@@ -1,0 +1,60 @@
+[
+  {"invoice_id": "INV-312", "customer_id": "CUST-0091", "amount": 25000.00, "due_date": "2024-04-15", "description": "Fuel delivery March 28", "status": "open"},
+  {"invoice_id": "INV-287", "customer_id": "CUST-0091", "amount": 22730.00, "due_date": "2024-04-12", "description": "Fuel delivery March 15", "status": "open"},
+  {"invoice_id": "INV-301", "customer_id": "CUST-0091", "amount": 18500.00, "due_date": "2024-04-30", "description": "Equipment rental April", "status": "open"},
+
+  {"invoice_id": "INV-410", "customer_id": "CUST-0445", "amount": 31200.00, "due_date": "2024-04-20", "description": "Bulk diesel March delivery", "status": "open"},
+
+  {"invoice_id": "INV-455", "customer_id": "CUST-0201", "amount": 46800.00, "due_date": "2024-04-18", "description": "International shipment Q1", "status": "open"},
+
+  {"invoice_id": "INV-520", "customer_id": "CUST-0102", "amount": 15750.00, "due_date": "2024-04-10", "description": "Lubricant supply March", "status": "open"},
+  {"invoice_id": "INV-521", "customer_id": "CUST-0102", "amount": 8300.00, "due_date": "2024-04-25", "description": "Filter cartridges March", "status": "open"},
+
+  {"invoice_id": "INV-600", "customer_id": "CUST-0155", "amount": 12000.00, "due_date": "2024-04-08", "description": "Diesel delivery April 1", "status": "open"},
+  {"invoice_id": "INV-601", "customer_id": "CUST-0155", "amount": 8500.00, "due_date": "2024-04-10", "description": "Gasoline delivery April 3", "status": "open"},
+  {"invoice_id": "INV-602", "customer_id": "CUST-0155", "amount": 9200.00, "due_date": "2024-04-12", "description": "Diesel delivery April 5", "status": "open"},
+  {"invoice_id": "INV-603", "customer_id": "CUST-0155", "amount": 6800.00, "due_date": "2024-04-15", "description": "Gasoline delivery April 8", "status": "open"},
+
+  {"invoice_id": "INV-710", "customer_id": "CUST-0233", "amount": 42000.00, "due_date": "2024-04-20", "description": "Crude oil shipment March", "status": "open"},
+  {"invoice_id": "INV-711", "customer_id": "CUST-0233", "amount": 38500.00, "due_date": "2024-04-22", "description": "Crude oil shipment March late", "status": "open"},
+
+  {"invoice_id": "INV-800", "customer_id": "CUST-0310", "amount": 5200.00, "due_date": "2024-04-05", "description": "Heating oil delivery", "status": "open"},
+  {"invoice_id": "INV-801", "customer_id": "CUST-0310", "amount": 7800.00, "due_date": "2024-04-08", "description": "Kerosene delivery", "status": "open"},
+  {"invoice_id": "INV-802", "customer_id": "CUST-0310", "amount": 3400.00, "due_date": "2024-04-10", "description": "Lubricant delivery", "status": "open"},
+
+  {"invoice_id": "INV-850", "customer_id": "CUST-0378", "amount": 92500.00, "due_date": "2024-04-25", "description": "Refinery feedstock Q1", "status": "open"},
+
+  {"invoice_id": "INV-900", "customer_id": "CUST-0412", "amount": 14200.00, "due_date": "2024-04-12", "description": "Fuel delivery batch 1", "status": "open"},
+  {"invoice_id": "INV-901", "customer_id": "CUST-0412", "amount": 11300.00, "due_date": "2024-04-14", "description": "Fuel delivery batch 2", "status": "open"},
+
+  {"invoice_id": "INV-950", "customer_id": "CUST-0489", "amount": 67000.00, "due_date": "2024-04-30", "description": "Monthly supply contract", "status": "open"},
+  {"invoice_id": "INV-951", "customer_id": "CUST-0489", "amount": 23400.00, "due_date": "2024-04-30", "description": "Spot purchase March 25", "status": "open"},
+
+  {"invoice_id": "INV-1010", "customer_id": "CUST-0523", "amount": 9750.00, "due_date": "2024-04-07", "description": "Distribution delivery", "status": "open"},
+
+  {"invoice_id": "INV-1100", "customer_id": "CUST-0567", "amount": 28000.00, "due_date": "2024-04-18", "description": "Fuel service March", "status": "open"},
+  {"invoice_id": "INV-1101", "customer_id": "CUST-0567", "amount": 15500.00, "due_date": "2024-04-20", "description": "Equipment lease March", "status": "open"},
+  {"invoice_id": "INV-1102", "customer_id": "CUST-0567", "amount": 22000.00, "due_date": "2024-04-25", "description": "Fuel service April partial", "status": "open"},
+
+  {"invoice_id": "INV-1200", "customer_id": "CUST-0601", "amount": 35000.00, "due_date": "2024-04-15", "description": "Pipeline maintenance Q1", "status": "open"},
+
+  {"invoice_id": "INV-1300", "customer_id": "CUST-0644", "amount": 18900.00, "due_date": "2024-04-10", "description": "Trading lot March", "status": "open"},
+  {"invoice_id": "INV-1301", "customer_id": "CUST-0644", "amount": 21100.00, "due_date": "2024-04-12", "description": "Trading lot March late", "status": "open"},
+
+  {"invoice_id": "INV-1400", "customer_id": "CUST-0702", "amount": 55000.00, "due_date": "2024-04-20", "description": "Crude supply March", "status": "open"},
+
+  {"invoice_id": "INV-1500", "customer_id": "CUST-0755", "amount": 16400.00, "due_date": "2024-04-10", "description": "Energy supply March", "status": "open"},
+
+  {"invoice_id": "INV-1600", "customer_id": "CUST-0801", "amount": 125000.00, "due_date": "2024-04-30", "description": "Quarterly supply Q1", "status": "open"},
+
+  {"invoice_id": "INV-1700", "customer_id": "CUST-0856", "amount": 7200.00, "due_date": "2024-04-08", "description": "Logistics haul March 28", "status": "open"},
+  {"invoice_id": "INV-1701", "customer_id": "CUST-0856", "amount": 6100.00, "due_date": "2024-04-10", "description": "Logistics haul April 1", "status": "open"},
+  {"invoice_id": "INV-1702", "customer_id": "CUST-0856", "amount": 8400.00, "due_date": "2024-04-12", "description": "Logistics haul April 3", "status": "open"},
+
+  {"invoice_id": "INV-1800", "customer_id": "CUST-0901", "amount": 78000.00, "due_date": "2024-04-25", "description": "Transport contract March", "status": "open"},
+
+  {"invoice_id": "INV-1900", "customer_id": "CUST-0950", "amount": 19000.00, "due_date": "2024-04-15", "description": "Distribution March wk1", "status": "open"},
+  {"invoice_id": "INV-1901", "customer_id": "CUST-0950", "amount": 22500.00, "due_date": "2024-04-18", "description": "Distribution March wk2", "status": "open"},
+  {"invoice_id": "INV-1902", "customer_id": "CUST-0950", "amount": 17800.00, "due_date": "2024-04-20", "description": "Distribution March wk3", "status": "open"},
+  {"invoice_id": "INV-1903", "customer_id": "CUST-0950", "amount": 24200.00, "due_date": "2024-04-25", "description": "Distribution March wk4", "status": "open"}
+]

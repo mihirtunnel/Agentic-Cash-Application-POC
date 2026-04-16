@@ -1,0 +1,1362 @@
+[
+  {
+    "invoice_id": "INV-2633049",
+    "customer_id": "CUST-EXX-001",
+    "amount": 1186000.00,
+    "due_date": "2024-02-20",
+    "description": "Crude oil supply contract Q1 2024",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-LC-SDK25TS0002",
+    "customer_id": "CUST-SAN-002",
+    "amount": 814172.55,
+    "due_date": "2024-02-15",
+    "description": "Letter of credit settlement SDK25TS0002",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-2630439",
+    "customer_id": "CUST-CHX-003",
+    "amount": 65214.16,
+    "due_date": "2024-02-10",
+    "description": "Equipment shipment batch 1",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-2630441",
+    "customer_id": "CUST-CHX-003",
+    "amount": 58932.88,
+    "due_date": "2024-02-12",
+    "description": "Equipment shipment batch 2",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-2630626",
+    "customer_id": "CUST-CHX-003",
+    "amount": 72146.22,
+    "due_date": "2024-02-14",
+    "description": "Service charges Q1",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-2630623",
+    "customer_id": "CUST-CHX-003",
+    "amount": 52341.08,
+    "due_date": "2024-02-16",
+    "description": "Technical support contract",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-2630120",
+    "customer_id": "CUST-CHX-003",
+    "amount": 47283.10,
+    "due_date": "2024-02-18",
+    "description": "Spare parts delivery",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-CHM-040121",
+    "customer_id": "CUST-SHR-004",
+    "amount": 105514.91,
+    "due_date": "2024-02-10",
+    "description": "Chemical batch shipment A",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-CHM-040122",
+    "customer_id": "CUST-SHR-004",
+    "amount": 105514.90,
+    "due_date": "2024-02-12",
+    "description": "Chemical batch shipment B",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-2632861",
+    "customer_id": "CUST-CHX-003",
+    "amount": 492215.67,
+    "due_date": "2024-02-08",
+    "description": "IVPT inter-company settlement 2632861",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-2632914",
+    "customer_id": "CUST-CHX-003",
+    "amount": 352175.04,
+    "due_date": "2024-02-10",
+    "description": "IVPT inter-company settlement 2632914",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-2633239",
+    "customer_id": "CUST-VAL-005",
+    "amount": 104098.92,
+    "due_date": "2024-02-18",
+    "description": "Marketing supply - fuel products",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-HLM-2632262",
+    "customer_id": "CUST-HLM-006",
+    "amount": 70000.00,
+    "due_date": "2024-02-15",
+    "description": "Account 2632262 international supply",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-SEC-001",
+    "customer_id": "CUST-SEC-007",
+    "amount": 47822.77,
+    "due_date": "2024-02-14",
+    "description": "Specialty services delivery",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-MDS-001",
+    "customer_id": "CUST-MDS-008",
+    "amount": 81625.88,
+    "due_date": "2024-02-12",
+    "description": "Transportation services batch 1",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-MDS-002",
+    "customer_id": "CUST-MDS-008",
+    "amount": 81625.87,
+    "due_date": "2024-02-14",
+    "description": "Transportation services batch 2",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-CHX-LLC-001",
+    "customer_id": "CUST-CHX-009",
+    "amount": 38146.80,
+    "due_date": "2024-02-13",
+    "description": "Corporate payment batch 1",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-CHX-LLC-002",
+    "customer_id": "CUST-CHX-009",
+    "amount": 38146.79,
+    "due_date": "2024-02-15",
+    "description": "Corporate payment batch 2",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-TAR-001",
+    "customer_id": "CUST-TAR-010",
+    "amount": 33973.47,
+    "due_date": "2024-02-12",
+    "description": "Oil supply contract segment 1",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-TAR-002",
+    "customer_id": "CUST-TAR-010",
+    "amount": 33973.46,
+    "due_date": "2024-02-14",
+    "description": "Oil supply contract segment 2",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-BCH-001",
+    "customer_id": "CUST-BCH-011",
+    "amount": 31268.81,
+    "due_date": "2024-02-11",
+    "description": "Service group fees period 1",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-BCH-002",
+    "customer_id": "CUST-BCH-011",
+    "amount": 31268.80,
+    "due_date": "2024-02-13",
+    "description": "Service group fees period 2",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-HAL-001",
+    "customer_id": "CUST-HAL-012",
+    "amount": 20360.99,
+    "due_date": "2024-02-10",
+    "description": "Equipment rental and maintenance",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-HAL-002",
+    "customer_id": "CUST-HAL-012",
+    "amount": 20360.99,
+    "due_date": "2024-02-12",
+    "description": "Service support and logistics",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-MAN-001",
+    "customer_id": "CUST-MAN-013",
+    "amount": 18853.62,
+    "due_date": "2024-02-11",
+    "description": "Oil corporation supply batch 1",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-MAN-002",
+    "customer_id": "CUST-MAN-013",
+    "amount": 18853.61,
+    "due_date": "2024-02-13",
+    "description": "Oil corporation supply batch 2",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-SAS-001",
+    "customer_id": "CUST-SAS-014",
+    "amount": 32854.12,
+    "due_date": "2024-02-16",
+    "description": "Services corporation payment",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-BAR-001",
+    "customer_id": "CUST-BAR-015",
+    "amount": 20066.65,
+    "due_date": "2024-02-12",
+    "description": "Brands international direct payment 1",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-BAR-002",
+    "customer_id": "CUST-BAR-015",
+    "amount": 20066.65,
+    "due_date": "2024-02-14",
+    "description": "Brands international direct payment 2",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-FER-001",
+    "customer_id": "CUST-FER-016",
+    "amount": 12054.14,
+    "due_date": "2024-02-10",
+    "description": "Propane supply delivery LP6689 batch 1",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-FER-002",
+    "customer_id": "CUST-FER-016",
+    "amount": 12054.14,
+    "due_date": "2024-02-12",
+    "description": "Propane supply delivery LP6689 batch 2",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-CLN-001",
+    "customer_id": "CUST-CLN-017",
+    "amount": 18092.31,
+    "due_date": "2024-02-14",
+    "description": "Recompression services and maintenance",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-2631641",
+    "customer_id": "CUST-VAL-005",
+    "amount": 17956.37,
+    "due_date": "2024-02-17",
+    "description": "Marketing supply - additional fuel products",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-BAM-001",
+    "customer_id": "CUST-BAM-020",
+    "amount": 12344.20,
+    "due_date": "2024-02-13",
+    "description": "Propane supply and delivery",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-ALT-001",
+    "customer_id": "CUST-ALT-018",
+    "amount": 7023.38,
+    "due_date": "2024-02-12",
+    "description": "Specialty chemicals transaction",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-ROC-00069169",
+    "customer_id": "CUST-TRI-019",
+    "amount": 1769.04,
+    "due_date": "2024-02-10",
+    "description": "Record of change 00069169 international supply",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-BRY-001",
+    "customer_id": "CUST-BRY-021",
+    "amount": 17598.73,
+    "due_date": "2024-02-16",
+    "description": "Chemical supply trades payment",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-2633050",
+    "customer_id": "CUST-EXX-001",
+    "amount": 542000.00,
+    "due_date": "2024-01-30",
+    "description": "Crude oil supply contract prior period",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-2633051",
+    "customer_id": "CUST-EXX-001",
+    "amount": 875500.00,
+    "due_date": "2024-03-10",
+    "description": "Lubricant products next shipment",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-2633052",
+    "customer_id": "CUST-EXX-001",
+    "amount": 325000.00,
+    "due_date": "2024-02-01",
+    "description": "Specialty fuel additives",
+    "status": "overdue"
+  },
+  {
+    "invoice_id": "INV-CHX-004",
+    "customer_id": "CUST-CHX-003",
+    "amount": 145000.00,
+    "due_date": "2024-02-05",
+    "description": "Equipment upgrade components",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-CHX-005",
+    "customer_id": "CUST-CHX-003",
+    "amount": 78500.00,
+    "due_date": "2024-03-15",
+    "description": "Quarterly maintenance planning",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-CHX-006",
+    "customer_id": "CUST-CHX-003",
+    "amount": 92300.00,
+    "due_date": "2024-02-28",
+    "description": "Technical consulting retainer",
+    "status": "partial"
+  },
+  {
+    "invoice_id": "INV-VAL-002",
+    "customer_id": "CUST-VAL-005",
+    "amount": 189500.00,
+    "due_date": "2024-03-05",
+    "description": "Fuel supply next quarter",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-VAL-003",
+    "customer_id": "CUST-VAL-005",
+    "amount": 75300.00,
+    "due_date": "2024-01-28",
+    "description": "Previous fuel products",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-VAL-004",
+    "customer_id": "CUST-VAL-005",
+    "amount": 65800.00,
+    "due_date": "2024-02-10",
+    "description": "Marketing supply adjustment",
+    "status": "overdue"
+  },
+  {
+    "invoice_id": "INV-HAL-006",
+    "customer_id": "CUST-HAL-012",
+    "amount": 45000.00,
+    "due_date": "2024-03-01",
+    "description": "Equipment rental Q2 2024",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-HAL-007",
+    "customer_id": "CUST-HAL-012",
+    "amount": 32500.00,
+    "due_date": "2024-01-25",
+    "description": "Previous quarter services",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-HAL-008",
+    "customer_id": "CUST-HAL-012",
+    "amount": 28900.00,
+    "due_date": "2024-02-20",
+    "description": "Field support services",
+    "status": "partial"
+  },
+  {
+    "invoice_id": "INV-SHR-005",
+    "customer_id": "CUST-SHR-004",
+    "amount": 245000.00,
+    "due_date": "2024-02-25",
+    "description": "Chemical shipment next batch",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-SHR-006",
+    "customer_id": "CUST-SHR-004",
+    "amount": 156700.00,
+    "due_date": "2024-01-20",
+    "description": "Previous chemical orders",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-SHR-007",
+    "customer_id": "CUST-SHR-004",
+    "amount": 89300.00,
+    "due_date": "2024-02-15",
+    "description": "Specialty polymers discount",
+    "status": "overdue"
+  },
+  {
+    "invoice_id": "INV-SEC-005",
+    "customer_id": "CUST-SEC-007",
+    "amount": 78500.00,
+    "due_date": "2024-03-10",
+    "description": "Security services Q2",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-SEC-006",
+    "customer_id": "CUST-SEC-007",
+    "amount": 52300.00,
+    "due_date": "2024-01-31",
+    "description": "Previous security contract",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-MDS-005",
+    "customer_id": "CUST-MDS-008",
+    "amount": 132500.00,
+    "due_date": "2024-03-20",
+    "description": "Transportation agreement next month",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-MDS-006",
+    "customer_id": "CUST-MDS-008",
+    "amount": 95700.00,
+    "due_date": "2024-01-15",
+    "description": "Prior month transport",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-ARC-003",
+    "customer_id": "CUST-ARC-022",
+    "amount": 345000.00,
+    "due_date": "2024-02-28",
+    "description": "Petroleum supply second order",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-ARC-004",
+    "customer_id": "CUST-ARC-022",
+    "amount": 178500.00,
+    "due_date": "2024-01-22",
+    "description": "Previous oil supply",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-ARC-005",
+    "customer_id": "CUST-ARC-022",
+    "amount": 215300.00,
+    "due_date": "2024-02-10",
+    "description": "Additives and blending",
+    "status": "overdue"
+  },
+  {
+    "invoice_id": "INV-BCL-004",
+    "customer_id": "CUST-BCL-023",
+    "amount": 267500.00,
+    "due_date": "2024-03-05",
+    "description": "Natural gas next supply",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-BCL-005",
+    "customer_id": "CUST-BCL-023",
+    "amount": 145800.00,
+    "due_date": "2024-01-30",
+    "description": "Previous gas supply",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-CAE-003",
+    "customer_id": "CUST-CAE-024",
+    "amount": 225000.00,
+    "due_date": "2024-02-25",
+    "description": "Energy consulting phase 2",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-CAE-004",
+    "customer_id": "CUST-CAE-024",
+    "amount": 145500.00,
+    "due_date": "2024-01-28",
+    "description": "Previous consulting work",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-DTE-004",
+    "customer_id": "CUST-DTE-025",
+    "amount": 189000.00,
+    "due_date": "2024-03-15",
+    "description": "Engineering services next phase",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-DTE-005",
+    "customer_id": "CUST-DTE-025",
+    "amount": 125400.00,
+    "due_date": "2024-01-25",
+    "description": "Prior engineering work",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-DTE-006",
+    "customer_id": "CUST-DTE-025",
+    "amount": 95300.00,
+    "due_date": "2024-02-15",
+    "description": "Design consultation retainer",
+    "status": "partial"
+  },
+  {
+    "invoice_id": "INV-EGX-003",
+    "customer_id": "CUST-EGX-026",
+    "amount": 285000.00,
+    "due_date": "2024-03-10",
+    "description": "Seismic analysis next phase",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-EGX-004",
+    "customer_id": "CUST-EGX-026",
+    "amount": 156700.00,
+    "due_date": "2024-01-20",
+    "description": "Previous exploration survey",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-FOX-003",
+    "customer_id": "CUST-FOX-027",
+    "amount": 556000.00,
+    "due_date": "2024-02-25",
+    "description": "Refining services batch 2",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-FOX-004",
+    "customer_id": "CUST-FOX-027",
+    "amount": 389500.00,
+    "due_date": "2024-01-15",
+    "description": "Previous refining work",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-GEO-003",
+    "customer_id": "CUST-GEO-028",
+    "amount": 278900.00,
+    "due_date": "2024-03-01",
+    "description": "Geological survey extension",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-GEO-004",
+    "customer_id": "CUST-GEO-028",
+    "amount": 189500.00,
+    "due_date": "2024-01-25",
+    "description": "Prior geological services",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-HUB-004",
+    "customer_id": "CUST-HUB-029",
+    "amount": 567000.00,
+    "due_date": "2024-03-05",
+    "description": "Pipeline maintenance next quarter",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-HUB-005",
+    "customer_id": "CUST-HUB-029",
+    "amount": 356800.00,
+    "due_date": "2024-01-31",
+    "description": "Previous pipeline works",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-HUB-006",
+    "customer_id": "CUST-HUB-029",
+    "amount": 287500.00,
+    "due_date": "2024-02-20",
+    "description": "Equipment upgrades",
+    "status": "partial"
+  },
+  {
+    "invoice_id": "INV-IIM-003",
+    "customer_id": "CUST-IIM-030",
+    "amount": 425000.00,
+    "due_date": "2024-02-28",
+    "description": "Industrial materials next order",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-IIM-004",
+    "customer_id": "CUST-IIM-030",
+    "amount": 267300.00,
+    "due_date": "2024-01-20",
+    "description": "Previous steel products",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-JON-003",
+    "customer_id": "CUST-JON-031",
+    "amount": 156000.00,
+    "due_date": "2024-03-10",
+    "description": "Consulting services Q2",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-JON-004",
+    "customer_id": "CUST-JON-031",
+    "amount": 98700.00,
+    "due_date": "2024-01-28",
+    "description": "Prior consultation work",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-KES-003",
+    "customer_id": "CUST-KES-032",
+    "amount": 425600.00,
+    "due_date": "2024-02-25",
+    "description": "Chemical supplies next batch",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-KES-004",
+    "customer_id": "CUST-KES-032",
+    "amount": 287400.00,
+    "due_date": "2024-01-22",
+    "description": "Previous chemical shipment",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-KES-005",
+    "customer_id": "CUST-KES-032",
+    "amount": 156800.00,
+    "due_date": "2024-02-10",
+    "description": "Bulk solvent order",
+    "status": "overdue"
+  },
+  {
+    "invoice_id": "INV-LTD-003",
+    "customer_id": "CUST-LTD-033",
+    "amount": 567500.00,
+    "due_date": "2024-03-01",
+    "description": "Trading settlement next month",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-LTD-004",
+    "customer_id": "CUST-LTD-033",
+    "amount": 389000.00,
+    "due_date": "2024-01-25",
+    "description": "Previous trading fees",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-MAR-001",
+    "customer_id": "CUST-MAR-034",
+    "amount": 234500.00,
+    "due_date": "2024-02-28",
+    "description": "Marine logistics services",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-MAR-002",
+    "customer_id": "CUST-MAR-034",
+    "amount": 156300.00,
+    "due_date": "2024-01-30",
+    "description": "Previous shipping fees",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-NEX-001",
+    "customer_id": "CUST-NEX-035",
+    "amount": 378500.00,
+    "due_date": "2024-03-05",
+    "description": "Energy partnership settlement",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-NEX-002",
+    "customer_id": "CUST-NEX-035",
+    "amount": 245600.00,
+    "due_date": "2024-01-20",
+    "description": "Prior partnership fees",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-OPN-001",
+    "customer_id": "CUST-OPN-036",
+    "amount": 425000.00,
+    "due_date": "2024-02-25",
+    "description": "Petroleum operations supply",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-OPN-002",
+    "customer_id": "CUST-OPN-036",
+    "amount": 298700.00,
+    "due_date": "2024-01-25",
+    "description": "Previous operations work",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-OPN-003",
+    "customer_id": "CUST-OPN-036",
+    "amount": 167500.00,
+    "due_date": "2024-02-15",
+    "description": "Operational maintenance",
+    "status": "overdue"
+  },
+  {
+    "invoice_id": "INV-PLC-001",
+    "customer_id": "CUST-PLC-037",
+    "amount": 356000.00,
+    "due_date": "2024-03-10",
+    "description": "Pacific logistics shipment",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-PLC-002",
+    "customer_id": "CUST-PLC-037",
+    "amount": 234500.00,
+    "due_date": "2024-01-28",
+    "description": "Prior logistics fees",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-QUA-001",
+    "customer_id": "CUST-QUA-038",
+    "amount": 289500.00,
+    "due_date": "2024-02-28",
+    "description": "Industrial supplies order",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-QUA-002",
+    "customer_id": "CUST-QUA-038",
+    "amount": 178300.00,
+    "due_date": "2024-01-22",
+    "description": "Previous supply delivery",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-RES-001",
+    "customer_id": "CUST-RES-039",
+    "amount": 412000.00,
+    "due_date": "2024-03-01",
+    "description": "Energy resolution services",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-RES-002",
+    "customer_id": "CUST-RES-039",
+    "amount": 267800.00,
+    "due_date": "2024-01-25",
+    "description": "Prior resolution work",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-SUM-001",
+    "customer_id": "CUST-SUM-040",
+    "amount": 567400.00,
+    "due_date": "2024-02-25",
+    "description": "Summit petrochemical orders",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-SUM-002",
+    "customer_id": "CUST-SUM-040",
+    "amount": 389600.00,
+    "due_date": "2024-01-20",
+    "description": "Previous chemical orders",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-SUM-003",
+    "customer_id": "CUST-SUM-040",
+    "amount": 245300.00,
+    "due_date": "2024-02-10",
+    "description": "Bulk supply discount",
+    "status": "partial"
+  },
+  {
+    "invoice_id": "INV-TEN-001",
+    "customer_id": "CUST-TEN-041",
+    "amount": 456000.00,
+    "due_date": "2024-02-28",
+    "description": "Oil services contract",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-TEN-002",
+    "customer_id": "CUST-TEN-041",
+    "amount": 289500.00,
+    "due_date": "2024-01-25",
+    "description": "Prior services work",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-UNI-001",
+    "customer_id": "CUST-UNI-042",
+    "amount": 378900.00,
+    "due_date": "2024-03-05",
+    "description": "Specialty fuels supply",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-UNI-002",
+    "customer_id": "CUST-UNI-042",
+    "amount": 245700.00,
+    "due_date": "2024-01-30",
+    "description": "Previous fuel order",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-VAV-001",
+    "customer_id": "CUST-VAV-043",
+    "amount": 567800.00,
+    "due_date": "2024-02-25",
+    "description": "International trading settlement",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-VAV-002",
+    "customer_id": "CUST-VAV-043",
+    "amount": 356200.00,
+    "due_date": "2024-01-20",
+    "description": "Prior trading fees",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-WES-001",
+    "customer_id": "CUST-WES-044",
+    "amount": 425600.00,
+    "due_date": "2024-03-10",
+    "description": "Energy solutions services",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-WES-002",
+    "customer_id": "CUST-WES-044",
+    "amount": 267400.00,
+    "due_date": "2024-01-25",
+    "description": "Prior solutions work",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-WES-003",
+    "customer_id": "CUST-WES-044",
+    "amount": 156800.00,
+    "due_date": "2024-02-15",
+    "description": "Energy consulting",
+    "status": "overdue"
+  },
+  {
+    "invoice_id": "INV-XES-001",
+    "customer_id": "CUST-XES-045",
+    "amount": 389500.00,
+    "due_date": "2024-02-28",
+    "description": "Energy systems supply",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-XES-002",
+    "customer_id": "CUST-XES-045",
+    "amount": 234600.00,
+    "due_date": "2024-01-22",
+    "description": "Previous systems order",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-YUM-001",
+    "customer_id": "CUST-YUM-046",
+    "amount": 456700.00,
+    "due_date": "2024-03-01",
+    "description": "Trading corporation settlement",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-YUM-002",
+    "customer_id": "CUST-YUM-046",
+    "amount": 289300.00,
+    "due_date": "2024-01-28",
+    "description": "Prior trading work",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-ZEN-001",
+    "customer_id": "CUST-ZEN-047",
+    "amount": 567900.00,
+    "due_date": "2024-02-25",
+    "description": "Petroleum group supply",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-ZEN-002",
+    "customer_id": "CUST-ZEN-047",
+    "amount": 378400.00,
+    "due_date": "2024-01-20",
+    "description": "Prior petroleum orders",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-ZEN-003",
+    "customer_id": "CUST-ZEN-047",
+    "amount": 245600.00,
+    "due_date": "2024-02-10",
+    "description": "Petroleum discount",
+    "status": "partial"
+  },
+  {
+    "invoice_id": "INV-AVM-001",
+    "customer_id": "CUST-AVM-048",
+    "amount": 425300.00,
+    "due_date": "2024-03-05",
+    "description": "Manufacturing supply",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-AVM-002",
+    "customer_id": "CUST-AVM-048",
+    "amount": 267800.00,
+    "due_date": "2024-01-25",
+    "description": "Prior manufacturing work",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-BRG-001",
+    "customer_id": "CUST-BRG-049",
+    "amount": 378600.00,
+    "due_date": "2024-02-28",
+    "description": "Energy trading bridge",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-BRG-002",
+    "customer_id": "CUST-BRG-049",
+    "amount": 245900.00,
+    "due_date": "2024-01-30",
+    "description": "Previous energy orders",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-CRC-001",
+    "customer_id": "CUST-CRC-050",
+    "amount": 456500.00,
+    "due_date": "2024-03-10",
+    "description": "Crestwood resources supply",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-CRC-002",
+    "customer_id": "CUST-CRC-050",
+    "amount": 289700.00,
+    "due_date": "2024-01-22",
+    "description": "Prior resource work",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-DRT-001",
+    "customer_id": "CUST-DRT-051",
+    "amount": 425800.00,
+    "due_date": "2024-02-25",
+    "description": "Technology solutions",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-DRT-002",
+    "customer_id": "CUST-DRT-051",
+    "amount": 267600.00,
+    "due_date": "2024-01-25",
+    "description": "Prior tech work",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-DRT-003",
+    "customer_id": "CUST-DRT-051",
+    "amount": 156900.00,
+    "due_date": "2024-02-15",
+    "description": "Technology discount",
+    "status": "overdue"
+  },
+  {
+    "invoice_id": "INV-EAS-001",
+    "customer_id": "CUST-EAS-052",
+    "amount": 389200.00,
+    "due_date": "2024-03-01",
+    "description": "Eastern supply chain",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-EAS-002",
+    "customer_id": "CUST-EAS-052",
+    "amount": 234800.00,
+    "due_date": "2024-01-28",
+    "description": "Prior supply solutions",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-FLX-001",
+    "customer_id": "CUST-FLX-053",
+    "amount": 567400.00,
+    "due_date": "2024-02-28",
+    "description": "Energy solutions flex",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-FLX-002",
+    "customer_id": "CUST-FLX-053",
+    "amount": 356500.00,
+    "due_date": "2024-01-20",
+    "description": "Prior flex solutions",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-GRT-001",
+    "customer_id": "CUST-GRT-054",
+    "amount": 425700.00,
+    "due_date": "2024-03-05",
+    "description": "Great Lakes petroleum supply",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-GRT-002",
+    "customer_id": "CUST-GRT-054",
+    "amount": 267900.00,
+    "due_date": "2024-01-25",
+    "description": "Prior lake supply",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-GRT-003",
+    "customer_id": "CUST-GRT-054",
+    "amount": 189400.00,
+    "due_date": "2024-02-15",
+    "description": "Great lakes bulk order",
+    "status": "partial"
+  },
+  {
+    "invoice_id": "INV-HRP-001",
+    "customer_id": "CUST-HRP-055",
+    "amount": 378500.00,
+    "due_date": "2024-02-25",
+    "description": "Heritage energy partnership",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-HRP-002",
+    "customer_id": "CUST-HRP-055",
+    "amount": 245600.00,
+    "due_date": "2024-01-30",
+    "description": "Prior heritage work",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-IND-001",
+    "customer_id": "CUST-IND-056",
+    "amount": 456800.00,
+    "due_date": "2024-03-10",
+    "description": "Infinity dynamics supply",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-IND-002",
+    "customer_id": "CUST-IND-056",
+    "amount": 289400.00,
+    "due_date": "2024-01-22",
+    "description": "Prior infinite work",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-JYX-001",
+    "customer_id": "CUST-JYX-057",
+    "amount": 425600.00,
+    "due_date": "2024-02-28",
+    "description": "Jynx industrial services",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-JYX-002",
+    "customer_id": "CUST-JYX-057",
+    "amount": 267700.00,
+    "due_date": "2024-01-25",
+    "description": "Prior jynx work",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-KIN-001",
+    "customer_id": "CUST-KIN-058",
+    "amount": 389400.00,
+    "due_date": "2024-03-01",
+    "description": "Kinter logistics shipment",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-KIN-002",
+    "customer_id": "CUST-KIN-058",
+    "amount": 234700.00,
+    "due_date": "2024-01-28",
+    "description": "Prior logistics fees",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-KIN-003",
+    "customer_id": "CUST-KIN-058",
+    "amount": 156300.00,
+    "due_date": "2024-02-15",
+    "description": "Kinter discount",
+    "status": "overdue"
+  },
+  {
+    "invoice_id": "INV-LYN-001",
+    "customer_id": "CUST-LYN-059",
+    "amount": 567600.00,
+    "due_date": "2024-02-25",
+    "description": "Lynx chemical supply",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-LYN-002",
+    "customer_id": "CUST-LYN-059",
+    "amount": 356400.00,
+    "due_date": "2024-01-20",
+    "description": "Prior lynx chemicals",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-MXL-001",
+    "customer_id": "CUST-MXL-060",
+    "amount": 425500.00,
+    "due_date": "2024-03-05",
+    "description": "Maxwell energy supply",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-MXL-002",
+    "customer_id": "CUST-MXL-060",
+    "amount": 267800.00,
+    "due_date": "2024-01-25",
+    "description": "Prior maxwell work",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-NEO-001",
+    "customer_id": "CUST-NEO-061",
+    "amount": 378700.00,
+    "due_date": "2024-02-28",
+    "description": "Neo petroleum solutions",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-NEO-002",
+    "customer_id": "CUST-NEO-061",
+    "amount": 245800.00,
+    "due_date": "2024-01-30",
+    "description": "Prior neo orders",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-NEO-003",
+    "customer_id": "CUST-NEO-061",
+    "amount": 156700.00,
+    "due_date": "2024-02-10",
+    "description": "Neo bulk order",
+    "status": "partial"
+  },
+  {
+    "invoice_id": "INV-ORC-001",
+    "customer_id": "CUST-ORC-062",
+    "amount": 456900.00,
+    "due_date": "2024-03-10",
+    "description": "Orca energy trading",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-ORC-002",
+    "customer_id": "CUST-ORC-062",
+    "amount": 289600.00,
+    "due_date": "2024-01-22",
+    "description": "Prior orca work",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-PRM-001",
+    "customer_id": "CUST-PRM-063",
+    "amount": 425400.00,
+    "due_date": "2024-02-25",
+    "description": "Prime industrial supply",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-PRM-002",
+    "customer_id": "CUST-PRM-063",
+    "amount": 267500.00,
+    "due_date": "2024-01-25",
+    "description": "Prior prime work",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-QUI-001",
+    "customer_id": "CUST-QUI-064",
+    "amount": 389300.00,
+    "due_date": "2024-03-01",
+    "description": "Quantum industries supply",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-QUI-002",
+    "customer_id": "CUST-QUI-064",
+    "amount": 234900.00,
+    "due_date": "2024-01-28",
+    "description": "Prior quantum work",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-RAV-001",
+    "customer_id": "CUST-RAV-065",
+    "amount": 567700.00,
+    "due_date": "2024-02-28",
+    "description": "Ravine petroleum supply",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-RAV-002",
+    "customer_id": "CUST-RAV-065",
+    "amount": 356300.00,
+    "due_date": "2024-01-20",
+    "description": "Prior ravine orders",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-RAV-003",
+    "customer_id": "CUST-RAV-065",
+    "amount": 189300.00,
+    "due_date": "2024-02-15",
+    "description": "Ravine discount",
+    "status": "overdue"
+  },
+  {
+    "invoice_id": "INV-STP-001",
+    "customer_id": "CUST-STP-066",
+    "amount": 425200.00,
+    "due_date": "2024-03-05",
+    "description": "Strategic transportation supply",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-STP-002",
+    "customer_id": "CUST-STP-066",
+    "amount": 267600.00,
+    "due_date": "2024-01-25",
+    "description": "Prior strategic work",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-TRX-001",
+    "customer_id": "CUST-TRX-067",
+    "amount": 378800.00,
+    "due_date": "2024-02-25",
+    "description": "Trex energy solutions",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-TRX-002",
+    "customer_id": "CUST-TRX-067",
+    "amount": 245700.00,
+    "due_date": "2024-01-30",
+    "description": "Prior trex orders",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-ULT-001",
+    "customer_id": "CUST-ULT-068",
+    "amount": 456700.00,
+    "due_date": "2024-03-10",
+    "description": "Ultimate supply services",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-ULT-002",
+    "customer_id": "CUST-ULT-068",
+    "amount": 289500.00,
+    "due_date": "2024-01-22",
+    "description": "Prior ultimate work",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-ULT-003",
+    "customer_id": "CUST-ULT-068",
+    "amount": 189200.00,
+    "due_date": "2024-02-10",
+    "description": "Ultimate bulk order",
+    "status": "partial"
+  },
+  {
+    "invoice_id": "INV-VIS-001",
+    "customer_id": "CUST-VIS-069",
+    "amount": 425300.00,
+    "due_date": "2024-02-28",
+    "description": "Vistra energy trading",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-VIS-002",
+    "customer_id": "CUST-VIS-069",
+    "amount": 267700.00,
+    "due_date": "2024-01-25",
+    "description": "Prior vistra work",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-WAR-001",
+    "customer_id": "CUST-WAR-070",
+    "amount": 389100.00,
+    "due_date": "2024-03-01",
+    "description": "Warranty energy services",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-WAR-002",
+    "customer_id": "CUST-WAR-070",
+    "amount": 234800.00,
+    "due_date": "2024-01-28",
+    "description": "Prior warranty work",
+    "status": "paid"
+  },
+  {
+    "invoice_id": "INV-ZEE-001",
+    "customer_id": "CUST-ZEE-071",
+    "amount": 567800.00,
+    "due_date": "2024-02-25",
+    "description": "Zenergy global trading",
+    "status": "open"
+  },
+  {
+    "invoice_id": "INV-ZEE-002",
+    "customer_id": "CUST-ZEE-071",
+    "amount": 356200.00,
+    "due_date": "2024-01-20",
+    "description": "Prior zenergy orders",
+    "status": "paid"
+  }
+]

@@ -1,0 +1,447 @@
+[
+  {
+    "customer_id": "CUST-EXX-001",
+    "name": "Exxon Mobil Corporation",
+    "payment_method": "",
+    "typical_pattern": "",
+    "discount_policy": "1.5% net 10"
+  },
+  {
+    "customer_id": "CUST-SAN-002",
+    "name": "Sanman Trading Import Export Ltd",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-CHX-003",
+    "name": "Championx Canada Inc",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-SHR-004",
+    "name": "Shrieve Chemical Inc",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-VAL-005",
+    "name": "Valero Marketing Supply",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-HLM-006",
+    "name": "Helm AG",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-SEC-007",
+    "name": "Secure Specialty Services Corp",
+    "payment_method": "",
+    "typical_pattern": "",
+    "discount_policy": "2% net 15"
+  },
+  {
+    "customer_id": "CUST-MDS-008",
+    "name": "Midstream Transportation Inc",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-CHX-009",
+    "name": "Championx LLC",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-TAR-010",
+    "name": "Tartan Oil Corporation",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-BCH-011",
+    "name": "Bachman Service Group",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-HAL-012",
+    "name": "Halliburton Company",
+    "payment_method": "",
+    "typical_pattern": "",
+    "discount_policy": "1% net 7"
+  },
+  {
+    "customer_id": "CUST-MAN-013",
+    "name": "Mansfield Oil Corporation",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-SAS-014",
+    "name": "SA Services Corporation",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-BAR-015",
+    "name": "Barr Brands International",
+    "payment_method": "",
+    "typical_pattern": "",
+    "discount_policy": "2% net 10"
+  },
+  {
+    "customer_id": "CUST-FER-016",
+    "name": "Ferrell Gas Inc",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-CLN-017",
+    "name": "Clean Recompression Corp",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-ALT-018",
+    "name": "Altivia Specialty Chemicals",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-TRI-019",
+    "name": "Tricon Industries Limited",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-BAM-020",
+    "name": "BAM Propane Company",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-BRY-021",
+    "name": "Berryman Chemical Supply",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-ARC-022",
+    "name": "Arcus Petroleum Inc",
+    "payment_method": "",
+    "typical_pattern": "",
+    "discount_policy": "1.5% net 10"
+  },
+  {
+    "customer_id": "CUST-BCL-023",
+    "name": "Belco Oil & Gas Corporation",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-CAE-024",
+    "name": "Carter Energy Solutions",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-DTE-025",
+    "name": "Delta Engineering Services",
+    "payment_method": "",
+    "typical_pattern": "",
+    "discount_policy": "2% net 15"
+  },
+  {
+    "customer_id": "CUST-EGX-026",
+    "name": "EG Exploration Limited",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-FOX-027",
+    "name": "Fox Refining Company",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-GEO-028",
+    "name": "Geodynamics International",
+    "payment_method": "",
+    "typical_pattern": "",
+    "discount_policy": "1% net 7"
+  },
+  {
+    "customer_id": "CUST-HUB-029",
+    "name": "Hub Pipeline Systems",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-IIM-030",
+    "name": "iGenius Industrial Materials",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-JON-031",
+    "name": "Jonson & Associates Ltd",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-KES-032",
+    "name": "Kesper Chemicals Corporation",
+    "payment_method": "",
+    "typical_pattern": "",
+    "discount_policy": "2% net 10"
+  },
+  {
+    "customer_id": "CUST-LTD-033",
+    "name": "Lexington Trading Division",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-MAR-034",
+    "name": "Marine Resources LLC",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-NEX-035",
+    "name": "Nexus Energy Partners",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-OPN-036",
+    "name": "Operon Petroleum Inc",
+    "payment_method": "",
+    "typical_pattern": "",
+    "discount_policy": "1.5% net 10"
+  },
+  {
+    "customer_id": "CUST-PLC-037",
+    "name": "Pacific Logistics Company",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-QUA-038",
+    "name": "Quantum Industrial Supply",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-RES-039",
+    "name": "Resolution Energy Inc",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-SUM-040",
+    "name": "Summit Petrochemical Corporation",
+    "payment_method": "",
+    "typical_pattern": "",
+    "discount_policy": "2% net 15"
+  },
+  {
+    "customer_id": "CUST-TEN-041",
+    "name": "Tenacious Oil Services",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-UNI-042",
+    "name": "United Specialty Fuels",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-VAV-043",
+    "name": "Vavien International Limited",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-WES-044",
+    "name": "Western Energy Solutions",
+    "payment_method": "",
+    "typical_pattern": "",
+    "discount_policy": "1% net 7"
+  },
+  {
+    "customer_id": "CUST-XES-045",
+    "name": "Xeric Energy Systems",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-YUM-046",
+    "name": "Yuma Trading Corporation",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-ZEN-047",
+    "name": "Zenith Petroleum Group",
+    "payment_method": "",
+    "typical_pattern": "",
+    "discount_policy": "2% net 10"
+  },
+  {
+    "customer_id": "CUST-AVM-048",
+    "name": "Avondale Manufacturing Inc",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-BRG-049",
+    "name": "Bridge Energy Trading",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-CRC-050",
+    "name": "Crestwood Resources",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-DRT-051",
+    "name": "Derat Technologies Corp",
+    "payment_method": "",
+    "typical_pattern": "",
+    "discount_policy": "1.5% net 10"
+  },
+  {
+    "customer_id": "CUST-EAS-052",
+    "name": "Eastern Supply Chain Solutions",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-FLX-053",
+    "name": "Flexor Energy Solutions",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-GRT-054",
+    "name": "Great Lakes Petroleum",
+    "payment_method": "",
+    "typical_pattern": "",
+    "discount_policy": "2% net 15"
+  },
+  {
+    "customer_id": "CUST-HRP-055",
+    "name": "Heritage Energy Partners",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-IND-056",
+    "name": "Infinity Dynamics Corporation",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-JYX-057",
+    "name": "Jynx Industrial Services",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-KIN-058",
+    "name": "Kinter Logistics Inc",
+    "payment_method": "",
+    "typical_pattern": "",
+    "discount_policy": "1% net 7"
+  },
+  {
+    "customer_id": "CUST-LYN-059",
+    "name": "Lynx Chemical Supply",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-MXL-060",
+    "name": "Maxwell Energy Incorporated",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-NEO-061",
+    "name": "Neo Petroleum Solutions",
+    "payment_method": "",
+    "typical_pattern": "",
+    "discount_policy": "2% net 10"
+  },
+  {
+    "customer_id": "CUST-ORC-062",
+    "name": "Orca Energy Trading",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-PRM-063",
+    "name": "Prime Industrial Supply Corporation",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-QUI-064",
+    "name": "Quantum Industries Inc",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-RAV-065",
+    "name": "Ravine Petroleum Corporation",
+    "payment_method": "",
+    "typical_pattern": "",
+    "discount_policy": "1.5% net 10"
+  },
+  {
+    "customer_id": "CUST-STP-066",
+    "name": "Strategic Transportation Partners",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-TRX-067",
+    "name": "Trex Energy Solutions",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-ULT-068",
+    "name": "Ultimate Supply Corporation",
+    "payment_method": "",
+    "typical_pattern": "",
+    "discount_policy": "2% net 15"
+  },
+  {
+    "customer_id": "CUST-VIS-069",
+    "name": "Vistra Energy Trading",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-WAR-070",
+    "name": "Warranty Energy Services",
+    "payment_method": "",
+    "typical_pattern": ""
+  },
+  {
+    "customer_id": "CUST-ZEE-071",
+    "name": "Zenergy Global Trading LLC",
+    "payment_method": "",
+    "typical_pattern": "",
+    "discount_policy": "1% net 7"
+  }
+]

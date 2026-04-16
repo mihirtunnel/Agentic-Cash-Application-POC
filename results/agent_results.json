@@ -1,0 +1,40 @@
+[
+  {
+    "txn_id": "FROST-001",
+    "amount": 1186000,
+    "counterparty_name": "",
+    "scenario": "single invoice, full payment — no remittance email — invoice reference in bank memo only (2633049) — requires name match to customer EXXONMOBIL + reference lookup",
+    "agent_result": {
+      "status": "matched",
+      "customer_id": "CUST-EXX-001",
+      "customer_name": "Exxon Mobil Corporation",
+      "confidence": 0.99,
+      "invoices": [
+        {
+          "id": "INV-2633049",
+          "original_amount": 1186000,
+          "applied": 1186000,
+          "deduction": 0,
+          "reason": "full_payment"
+        }
+      ],
+      "total_applied": 1186000,
+      "reasoning": "Multiple confirming signals: (1) Remittance info explicitly names EXXONMOBIL OIL CORPORATION as sender; (2) Amount search returned exact match of $1,186,000.00 to invoice INV-2633049; (3) Invoice due date (2024-02-20) matches payment date exactly; (4) Customer name search confirmed CUST-EXX-001 as Exxon Mobil Corporation.",
+      "investigation_summary": "Payment of $1,186,000.00 from Exxon Mobil Corporation (CUST-EXX-001) received 2024-02-20. Remittance info explicitly identifies sender as EXXONMOBIL OIL CORPORATION. Amount matches invoice INV-2633049 exactly ($1,186,000.00 for Crude oil supply contract Q1 2024, due 2024-02-20). Payment is on-time with no discount applied.",
+      "suggested_alias": "EXXONMOBIL OIL CORPORATION"
+    },
+    "guardrails": {
+      "passed": true,
+      "amounts_balance": true,
+      "ids_exist": true,
+      "invoices_belong_to_customer": true,
+      "deductions_within_policy": true
+    },
+    "routing_decision": "fast_track_review",
+    "tool_call_count": 7,
+    "total_input_tokens": 8721,
+    "total_output_tokens": 1197,
+    "total_cost_usd": 0.011764799999999999,
+    "matches_expected": true
+  }
+]

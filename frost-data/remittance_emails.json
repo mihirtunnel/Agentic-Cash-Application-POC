@@ -1,0 +1,500 @@
+[
+  {
+    "email_id": "EMAIL-FROST-001",
+    "txn_id": "FROST-003",
+    "customer_id": "CUST-CHX-003",
+    "sender_name": "Championx Canada ULC - Accounts Payable",
+    "sender_email": "ap@championx.ca",
+    "received_date": "2024-02-20",
+    "subject": "Remittance Advice - Equipment & Services Batch Payment",
+    "body_text": "Please find enclosed remittance for the wire transfer dated February 20, 2024. Payment covers the following invoices:\n\nINV-2630439: $65,214.16 (Equipment shipment batch 1)\nINV-2630441: $58,932.88 (Equipment shipment batch 2)\nINV-2630626: $72,146.22 (Service charges Q1)\nINV-2630623: $52,341.08 (Technical support contract)\nINV-2630120: $47,283.10 (Spare parts delivery)\n\nTotal Payment: $295,857.44\n\nReference: RFB 2000037585\n\nThank you for your business.",
+    "parsed_invoices": [
+      {"invoice_ref": "INV-2630439", "amount": 65214.16, "description": "Equipment shipment batch 1"},
+      {"invoice_ref": "INV-2630441", "amount": 58932.88, "description": "Equipment shipment batch 2"},
+      {"invoice_ref": "INV-2630626", "amount": 72146.22, "description": "Service charges Q1"},
+      {"invoice_ref": "INV-2630623", "amount": 52341.08, "description": "Technical support contract"},
+      {"invoice_ref": "INV-2630120", "amount": 47283.10, "description": "Spare parts delivery"}
+    ],
+    "total_amount": 295857.44
+  },
+  {
+    "email_id": "EMAIL-FROST-002",
+    "txn_id": "FROST-001",
+    "customer_id": "CUST-EXX-001",
+    "sender_name": "ExxonMobil Corporation - Treasury Department",
+    "sender_email": "payments@exxon.com",
+    "received_date": "2024-02-20",
+    "subject": "Payment Confirmation - Crude Oil Supply Q1 2024",
+    "body_text": "Wire transfer confirmation for February 20, 2024.\n\nPayment Details:\nInvoice: INV-2633049\nAmount: $1,186,000.00\nDescription: Crude oil supply contract Q1 2024\nDiscount Applied: 1.5% early payment discount per net 10 terms\n\nTotal Remitted: $1,186,000.00\n\nThis payment satisfies invoice 2633049 in full. No further action required.\n\nBest regards,\nExxonMobil Treasury",
+    "parsed_invoices": [
+      {"invoice_ref": "INV-2633049", "amount": 1186000.00, "description": "Crude oil supply contract Q1 2024", "discount_applied": "1.5% early payment"}
+    ],
+    "total_amount": 1186000.00
+  },
+  {
+    "email_id": "EMAIL-FROST-003",
+    "txn_id": "FROST-007",
+    "customer_id": "CUST-VAL-005",
+    "sender_name": "Valero Marketing Supply - Finance",
+    "sender_email": "finance@valero.com",
+    "received_date": "2024-02-20",
+    "subject": "Payment Remittance - Invoice 2633239",
+    "body_text": "Remittance Advice for payment dated February 20, 2024.\n\nInvoice Reference: INV-2633239\nAmount Due: $104,098.92\nAmount Paid: $104,098.92\n\nPayment in full per original invoice terms. Wire transfer number referenced in bank details.\n\nInvoice Description: Marketing supply - fuel products\n\nPlease confirm receipt of this payment.\n\nValero Finance",
+    "parsed_invoices": [
+      {"invoice_ref": "INV-2633239", "amount": 104098.92, "description": "Marketing supply - fuel products"}
+    ],
+    "total_amount": 104098.92
+  },
+  {
+    "email_id": "EMAIL-FROST-004",
+    "txn_id": "FROST-009",
+    "customer_id": "CUST-HLM-006",
+    "sender_name": "Helm AG - International Payments",
+    "sender_email": "payments@helm-ag.de",
+    "received_date": "2024-02-20",
+    "subject": "Überweisungsbestätigung / Wire Confirmation - Account 2632262",
+    "body_text": "Payment confirmation for international wire transfer dated February 20, 2024.\n\nAccount Reference: 2632262\nInvoice: INV-HLM-2632262\nAmount: $70,000.00\nDue Date: February 15, 2024\nPayment Date: February 20, 2024\n\nDescription: Account 2632262 international supply\n\nPayment Details:\nAccount Withholding No.: 2632262\nMaturity Date: 4.2.2026\n\nVielen Dank für Ihre Geschäftsbeziehung.\nThank you for your business.",
+    "parsed_invoices": [
+      {"invoice_ref": "INV-HLM-2632262", "amount": 70000.00, "description": "Account 2632262 international supply", "account_ref": "2632262"}
+    ],
+    "total_amount": 70000.00
+  },
+  {
+    "email_id": "EMAIL-FROST-005",
+    "txn_id": "FROST-016",
+    "customer_id": "CUST-HAL-012",
+    "sender_name": "Halliburton Company - Accounts Payable",
+    "sender_email": "ap@halliburton.com",
+    "received_date": "2024-02-20",
+    "subject": "Payment Notification - Equipment Rental & Service Support",
+    "body_text": "Remittance Advice for wire transfer dated February 20, 2024.\n\nPayment covers the following outstanding invoices:\n\nINV-HAL-001: $20,360.99 (Equipment rental and maintenance)\nINV-HAL-002: $20,360.99 (Service support and logistics)\n\nTotal Payment: $40,721.98\n\nDiscount Applied: 1.0% early payment discount (net 7 terms paid in full)\nAccount Reference: 7833\nPayment ID: 3807235507\n\nAll invoices now marked paid in full. Thank you for your continued partnership.\n\nHalliburton Accounts Payable",
+    "parsed_invoices": [
+      {"invoice_ref": "INV-HAL-001", "amount": 20360.99, "description": "Equipment rental and maintenance"},
+      {"invoice_ref": "INV-HAL-002", "amount": 20360.99, "description": "Service support and logistics"}
+    ],
+    "total_amount": 40721.98
+  },
+  {
+    "email_id": "EMAIL-FROST-006",
+    "txn_id": "FROST-023",
+    "customer_id": "CUST-VAL-005",
+    "sender_name": "Valero Marketing Supply - Finance",
+    "sender_email": "finance@valero.com",
+    "received_date": "2024-02-20",
+    "subject": "Payment Remittance - Invoice 2631641",
+    "body_text": "Remittance Advice for payment dated February 20, 2024.\n\nInvoice Reference: INV-2631641\nAmount Due: $17,956.37\nAmount Paid: $17,956.37\n\nPayment in full per invoice terms. Wire transfer reference in bank details.\n\nInvoice Description: Marketing supply - additional fuel products\n\nReference: WIRE IN 26022005380\n\nValero Finance Department",
+    "parsed_invoices": [
+      {"invoice_ref": "INV-2631641", "amount": 17956.37, "description": "Marketing supply - additional fuel products"}
+    ],
+    "total_amount": 17956.37
+  },
+  {
+    "email_id": "EMAIL-FROST-007",
+    "txn_id": "FROST-006",
+    "customer_id": "CUST-CHX-003",
+    "sender_name": "The Bank of Tokyo-Mitsubishi UFJ Ltd - Trade Finance",
+    "sender_email": "tradeservices@bk.mufg.jp",
+    "received_date": "2024-02-20",
+    "subject": "Correspondent Bank Settlement - IVPT Invoices",
+    "body_text": "Correspondent bank wire settlement for February 20, 2024.\n\nOriginating Payment via: Bank of Tokyo-Mitsubishi UFJ\nBeneficiary: Tauber Oil Company\n\nUnderlying Invoice References (IVPT):\n\nINV-2632861: $492,215.67 (IVPT inter-company settlement)\nINV-2632914: $352,175.04 (IVPT inter-company settlement)\n\nTotal Payment: $844,390.71\n\nThis payment represents full settlement of both referenced invoices. Correspondent bank documentation attached separately.\n\nReference Code: IVPTINV.2632861 2632914\n\nBank of Tokyo-Mitsubishi UFJ - Trade Services",
+    "parsed_invoices": [
+      {"invoice_ref": "INV-2632861", "amount": 492215.67, "description": "IVPT inter-company settlement 2632861"},
+      {"invoice_ref": "INV-2632914", "amount": 352175.04, "description": "IVPT inter-company settlement 2632914"}
+    ],
+    "total_amount": 844390.71
+  },
+  {
+    "email_id": "EMAIL-FROST-008",
+    "txn_id": "FROST-010",
+    "customer_id": "CUST-CHX-003",
+    "sender_name": "Championx Canada ULC - Finance Department",
+    "sender_email": "finance@championx.ca",
+    "received_date": "2024-02-22",
+    "subject": "Remittance - February Supply Agreement Final Payment",
+    "body_text": "Remittance Advice for wire transfer dated February 22, 2024.\n\nPayment Reference: CHAMPIONX-FEB-FINAL\n\nInvoice Details:\nINV-2630512: $89,450.00 (Mobile equipment leasing agreement)\nINV-2630513: $64,275.33 (Maintenance and support services)\n\nTotal Payment: $153,725.33\n\nThis payment completes our February obligations. Early payment discount of 1% applied per contract terms.\n\nPlease acknowledge receipt and confirm posting to our account.\n\nBest regards,\nChampionx Canada Finance Team",
+    "parsed_invoices": [
+      {"invoice_ref": "INV-2630512", "amount": 89450.00, "description": "Mobile equipment leasing agreement"},
+      {"invoice_ref": "INV-2630513", "amount": 64275.33, "description": "Maintenance and support services"}
+    ],
+    "total_amount": 153725.33
+  },
+  {
+    "email_id": "EMAIL-FROST-009",
+    "txn_id": "FROST-018",
+    "customer_id": "CUST-VAL-005",
+    "sender_name": "Valero Marketing Supply - Accounts Payable",
+    "sender_email": "ap@valero.com",
+    "received_date": "2024-02-21",
+    "subject": "Remittance Notice - Multi-Invoice Settlement",
+    "body_text": "Remittance Advice for payment dated February 21, 2024.\n\nPayment covers the following invoices:\n\nINV-2631750: $58,900.44 (Diesel fuel supply - bulk order)\nINV-2631751: $45,320.18 (Transportation and handling charges)\nINV-2631752: $22,150.00 (Premium additive package)\n\nTotal Payment: $126,370.62\n\nPayment method: Wire transfer\nDiscount: Net 30 terms - full payment\n\nInvoice due dates have been satisfied with this payment. Thank you for your continued partnership.\n\nValero Accounts Payable Department",
+    "parsed_invoices": [
+      {"invoice_ref": "INV-2631750", "amount": 58900.44, "description": "Diesel fuel supply - bulk order"},
+      {"invoice_ref": "INV-2631751", "amount": 45320.18, "description": "Transportation and handling charges"},
+      {"invoice_ref": "INV-2631752", "amount": 22150.00, "description": "Premium additive package"}
+    ],
+    "total_amount": 126370.62
+  },
+  {
+    "email_id": "EMAIL-FROST-010",
+    "txn_id": "FROST-032",
+    "customer_id": "CUST-HAL-012",
+    "sender_name": "Halliburton Company - Treasury Operations",
+    "sender_email": "treasury@halliburton.com",
+    "received_date": "2024-02-21",
+    "subject": "Payment Confirmation - Quarterly Service Agreement",
+    "body_text": "Wire transfer confirmation for February 21, 2024.\n\nQuarterly Service Agreement Settlement\n\nInvoices Included:\nINV-HAL-003: $31,542.15 (Well site services - January)\nINV-HAL-004: $28,645.20 (Pressure management equipment)\nINV-HAL-005: $19,812.65 (Field supervision and logistics)\n\nTotal Payment Due: $80,000.00\nEarly Payment Discount (1% net 7): -$800.00\nNet Amount Remitted: $79,200.00\n\nAccount Executive: John Martinez\nAccount Number: 7833-Q1-2024\n\nThis payment reflects full settlement of Q1 services. Please confirm posting.\n\nHalliburton Treasury Operations",
+    "parsed_invoices": [
+      {"invoice_ref": "INV-HAL-003", "amount": 31542.15, "description": "Well site services - January"},
+      {"invoice_ref": "INV-HAL-004", "amount": 28645.20, "description": "Pressure management equipment"},
+      {"invoice_ref": "INV-HAL-005", "amount": 19812.65, "description": "Field supervision and logistics"}
+    ],
+    "total_amount": 79200.00
+  },
+  {
+    "email_id": "EMAIL-FROST-011",
+    "txn_id": "FROST-014",
+    "customer_id": "CUST-EXX-001",
+    "sender_name": "ExxonMobil Corporation - Global Payments",
+    "sender_email": "globalpayments@exxon.com",
+    "received_date": "2024-02-19",
+    "subject": "Remittance - Lubricant Products Supply Contract",
+    "body_text": "Wire transfer dated February 19, 2024\n\nPayment Summary:\n\nInvoice: INV-2634101\nDescription: High-grade synthetic lubricant product shipment\nAmount: $425,650.00\n\nDiscount Applied: 1.5% net 10 discount = $6,384.75\nNet Amount Remitted: $419,265.25\n\nPayment reference in bank: 2634101\nContract Period: Q1-Q2 2024\n\nThis payment covers the primary lubricant supply contract for the current quarter.\n\nExxonMobil Global Payments Team",
+    "parsed_invoices": [
+      {"invoice_ref": "INV-2634101", "amount": 419265.25, "description": "High-grade synthetic lubricant product shipment", "discount_applied": "1.5% net 10 = $6,384.75"}
+    ],
+    "total_amount": 419265.25
+  },
+  {
+    "email_id": "EMAIL-FROST-012",
+    "txn_id": "FROST-025",
+    "customer_id": "CUST-SEC-007",
+    "sender_name": "Secure Specialty Services Corp - Finance",
+    "sender_email": "finance@securespecialty.com",
+    "received_date": "2024-02-20",
+    "subject": "Payment Confirmation - Facility Security Services",
+    "body_text": "Remittance Advice for wire transfer February 20, 2024\n\nPayment Schedule Settlement - February 2024\n\nInvoice Breakdown:\nINV-SEC-002: $24,570.50 (Perimeter security monitoring - monthly)\nINV-SEC-003: $18,945.75 (Access control system maintenance)\nINV-SEC-004: $12,784.25 (Security personnel allocation - 2 weeks)\n\nSubtotal: $56,300.50\nEarly Payment Discount (2% net 15): -$1,126.01\nTotal Remitted: $55,174.49\n\nPayment Method: Bank wire\nBusinessday: 2024-02-20\n\nAll invoices now satisfied. Thank you for your continued security partnership.\n\nSecure Specialty Finance Team",
+    "parsed_invoices": [
+      {"invoice_ref": "INV-SEC-002", "amount": 24570.50, "description": "Perimeter security monitoring - monthly"},
+      {"invoice_ref": "INV-SEC-003", "amount": 18945.75, "description": "Access control system maintenance"},
+      {"invoice_ref": "INV-SEC-004", "amount": 12784.25, "description": "Security personnel allocation - 2 weeks"}
+    ],
+    "total_amount": 55174.49
+  },
+  {
+    "email_id": "EMAIL-FROST-013",
+    "txn_id": "FROST-031",
+    "customer_id": "CUST-SHR-004",
+    "sender_name": "Shrieve Chemical Inc - Accounts Receivable",
+    "sender_email": "ar@shrievechemical.com",
+    "received_date": "2024-02-23",
+    "subject": "Remittance - Specialty Chemical Bulk Orders",
+    "body_text": "Remittance Advice - Payment dated February 23, 2024\n\nMulti-Shipment Chemical Supply Payment\n\nInvoice Line Items:\nINV-CHM-040301: $134,800.00 (Specialty polymers - bulk shipment A)\nINV-CHM-040302: $118,250.75 (Processing additives - batch B)\nINV-CHM-040303: $95,412.50 (Quality testing and certification)\n\nSubtotal: $348,463.25\nEarly Payment Discount: None applied (standard terms)\nTotal Amount Wired: $348,463.25\n\nShipment tracking and lot numbers cross-referenced in accounting system.\n\nBest regards,\nShrieve Chemical Accounts Receivable Team",
+    "parsed_invoices": [
+      {"invoice_ref": "INV-CHM-040301", "amount": 134800.00, "description": "Specialty polymers - bulk shipment A"},
+      {"invoice_ref": "INV-CHM-040302", "amount": 118250.75, "description": "Processing additives - batch B"},
+      {"invoice_ref": "INV-CHM-040303", "amount": 95412.50, "description": "Quality testing and certification"}
+    ],
+    "total_amount": 348463.25
+  },
+  {
+    "email_id": "EMAIL-FROST-014",
+    "txn_id": "FROST-012",
+    "customer_id": "CUST-MDS-008",
+    "sender_name": "Midstream Transportation Inc - AP Department",
+    "sender_email": "ap@midstreamtrans.com",
+    "received_date": "2024-02-21",
+    "subject": "Remittance Advice - February Transportation Services",
+    "body_text": "Remittance Advice for wire transfer dated February 21, 2024.\n\nInvoice Details:\nINV-MDS-003: $82,500.00 (Pipeline transportation services)\nINV-MDS-004: $80,751.75 (Base load haul charges)\n\nTotal Payment: $163,251.75\n\nPayment method: Wire transfer\nPayment terms: Net 30\n\nThank you for choosing Midstream Transportation.\n\nAP Department",
+    "parsed_invoices": [
+      {"invoice_ref": "INV-MDS-003", "amount": 82500.00, "description": "Pipeline transportation services"},
+      {"invoice_ref": "INV-MDS-004", "amount": 80751.75, "description": "Base load haul charges"}
+    ],
+    "total_amount": 163251.75
+  },
+  {
+    "email_id": "EMAIL-FROST-015",
+    "txn_id": "FROST-017",
+    "customer_id": "CUST-TAR-010",
+    "sender_name": "Tartan Oil Corporation - Finance",
+    "sender_email": "finance@tartanoil.com",
+    "received_date": "2024-02-22",
+    "subject": "Payment Notification - Oil Supply Agreement",
+    "body_text": "Wire transfer confirmation for February 22, 2024.\n\nPayment Summary:\nINV-TAR-003: $34,000.00 (Crude oil shipment batch A)\nINV-TAR-004: $33,946.93 (Transportation and handling)\n\nTotal Payment: $67,946.93\n\nPayment reference: TARTAN-FEB-22\nPayment method: Corporate wire\n\nTartan Oil Finance Team",
+    "parsed_invoices": [
+      {"invoice_ref": "INV-TAR-003", "amount": 34000.00, "description": "Crude oil shipment batch A"},
+      {"invoice_ref": "INV-TAR-004", "amount": 33946.93, "description": "Transportation and handling"}
+    ],
+    "total_amount": 67946.93
+  },
+  {
+    "email_id": "EMAIL-FROST-016",
+    "txn_id": "FROST-019",
+    "customer_id": "CUST-BCH-011",
+    "sender_name": "Bachman Service Group - Accounts Payable",
+    "sender_email": "ap@bachmanservices.com",
+    "received_date": "2024-02-23",
+    "subject": "Payment Confirmation - Maintenance Services Invoice",
+    "body_text": "Remittance Advice for wire transfer dated February 23, 2024.\n\nInvoices:\nINV-BCH-003: $31,268.81 (Facility maintenance Q1)\nINV-BCH-004: $31,268.80 (Equipment inspection and repairs)\n\nTotal Payment: $62,537.61\n\nPayment status: Completed\nAccount reference: BAC-001\n\nBachman Service Group",
+    "parsed_invoices": [
+      {"invoice_ref": "INV-BCH-003", "amount": 31268.81, "description": "Facility maintenance Q1"},
+      {"invoice_ref": "INV-BCH-004", "amount": 31268.80, "description": "Equipment inspection and repairs"}
+    ],
+    "total_amount": 62537.61
+  },
+  {
+    "email_id": "EMAIL-FROST-017",
+    "txn_id": "FROST-021",
+    "customer_id": "CUST-MAN-013",
+    "sender_name": "Mansfield Oil Corporation - Treasury",
+    "sender_email": "treasury@mansfield-oil.com",
+    "received_date": "2024-02-20",
+    "subject": "Payment Remittance - Supply Contract Settlement",
+    "body_text": "Wire transfer confirmation for February 20, 2024.\n\nPayment Details:\nINV-MAN-003: $18,900.00 (Oil refining products)\nINV-MAN-004: $18,807.23 (Quality assurance and delivery)\n\nTotal Payment: $37,707.23\n\nPayment ID: MANS-FEB-001\nPayment method: Wire transfer\n\nBest regards,\nMansfield Oil Treasury",
+    "parsed_invoices": [
+      {"invoice_ref": "INV-MAN-003", "amount": 18900.00, "description": "Oil refining products"},
+      {"invoice_ref": "INV-MAN-004", "amount": 18807.23, "description": "Quality assurance and delivery"}
+    ],
+    "total_amount": 37707.23
+  },
+  {
+    "email_id": "EMAIL-FROST-018",
+    "txn_id": "FROST-022",
+    "customer_id": "CUST-FER-016",
+    "sender_name": "Ferrell Gas Inc - Finance Operations",
+    "sender_email": "finance@ferrellgas.com",
+    "received_date": "2024-02-21",
+    "subject": "Remittance Advice - Propane Supply Agreement",
+    "body_text": "Remittance Advice for payment dated February 21, 2024.\n\nInvoice Details:\nINV-FER-003: $12,054.14 (Propane supply delivery LP6689 batch 1)\nINV-FER-004: $12,054.14 (Propane supply delivery LP6689 batch 2)\n\nTotal Payment: $24,108.28\n\nPayment method: Bank wire\nEarly payment discount: Not applicable\n\nFerrell Gas Finance",
+    "parsed_invoices": [
+      {"invoice_ref": "INV-FER-003", "amount": 12054.14, "description": "Propane supply delivery LP6689 batch 1"},
+      {"invoice_ref": "INV-FER-004", "amount": 12054.14, "description": "Propane supply delivery LP6689 batch 2"}
+    ],
+    "total_amount": 24108.28
+  },
+  {
+    "email_id": "EMAIL-FROST-019",
+    "txn_id": "FROST-024",
+    "customer_id": "CUST-ALT-018",
+    "sender_name": "Altivia Specialty Chemicals - AP",
+    "sender_email": "ap@altivia.com",
+    "received_date": "2024-02-22",
+    "subject": "Payment Notification - Specialty Chemicals Supply",
+    "body_text": "Wire transfer confirmation for February 22, 2024.\n\nPayment Summary:\nINV-ALT-002: $7,023.38 (Specialty chemical transaction follow-up)\n\nTotal Payment: $7,023.38\n\nPayment reference: ALTI-SP-001\nAccount number: 17842\nPayment type: Standard wire transfer\n\nAltivia Specialty Chemicals",
+    "parsed_invoices": [
+      {"invoice_ref": "INV-ALT-002", "amount": 7023.38, "description": "Specialty chemical transaction follow-up"}
+    ],
+    "total_amount": 7023.38
+  },
+  {
+    "email_id": "EMAIL-FROST-020",
+    "txn_id": "FROST-026",
+    "customer_id": "CUST-CHX-009",
+    "sender_name": "Championx LLC - Finance Department",
+    "sender_email": "finance@championx-llc.com",
+    "received_date": "2024-02-24",
+    "subject": "Remittance - Corporate Payment Settlement",
+    "body_text": "Remittance Advice for wire transfer dated February 24, 2024.\n\nPayment Details:\nINV-CHX-LLC-003: $38,200.00 (Corporate payment batch 3)\nINV-CHX-LLC-004: $38,093.59 (Corporate payment batch 4)\n\nTotal Payment: $76,293.59\n\nPayment ID: CHX-LLC-FEB-24\nPayment method: Corporate wire\n\nChampionx LLC Finance",
+    "parsed_invoices": [
+      {"invoice_ref": "INV-CHX-LLC-003", "amount": 38200.00, "description": "Corporate payment batch 3"},
+      {"invoice_ref": "INV-CHX-LLC-004", "amount": 38093.59, "description": "Corporate payment batch 4"}
+    ],
+    "total_amount": 76293.59
+  },
+  {
+    "email_id": "EMAIL-FROST-021",
+    "txn_id": "FROST-027",
+    "customer_id": "CUST-TRI-019",
+    "sender_name": "Tricon Industries Limited - Treasury",
+    "sender_email": "treasury@triconindustries.com",
+    "received_date": "2024-02-25",
+    "subject": "Payment Confirmation - International Supply Agreement",
+    "body_text": "Wire transfer confirmation for February 25, 2024.\n\nInternational Supply Settlement:\nINV-ROC-00069170: $1,769.04 (Record of change 00069170 international supply)\n\nTotal Payment: $1,769.04\n\nPayment method: International wire\nCurrency: USD\nReference: TRICON-FEB-25\n\nTricon Industries Limited",
+    "parsed_invoices": [
+      {"invoice_ref": "INV-ROC-00069170", "amount": 1769.04, "description": "Record of change 00069170 international supply"}
+    ],
+    "total_amount": 1769.04
+  },
+  {
+    "email_id": "EMAIL-FROST-022",
+    "txn_id": "FROST-028",
+    "customer_id": "CUST-ARC-022",
+    "sender_name": "Arcus Petroleum Inc - Accounts Payable",
+    "sender_email": "ap@arcuspetroleum.com",
+    "received_date": "2024-02-20",
+    "subject": "Remittance Advice - Q1 Oil Supply Contract",
+    "body_text": "Remittance Advice for wire transfer dated February 20, 2024.\n\nInvoice Details:\nINV-ARC-001: $156,750.00 (Crude oil supply agreement Q1)\nINV-ARC-002: $143,250.00 (Refined products shipment)\n\nSubtotal: $300,000.00\nEarly Payment Discount (1.5% net 10): -$4,500.00\nTotal Remitted: $295,500.00\n\nPayment method: Wire transfer\nPayment date: February 20, 2024\n\nArcus Petroleum Inc",
+    "parsed_invoices": [
+      {"invoice_ref": "INV-ARC-001", "amount": 156750.00, "description": "Crude oil supply agreement Q1"},
+      {"invoice_ref": "INV-ARC-002", "amount": 143250.00, "description": "Refined products shipment"}
+    ],
+    "total_amount": 295500.00
+  },
+  {
+    "email_id": "EMAIL-FROST-023",
+    "txn_id": "FROST-029",
+    "customer_id": "CUST-BCL-023",
+    "sender_name": "Belco Oil & Gas Corporation - Finance",
+    "sender_email": "finance@belcooil.com",
+    "received_date": "2024-02-21",
+    "subject": "Payment Confirmation - Supply Settlement",
+    "body_text": "Wire transfer confirmation for February 21, 2024.\n\nPayment Details:\nINV-BCL-001: $89,500.00 (Natural gas supply)\nINV-BCL-002: $78,400.00 (Processing and handling)\nINV-BCL-003: $42,850.00 (Storage and transportation)\n\nTotal Payment: $210,750.00\n\nPayment ID: BELCO-FEB-21\nPayment method: Corporate wire\n\nBelco Oil & Gas Finance",
+    "parsed_invoices": [
+      {"invoice_ref": "INV-BCL-001", "amount": 89500.00, "description": "Natural gas supply"},
+      {"invoice_ref": "INV-BCL-002", "amount": 78400.00, "description": "Processing and handling"},
+      {"invoice_ref": "INV-BCL-003", "amount": 42850.00, "description": "Storage and transportation"}
+    ],
+    "total_amount": 210750.00
+  },
+  {
+    "email_id": "EMAIL-FROST-024",
+    "txn_id": "FROST-030",
+    "customer_id": "CUST-CAE-024",
+    "sender_name": "Carter Energy Solutions - Accounts Payable",
+    "sender_email": "ap@carterenergy.com",
+    "received_date": "2024-02-22",
+    "subject": "Remittance - Energy Solutions Contract Payment",
+    "body_text": "Remittance Advice for payment dated February 22, 2024.\n\nEnergy Solutions Contract Settlement:\nINV-CAE-001: $95,200.00 (Energy efficiency consulting)\nINV-CAE-002: $71,800.00 (System integration services)\n\nTotal Payment: $167,000.00\n\nPayment method: Wire transfer\nPayment reference: CARTER-022\n\nCarter Energy Solutions",
+    "parsed_invoices": [
+      {"invoice_ref": "INV-CAE-001", "amount": 95200.00, "description": "Energy efficiency consulting"},
+      {"invoice_ref": "INV-CAE-002", "amount": 71800.00, "description": "System integration services"}
+    ],
+    "total_amount": 167000.00
+  },
+  {
+    "email_id": "EMAIL-FROST-025",
+    "txn_id": "FROST-033",
+    "customer_id": "CUST-DTE-025",
+    "sender_name": "Delta Engineering Services - Finance",
+    "sender_email": "finance@deltaeng.com",
+    "received_date": "2024-02-23",
+    "subject": "Payment Confirmation - Engineering Services",
+    "body_text": "Wire transfer confirmation for February 23, 2024.\n\nEngineering Services Payment:\nINV-DTE-001: $64,500.00 (Field engineering support)\nINV-DTE-002: $52,300.00 (Design and implementation)\nINV-DTE-003: $28,720.00 (Project management)\n\nSubtotal: $145,520.00\nEarly Payment Discount (2% net 15): -$2,910.40\nTotal Remitted: $142,609.60\n\nPayment method: Wire transfer\nAccount: Delta Engineering - Main\n\nDelta Engineering Services",
+    "parsed_invoices": [
+      {"invoice_ref": "INV-DTE-001", "amount": 64500.00, "description": "Field engineering support"},
+      {"invoice_ref": "INV-DTE-002", "amount": 52300.00, "description": "Design and implementation"},
+      {"invoice_ref": "INV-DTE-003", "amount": 28720.00, "description": "Project management"}
+    ],
+    "total_amount": 142609.60
+  },
+  {
+    "email_id": "EMAIL-FROST-026",
+    "txn_id": "FROST-034",
+    "customer_id": "CUST-EGX-026",
+    "sender_name": "EG Exploration Limited - Treasury",
+    "sender_email": "treasury@egexploration.com",
+    "received_date": "2024-02-24",
+    "subject": "Remittance Advice - Exploration Agreement",
+    "body_text": "Remittance Advice for wire transfer dated February 24, 2024.\n\nExploration Contract Settlement:\nINV-EGX-001: $112,450.00 (Seismic survey services)\nINV-EGX-002: $88,350.00 (Data analysis and reporting)\n\nTotal Payment: $200,800.00\n\nPayment ID: EGX-FEB-24\nPayment method: Wire transfer\nPayment status: Completed\n\nEG Exploration Limited",
+    "parsed_invoices": [
+      {"invoice_ref": "INV-EGX-001", "amount": 112450.00, "description": "Seismic survey services"},
+      {"invoice_ref": "INV-EGX-002", "amount": 88350.00, "description": "Data analysis and reporting"}
+    ],
+    "total_amount": 200800.00
+  },
+  {
+    "email_id": "EMAIL-FROST-027",
+    "txn_id": "FROST-035",
+    "customer_id": "CUST-FOX-027",
+    "sender_name": "Fox Refining Company - Accounts Payable",
+    "sender_email": "ap@foxrefining.com",
+    "received_date": "2024-02-25",
+    "subject": "Payment Notification - Refining Services",
+    "body_text": "Wire transfer confirmation for February 25, 2024.\n\nRefining Services Payment:\nINV-FOX-001: $275,600.00 (Crude oil refining services)\nINV-FOX-002: $124,400.00 (Product transportation)\n\nTotal Payment: $400,000.00\n\nPayment reference: FOX-FEB-25\nPayment method: Corporate wire\nDiscount: Net 30 terms\n\nFox Refining Company",
+    "parsed_invoices": [
+      {"invoice_ref": "INV-FOX-001", "amount": 275600.00, "description": "Crude oil refining services"},
+      {"invoice_ref": "INV-FOX-002", "amount": 124400.00, "description": "Product transportation"}
+    ],
+    "total_amount": 400000.00
+  },
+  {
+    "email_id": "EMAIL-FROST-028",
+    "txn_id": "FROST-036",
+    "customer_id": "CUST-GEO-028",
+    "sender_name": "Geodynamics International - Finance",
+    "sender_email": "finance@geodynamics.com",
+    "received_date": "2024-02-20",
+    "subject": "Remittance - Geological Services Contract",
+    "body_text": "Remittance Advice for payment dated February 20, 2024.\n\nGeological Services Settlement:\nINV-GEO-001: $156,800.00 (Subsurface mapping)\nINV-GEO-002: $89,200.00 (Pressure analysis)\n\nTotal Payment: $246,000.00\nEarly Payment Discount (1% net 7): -$2,460.00\nNet Amount: $243,540.00\n\nPayment method: Wire transfer\n\nGeodynamics International",
+    "parsed_invoices": [
+      {"invoice_ref": "INV-GEO-001", "amount": 156800.00, "description": "Subsurface mapping"},
+      {"invoice_ref": "INV-GEO-002", "amount": 89200.00, "description": "Pressure analysis"}
+    ],
+    "total_amount": 243540.00
+  },
+  {
+    "email_id": "EMAIL-FROST-029",
+    "txn_id": "FROST-037",
+    "customer_id": "CUST-HUB-029",
+    "sender_name": "Hub Pipeline Systems - AP Department",
+    "sender_email": "ap@hubpipeline.com",
+    "received_date": "2024-02-21",
+    "subject": "Payment Confirmation - Pipeline Infrastructure",
+    "body_text": "Wire transfer confirmation for February 21, 2024.\n\nPipeline Infrastructure Payment:\nINV-HUB-001: $185,500.00 (Pipeline maintenance and repairs)\nINV-HUB-002: $164,500.00 (Valve and equipment replacement)\nINV-HUB-003: $98,750.00 (Inspection and certification)\n\nTotal Payment: $448,750.00\n\nPayment ID: HUB-FEB-21\nPayment method: Wire transfer\nPayment status: Completed\n\nHub Pipeline Systems",
+    "parsed_invoices": [
+      {"invoice_ref": "INV-HUB-001", "amount": 185500.00, "description": "Pipeline maintenance and repairs"},
+      {"invoice_ref": "INV-HUB-002", "amount": 164500.00, "description": "Valve and equipment replacement"},
+      {"invoice_ref": "INV-HUB-003", "amount": 98750.00, "description": "Inspection and certification"}
+    ],
+    "total_amount": 448750.00
+  },
+  {
+    "email_id": "EMAIL-FROST-030",
+    "txn_id": "FROST-038",
+    "customer_id": "CUST-IIM-030",
+    "sender_name": "iGenius Industrial Materials - Finance",
+    "sender_email": "finance@igeniusmaterials.com",
+    "received_date": "2024-02-22",
+    "subject": "Remittance Advice - Industrial Materials Supply",
+    "body_text": "Remittance Advice for wire transfer dated February 22, 2024.\n\nIndustrial Materials Supply Settlement:\nINV-IIM-001: $234,600.00 (Specialty steel products)\nINV-IIM-002: $145,400.00 (Composite materials)\n\nTotal Payment: $380,000.00\n\nPayment reference: IG-FEB-22\nPayment method: Wire transfer\nPayment terms: Net 30\n\niGenius Industrial Materials",
+    "parsed_invoices": [
+      {"invoice_ref": "INV-IIM-001", "amount": 234600.00, "description": "Specialty steel products"},
+      {"invoice_ref": "INV-IIM-002", "amount": 145400.00, "description": "Composite materials"}
+    ],
+    "total_amount": 380000.00
+  },
+  {
+    "email_id": "EMAIL-FROST-031",
+    "txn_id": "FROST-039",
+    "customer_id": "CUST-JON-031",
+    "sender_name": "Jonson & Associates Ltd - Accounts Payable",
+    "sender_email": "ap@jonsonassociates.com",
+    "received_date": "2024-02-23",
+    "subject": "Payment Confirmation - Professional Services",
+    "body_text": "Wire transfer confirmation for February 23, 2024.\n\nProfessional Services Payment:\nINV-JON-001: $78,900.00 (Consulting services - Q1)\nINV-JON-002: $56,800.00 (Technical support)\n\nTotal Payment: $135,700.00\n\nPayment ID: JON-FEB-23\nPayment method: Corporate wire\nAccount reference: JA-2024-001\n\nJonson & Associates Ltd",
+    "parsed_invoices": [
+      {"invoice_ref": "INV-JON-001", "amount": 78900.00, "description": "Consulting services - Q1"},
+      {"invoice_ref": "INV-JON-002", "amount": 56800.00, "description": "Technical support"}
+    ],
+    "total_amount": 135700.00
+  },
+  {
+    "email_id": "EMAIL-FROST-032",
+    "txn_id": "FROST-040",
+    "customer_id": "CUST-KES-032",
+    "sender_name": "Kesper Chemicals Corporation - Treasury",
+    "sender_email": "treasury@kesperchemicals.com",
+    "received_date": "2024-02-24",
+    "subject": "Remittance - Chemical Supply Agreement",
+    "body_text": "Remittance Advice for payment dated February 24, 2024.\n\nChemical Supply Settlement:\nINV-KES-001: $189,750.00 (Industrial solvents - bulk order)\nINV-KES-002: $156,250.00 (Catalysts and additives)\n\nSubtotal: $346,000.00\nEarly Payment Discount (2% net 10): -$6,920.00\nTotal Remitted: $339,080.00\n\nPayment method: Wire transfer\nPayment reference: KES-FEB-24\n\nKesper Chemicals Corporation",
+    "parsed_invoices": [
+      {"invoice_ref": "INV-KES-001", "amount": 189750.00, "description": "Industrial solvents - bulk order"},
+      {"invoice_ref": "INV-KES-002", "amount": 156250.00, "description": "Catalysts and additives"}
+    ],
+    "total_amount": 339080.00
+  },
+  {
+    "email_id": "EMAIL-FROST-033",
+    "txn_id": "FROST-041",
+    "customer_id": "CUST-LTD-033",
+    "sender_name": "Lexington Trading Division - Finance",
+    "sender_email": "finance@lexingtontrading.com",
+    "received_date": "2024-02-25",
+    "subject": "Payment Notification - Trading Settlement",
+    "body_text": "Wire transfer confirmation for February 25, 2024.\n\nTrading Settlement Payment:\nINV-LTD-001: $267,500.00 (Commodity futures hedging)\nINV-LTD-002: $122,500.00 (Physical delivery fees)\n\nTotal Payment: $390,000.00\n\nPayment ID: LEX-FEB-25\nPayment method: Wire transfer\nSettlement date: February 25, 2024\n\nLexington Trading Division",
+    "parsed_invoices": [
+      {"invoice_ref": "INV-LTD-001", "amount": 267500.00, "description": "Commodity futures hedging"},
+      {"invoice_ref": "INV-LTD-002", "amount": 122500.00, "description": "Physical delivery fees"}
+    ],
+    "total_amount": 390000.00
+  }
+]
