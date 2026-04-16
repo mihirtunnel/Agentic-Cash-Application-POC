@@ -1,0 +1,59 @@
+[
+  {
+    "email_id": "EMAIL-001",
+    "customer_id": "CUST-0091",
+    "sender_name": "AP Department - Acme Corp",
+    "sender_email": "ap@acmecorp.com",
+    "received_date": "2024-04-09",
+    "subject": "Payment notification - April batch",
+    "body_text": "Please find attached remittance for wire transfer April 10. INV-312: $25,000.00. INV-287: $22,230.00 (2% early pay discount applied). Total: $47,230.00",
+    "parsed_invoices": [
+      {"invoice_ref": "INV-312", "amount": 25000.00},
+      {"invoice_ref": "INV-287", "amount": 22230.00, "note": "2% early pay discount applied"}
+    ],
+    "total_amount": 47230.00
+  },
+  {
+    "email_id": "EMAIL-002",
+    "customer_id": "CUST-0155",
+    "sender_name": "Accounts Payable - Delta Fuels",
+    "sender_email": "payments@deltafuels.com",
+    "received_date": "2024-04-09",
+    "subject": "Remittance Advice - April Week 1",
+    "body_text": "Payment for the following invoices: INV-600 $12,000, INV-601 $8,500, INV-602 $9,200. Total payment: $29,106.00 (2% discount taken on all).",
+    "parsed_invoices": [
+      {"invoice_ref": "INV-600", "amount": 11760.00, "note": "2% discount"},
+      {"invoice_ref": "INV-601", "amount": 8330.00, "note": "2% discount"},
+      {"invoice_ref": "INV-602", "amount": 9016.00, "note": "2% discount"}
+    ],
+    "total_amount": 29106.00
+  },
+  {
+    "email_id": "EMAIL-003",
+    "customer_id": "CUST-0310",
+    "sender_name": "Treasury - Horizon Petroleum",
+    "sender_email": "treasury@horizonpetro.com",
+    "received_date": "2024-04-08",
+    "subject": "Full balance payment",
+    "body_text": "Clearing all outstanding invoices. INV-800, INV-801, INV-802. Total: $16,154.00 after 1.5% early payment discount.",
+    "parsed_invoices": [
+      {"invoice_ref": "INV-800", "amount": 5122.00, "note": "1.5% discount"},
+      {"invoice_ref": "INV-801", "amount": 7683.00, "note": "1.5% discount"},
+      {"invoice_ref": "INV-802", "amount": 3349.00, "note": "1.5% discount"}
+    ],
+    "total_amount": 16154.00
+  },
+  {
+    "email_id": "EMAIL-004",
+    "customer_id": "CUST-0378",
+    "sender_name": "Finance - Inland Refining",
+    "sender_email": "finance@inlandrefining.com",
+    "received_date": "2024-04-10",
+    "subject": "Wire transfer notification",
+    "body_text": "Wire for INV-850 $92,500. Short-paying $2,500 due to damaged goods on pallet 14. Net payment: $90,000.",
+    "parsed_invoices": [
+      {"invoice_ref": "INV-850", "amount": 90000.00, "note": "short-pay: $2,500 damaged goods"}
+    ],
+    "total_amount": 90000.00
+  }
+]

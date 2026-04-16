@@ -1,0 +1,21 @@
+[
+  {
+    "txn_id": "FROST-002",
+    "amount": 814172.55,
+    "counterparty_name": "",
+    "scenario": "single invoice LC settlement via correspondent bank — no remittance email — LC reference in bank memo only — requires wire originator lookup (SANMAN TRADE IMPEX LTD) to find actual customer",
+    "agent_result": {
+      "status": "unresolved",
+      "confidence": 0.2,
+      "unmatched_amount": 814172.55,
+      "reasoning": "Because the remittance indicates an external bank (SBI) and an external applicant (SANMAN TRADE IMPEX LTD), this must be treated as a customer payment. However, the provided data does not include an invoice number, and the only strong reference is an LC number/reference that requires a reference-to-invoice lookup or invoice matching by amount. With insufficient evidence from the bank text alone, the payer and invoice coverage cannot be confirmed.",
+      "investigation_summary": "Internal transfer check: SENDER is STATE BANK OF INDIA (external) and remittance includes external applicant SANMAN TRADE IMPEX LTD, so this is a customer payment, not an internal Tauber transfer. Customer matching: remittance text contains LC NUMBER.0607025IM0B00528 and reference SDK25TS0002, but no direct invoice number or customer name that can be reliably mapped to an internal invoice without reference lookup. Counterparty text is blank, and no amount-based or name-based matching tools were executed due to missing searchable identifiers (no customer name field besides applicant, and no invoice reference to look up)."
+    },
+    "routing_decision": "manual_investigation",
+    "tool_call_count": 1,
+    "total_input_tokens": 1826,
+    "total_output_tokens": 257,
+    "total_cost_usd": 0.007134999999999999,
+    "matches_expected": false
+  }
+]
