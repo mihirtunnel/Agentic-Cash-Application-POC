@@ -1,0 +1,142 @@
+[
+  {
+    "customer_id": "CUST-0091",
+    "name": "Acme Corp Ltd",
+    "payment_method": "wire",
+    "typical_pattern": "pays 2-3 invoices together",
+    "discount_policy": "2% if paid within 10 days"
+  },
+  {
+    "customer_id": "CUST-0445",
+    "name": "Acme Corporation",
+    "payment_method": "ach",
+    "typical_pattern": "pays single invoices",
+    "discount_policy": "none"
+  },
+  {
+    "customer_id": "CUST-0201",
+    "name": "Acme Corp International",
+    "payment_method": "wire",
+    "typical_pattern": "no payments in last 90 days",
+    "discount_policy": "1% net 15"
+  },
+  {
+    "customer_id": "CUST-0102",
+    "name": "Baker Industries LLC",
+    "payment_method": "wire",
+    "typical_pattern": "pays monthly, single invoice",
+    "discount_policy": "none"
+  },
+  {
+    "customer_id": "CUST-0155",
+    "name": "Delta Fuels Inc",
+    "payment_method": "ach",
+    "typical_pattern": "pays weekly, multiple invoices",
+    "discount_policy": "2% net 10"
+  },
+  {
+    "customer_id": "CUST-0233",
+    "name": "Gulf Coast Energy Partners",
+    "payment_method": "wire",
+    "typical_pattern": "pays 1-2 invoices together",
+    "discount_policy": "none"
+  },
+  {
+    "customer_id": "CUST-0310",
+    "name": "Horizon Petroleum Co",
+    "payment_method": "ach",
+    "typical_pattern": "pays all open invoices at once",
+    "discount_policy": "1.5% net 10"
+  },
+  {
+    "customer_id": "CUST-0378",
+    "name": "Inland Refining Group",
+    "payment_method": "wire",
+    "typical_pattern": "pays single large invoices",
+    "discount_policy": "none"
+  },
+  {
+    "customer_id": "CUST-0412",
+    "name": "Jefferson Energy Supply",
+    "payment_method": "ach",
+    "typical_pattern": "pays bi-weekly",
+    "discount_policy": "2% net 10"
+  },
+  {
+    "customer_id": "CUST-0489",
+    "name": "Keystone Oil & Gas",
+    "payment_method": "wire",
+    "typical_pattern": "pays monthly batch",
+    "discount_policy": "none"
+  },
+  {
+    "customer_id": "CUST-0523",
+    "name": "Lone Star Distributors",
+    "payment_method": "ach",
+    "typical_pattern": "pays single invoices promptly",
+    "discount_policy": "1% net 7"
+  },
+  {
+    "customer_id": "CUST-0567",
+    "name": "Marathon Fuel Services",
+    "payment_method": "wire",
+    "typical_pattern": "pays 2-4 invoices monthly",
+    "discount_policy": "none"
+  },
+  {
+    "customer_id": "CUST-0601",
+    "name": "Northern Pipeline Corp",
+    "payment_method": "wire",
+    "typical_pattern": "irregular payment schedule",
+    "discount_policy": "2% net 15"
+  },
+  {
+    "customer_id": "CUST-0644",
+    "name": "Oceanic Trading LLC",
+    "payment_method": "ach",
+    "typical_pattern": "pays weekly",
+    "discount_policy": "none"
+  },
+  {
+    "customer_id": "CUST-0702",
+    "name": "Pacific Crude Suppliers",
+    "payment_method": "wire",
+    "typical_pattern": "pays on due date",
+    "discount_policy": "none"
+  },
+  {
+    "customer_id": "CUST-0755",
+    "name": "Rio Grande Energy",
+    "payment_method": "ach",
+    "typical_pattern": "pays monthly",
+    "discount_policy": "1.5% net 10"
+  },
+  {
+    "customer_id": "CUST-0801",
+    "name": "Summit Resources Inc",
+    "payment_method": "wire",
+    "typical_pattern": "pays quarterly",
+    "discount_policy": "none"
+  },
+  {
+    "customer_id": "CUST-0856",
+    "name": "Tidewater Logistics",
+    "payment_method": "ach",
+    "typical_pattern": "pays bi-weekly, multiple invoices",
+    "discount_policy": "2% net 10"
+  },
+  {
+    "customer_id": "CUST-0901",
+    "name": "United Fuel Transport",
+    "payment_method": "wire",
+    "typical_pattern": "pays single large invoices",
+    "discount_policy": "none"
+  },
+  {
+    "customer_id": "CUST-0950",
+    "name": "Valero Distribution Group",
+    "payment_method": "wire",
+    "typical_pattern": "pays monthly batch of 3-5 invoices",
+    "discount_policy": "1% net 10"
+  }
+]

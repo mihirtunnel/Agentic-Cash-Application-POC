@@ -1,0 +1,117 @@
+[
+  {
+    "txn_id": "TXN-001",
+    "pipeline_path": "dry_run",
+    "pre_filter": {
+      "candidates_found": 4,
+      "top_candidate": "CUST-0091",
+      "top_score": 1.2105263157894737
+    },
+    "routing_decision": "dry_run",
+    "total_cost_usd": 0,
+    "matches_expected": false
+  },
+  {
+    "txn_id": "TXN-002",
+    "pipeline_path": "short_circuit",
+    "short_circuit": {
+      "type": "account_and_amount",
+      "customer_id": "CUST-0102",
+      "invoice_id": "INV-520"
+    },
+    "routing_decision": "auto_post",
+    "total_cost_usd": 0,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "TXN-003",
+    "pipeline_path": "short_circuit",
+    "short_circuit": {
+      "type": "invoice_reference",
+      "customer_id": "CUST-0523",
+      "invoice_id": "INV-1010"
+    },
+    "routing_decision": "auto_post",
+    "total_cost_usd": 0,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "TXN-004",
+    "pipeline_path": "skip_call1",
+    "short_circuit": {
+      "type": "single_exact_match",
+      "customer_id": "CUST-0378",
+      "invoice_id": "INV-850"
+    },
+    "routing_decision": "dry_run",
+    "total_cost_usd": 0,
+    "matches_expected": false
+  },
+  {
+    "txn_id": "TXN-005",
+    "pipeline_path": "dry_run",
+    "pre_filter": {
+      "candidates_found": 4,
+      "top_candidate": "CUST-0091",
+      "top_score": 1.2222222222222223
+    },
+    "routing_decision": "dry_run",
+    "total_cost_usd": 0,
+    "matches_expected": false
+  },
+  {
+    "txn_id": "TXN-006",
+    "pipeline_path": "no_candidates",
+    "routing_decision": "manual_investigation",
+    "total_cost_usd": 0,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "TXN-007",
+    "pipeline_path": "dry_run",
+    "pre_filter": {
+      "candidates_found": 3,
+      "top_candidate": "CUST-0310",
+      "top_score": 1
+    },
+    "routing_decision": "dry_run",
+    "total_cost_usd": 0,
+    "matches_expected": false
+  },
+  {
+    "txn_id": "TXN-008",
+    "pipeline_path": "dry_run",
+    "pre_filter": {
+      "candidates_found": 2,
+      "top_candidate": "CUST-0378",
+      "top_score": 1.1
+    },
+    "routing_decision": "dry_run",
+    "total_cost_usd": 0,
+    "matches_expected": false
+  },
+  {
+    "txn_id": "TXN-009",
+    "pipeline_path": "dry_run",
+    "pre_filter": {
+      "candidates_found": 1,
+      "top_candidate": "CUST-0155",
+      "top_score": 1.4000000000000001
+    },
+    "routing_decision": "dry_run",
+    "total_cost_usd": 0,
+    "matches_expected": false
+  },
+  {
+    "txn_id": "TXN-010",
+    "pipeline_path": "dry_run",
+    "pre_filter": {
+      "candidates_found": 2,
+      "top_candidate": "CUST-0702",
+      "top_score": 0.980952380952381
+    },
+    "routing_decision": "dry_run",
+    "total_cost_usd": 0,
+    "matches_expected": false
+  }
+]

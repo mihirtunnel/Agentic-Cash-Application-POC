@@ -1,0 +1,102 @@
+[
+  {
+    "customer_id": "CUST-0091",
+    "aliases": ["Acme Corp", "ACME CORP LTD", "Acme Corp Ltd", "ACME"],
+    "bank_accounts": ["ACC-8821", "ACC-8822"]
+  },
+  {
+    "customer_id": "CUST-0445",
+    "aliases": ["Acme Corporation", "ACME CORPORATION", "ACME CORP INC"],
+    "bank_accounts": ["ACC-4401"]
+  },
+  {
+    "customer_id": "CUST-0201",
+    "aliases": ["Acme Corp International", "ACME INTL", "ACME CORP INTL"],
+    "bank_accounts": ["ACC-2010"]
+  },
+  {
+    "customer_id": "CUST-0102",
+    "aliases": ["Baker Industries", "BAKER IND", "BAKER INDUSTRIES LLC"],
+    "bank_accounts": ["ACC-1020"]
+  },
+  {
+    "customer_id": "CUST-0155",
+    "aliases": ["Delta Fuels", "DELTA FUELS INC", "DELTA FUEL"],
+    "bank_accounts": ["ACC-1550", "ACC-1551"]
+  },
+  {
+    "customer_id": "CUST-0233",
+    "aliases": ["Gulf Coast Energy", "GULF COAST ENERGY PARTNERS", "GCE PARTNERS"],
+    "bank_accounts": ["ACC-2330"]
+  },
+  {
+    "customer_id": "CUST-0310",
+    "aliases": ["Horizon Petroleum", "HORIZON PETRO", "HORIZON PET CO"],
+    "bank_accounts": ["ACC-3100"]
+  },
+  {
+    "customer_id": "CUST-0378",
+    "aliases": ["Inland Refining", "INLAND REFINING GROUP", "INLAND REF GRP"],
+    "bank_accounts": ["ACC-3780"]
+  },
+  {
+    "customer_id": "CUST-0412",
+    "aliases": ["Jefferson Energy", "JEFFERSON ENERGY SUPPLY", "JES"],
+    "bank_accounts": ["ACC-4120"]
+  },
+  {
+    "customer_id": "CUST-0489",
+    "aliases": ["Keystone Oil", "KEYSTONE OIL & GAS", "KEYSTONE O&G"],
+    "bank_accounts": ["ACC-4890"]
+  },
+  {
+    "customer_id": "CUST-0523",
+    "aliases": ["Lone Star Dist", "LONE STAR DISTRIBUTORS", "LONESTAR DIST"],
+    "bank_accounts": ["ACC-5230"]
+  },
+  {
+    "customer_id": "CUST-0567",
+    "aliases": ["Marathon Fuel", "MARATHON FUEL SERVICES", "MARATHON FUEL SVC"],
+    "bank_accounts": ["ACC-5670"]
+  },
+  {
+    "customer_id": "CUST-0601",
+    "aliases": ["Northern Pipeline", "NORTHERN PIPELINE CORP", "NPC"],
+    "bank_accounts": ["ACC-6010"]
+  },
+  {
+    "customer_id": "CUST-0644",
+    "aliases": ["Oceanic Trading", "OCEANIC TRADING LLC", "OCEANIC TRDG"],
+    "bank_accounts": ["ACC-6440"]
+  },
+  {
+    "customer_id": "CUST-0702",
+    "aliases": ["Pacific Crude", "PACIFIC CRUDE SUPPLIERS", "PAC CRUDE"],
+    "bank_accounts": ["ACC-7020"]
+  },
+  {
+    "customer_id": "CUST-0755",
+    "aliases": ["Rio Grande Energy", "RIO GRANDE ENERGY", "RGE"],
+    "bank_accounts": ["ACC-7550"]
+  },
+  {
+    "customer_id": "CUST-0801",
+    "aliases": ["Summit Resources", "SUMMIT RESOURCES INC", "SUMMIT RES"],
+    "bank_accounts": ["ACC-8010"]
+  },
+  {
+    "customer_id": "CUST-0856",
+    "aliases": ["Tidewater Logistics", "TIDEWATER LOGISTICS", "TIDEWATER LOG"],
+    "bank_accounts": ["ACC-8560"]
+  },
+  {
+    "customer_id": "CUST-0901",
+    "aliases": ["United Fuel", "UNITED FUEL TRANSPORT", "UFT"],
+    "bank_accounts": ["ACC-9010"]
+  },
+  {
+    "customer_id": "CUST-0950",
+    "aliases": ["Valero Distribution", "VALERO DISTRIBUTION GROUP", "VALERO DIST GRP"],
+    "bank_accounts": ["ACC-9500"]
+  }
+]
