@@ -1,0 +1,745 @@
+[
+  {
+    "txn_id": "FROST-001",
+    "amount": 1186000,
+    "counterparty_name": "",
+    "scenario": "single invoice, full payment — no remittance email — invoice reference in bank memo only (2633049) — requires name match to customer EXXONMOBIL + reference lookup",
+    "agent_result": {
+      "status": "unresolved",
+      "confidence": 0,
+      "reasoning": "Planning phase error: planner returned empty sub-agent list",
+      "investigation_summary": "OrchestratorV2 failed during planning phase."
+    },
+    "routing_decision": "manual_investigation",
+    "tool_call_count": 0,
+    "total_input_tokens": 1963,
+    "total_output_tokens": 704,
+    "total_cost_usd": 0.0043864,
+    "matches_expected": false
+  },
+  {
+    "txn_id": "FROST-002",
+    "amount": 814172.55,
+    "counterparty_name": "",
+    "scenario": "single invoice LC settlement via correspondent bank — no remittance email — LC reference in bank memo only — requires wire originator lookup (SANMAN TRADE IMPEX LTD) to find actual customer",
+    "agent_result": {
+      "status": "unresolved",
+      "confidence": 0,
+      "reasoning": "Planning phase error: planner returned empty sub-agent list",
+      "investigation_summary": "OrchestratorV2 failed during planning phase."
+    },
+    "routing_decision": "manual_investigation",
+    "tool_call_count": 0,
+    "total_input_tokens": 1993,
+    "total_output_tokens": 1091,
+    "total_cost_usd": 0.0059584,
+    "matches_expected": false
+  },
+  {
+    "txn_id": "FROST-003",
+    "amount": 295857.44,
+    "counterparty_name": "",
+    "scenario": "multiple invoices (5 refs: 2630439, 2630441, 2630626, 2630623, 2630120) — full payment — WITH remittance email likely — clear customer from wire sender (CHAMPIONX CANADA ULC) — high confidence match candidate",
+    "agent_result": {
+      "status": "unresolved",
+      "confidence": 0,
+      "reasoning": "Planning phase error: planner returned empty sub-agent list",
+      "investigation_summary": "OrchestratorV2 failed during planning phase."
+    },
+    "routing_decision": "manual_investigation",
+    "tool_call_count": 0,
+    "total_input_tokens": 1981,
+    "total_output_tokens": 1189,
+    "total_cost_usd": 0.0063408,
+    "matches_expected": false
+  },
+  {
+    "txn_id": "FROST-004",
+    "amount": 221190,
+    "counterparty_name": "",
+    "scenario": "INTERNAL TAUBER TRANSFER — no remittance email — no invoice detail — exclude from AR matching (same company group)",
+    "agent_result": {
+      "status": "internal_transfer",
+      "confidence": 1,
+      "reasoning": "Remittance information explicitly identifies both sender and beneficiary as Tauber entities: SENDER=Tauber Oil Company, BENE=Tauber Petrochemical Canada ULC. This is a wire transfer between internal corporate subsidiaries, not a customer payment. All three analysts unanimously confirmed no external customer match exists. The reference number does not correlate to any external customer invoice.",
+      "investigation_summary": "Transaction FROST-004 ($221,190.00 wire on 2024-02-20) is an internal transfer from Tauber Oil Company to Tauber Petrochemical Canada ULC. Remittance documentation explicitly identifies both parties as Tauber entities. No external customer involvement. All analysts confirmed internal classification. This payment should not be matched to any external customer account."
+    },
+    "routing_decision": "manual_investigation",
+    "tool_call_count": 0,
+    "total_input_tokens": 6388,
+    "total_output_tokens": 2000,
+    "total_cost_usd": 0.013110400000000001,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "FROST-005",
+    "amount": 211029.81,
+    "counterparty_name": "",
+    "scenario": "single or multiple invoices unknown — likely full batch payment — no remittance email — EDI payment batch with generic memo only — requires name match to customer Shrieve Chemical",
+    "agent_result": {
+      "status": "unresolved",
+      "confidence": 0,
+      "reasoning": "Planning phase error: planner returned empty sub-agent list",
+      "investigation_summary": "OrchestratorV2 failed during planning phase."
+    },
+    "routing_decision": "manual_investigation",
+    "tool_call_count": 0,
+    "total_input_tokens": 1927,
+    "total_output_tokens": 1038,
+    "total_cost_usd": 0.0056936,
+    "matches_expected": false
+  },
+  {
+    "txn_id": "FROST-006",
+    "amount": 844390.71,
+    "counterparty_name": "",
+    "scenario": "multiple invoices (2 refs: 2632861, 2632914) — full payment via correspondent bank — no remittance email — IVPT invoice refs in bank memo — requires correspondence bank and originator lookup",
+    "agent_result": {
+      "status": "unresolved",
+      "confidence": 0,
+      "reasoning": "Planning phase error: planner returned empty sub-agent list",
+      "investigation_summary": "OrchestratorV2 failed during planning phase."
+    },
+    "routing_decision": "manual_investigation",
+    "tool_call_count": 0,
+    "total_input_tokens": 1974,
+    "total_output_tokens": 1082,
+    "total_cost_usd": 0.0059072000000000005,
+    "matches_expected": false
+  },
+  {
+    "txn_id": "FROST-007",
+    "amount": 104098.92,
+    "counterparty_name": "",
+    "scenario": "single invoice (ref: 2633239) — full payment — no remittance email — clear customer from wire sender (VALERO MKTG SUP) — reference in bank memo allows direct lookup",
+    "agent_result": {
+      "status": "unresolved",
+      "confidence": 0,
+      "reasoning": "Planning phase error: planner returned empty sub-agent list",
+      "investigation_summary": "OrchestratorV2 failed during planning phase."
+    },
+    "routing_decision": "manual_investigation",
+    "tool_call_count": 0,
+    "total_input_tokens": 1958,
+    "total_output_tokens": 746,
+    "total_cost_usd": 0.0045504000000000005,
+    "matches_expected": false
+  },
+  {
+    "txn_id": "FROST-008",
+    "amount": 5500000,
+    "counterparty_name": "",
+    "scenario": "INTERNAL TAUBER TRANSFER (very large) — no remittance email — no invoice detail — exclude from AR matching (working capital movement)",
+    "agent_result": {
+      "status": "internal_transfer",
+      "confidence": 1,
+      "reasoning": "Transaction FROST-008 shows unmistakable internal transfer markers: remittance info explicitly states SENDER=TAUBER OIL COMPANY and BENE=TAUBER OIL COMPANY. Both analysts (AmountAnalyst and EmailAnalyst) found no external customer matches and confirmed this is an internal transfer. Wire routing language and zero external counterparty text further confirm this is an inter-company movement, not a customer payment.",
+      "investigation_summary": "FROST-008 ($5,500,000.00 on 2024-02-20) is an internal transfer between Tauber Oil Company accounts. Remittance info shows sender and beneficiary are both Tauber entities. No external customer found despite comprehensive amount and email searches. This is a ZBA or inter-company transfer, not a customer cash application."
+    },
+    "routing_decision": "manual_investigation",
+    "tool_call_count": 0,
+    "total_input_tokens": 5263,
+    "total_output_tokens": 1557,
+    "total_cost_usd": 0.0104384,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "FROST-009",
+    "amount": 70000,
+    "counterparty_name": "",
+    "scenario": "single invoice (account witno 2632262) — full payment — no remittance email — international book credit from HELM AG — both account and invoice ref in bank memo",
+    "agent_result": {
+      "status": "unresolved",
+      "confidence": 0,
+      "reasoning": "Planning phase error: planner returned empty sub-agent list",
+      "investigation_summary": "OrchestratorV2 failed during planning phase."
+    },
+    "routing_decision": "manual_investigation",
+    "tool_call_count": 0,
+    "total_input_tokens": 1972,
+    "total_output_tokens": 639,
+    "total_cost_usd": 0.0041336,
+    "matches_expected": false
+  },
+  {
+    "txn_id": "FROST-010",
+    "amount": 47822.77,
+    "counterparty_name": "",
+    "scenario": "single or multiple invoices unknown — likely full payment — no remittance email — minimal detail memo — requires fuzzy name match to Secure Specialty customer",
+    "agent_result": {
+      "status": "matched",
+      "customer_id": "CUST-SEC-007",
+      "customer_name": "Secure Specialty Services Corp",
+      "confidence": 0.95,
+      "invoices": [
+        {
+          "id": "INV-SEC-001",
+          "original_amount": 47822.77,
+          "applied": 47822.77,
+          "deduction": 0,
+          "reason": "full_payment"
+        }
+      ],
+      "total_applied": 47822.77,
+      "reasoning": "All three analysts unanimously identified Secure Specialty Services Corp as the matching customer. Verification confirmed CUST-SEC-007 exists with INV-SEC-001 = $47,822.77, an exact match to the payment amount. The remittance text 'SECURESPECIALITYBILL PYMT' directly correlates with the customer name. Payment date 2024-02-20 is 6 days after invoice due date (2024-02-14), so no early-pay discount applies. Strong consensus across analysts plus exact amount match and verified customer details support high confidence.",
+      "investigation_summary": "FROST-010 payment of $47,822.77 on 2024-02-20 matched to Secure Specialty Services Corp (CUST-SEC-007). Remittance info 'SECURESPECIALITYBILL PYMT 260219V005718' aligns with customer name. Invoice INV-SEC-001 for $47,822.77 (specialty services delivery, due 2024-02-14) confirmed via customer lookup. Payment applied in full with no deductions. All three analysts (NameAnalyst, AmountAnalyst, EmailAnalyst) agreed on this match with confidence 0.72–0.95.",
+      "suggested_alias": "SECURESPECIALTY"
+    },
+    "guardrails": {
+      "passed": true,
+      "amounts_balance": true,
+      "ids_exist": true,
+      "invoices_belong_to_customer": true,
+      "deductions_within_policy": true
+    },
+    "routing_decision": "fast_track_review",
+    "tool_call_count": 0,
+    "total_input_tokens": 9712,
+    "total_output_tokens": 2985,
+    "total_cost_usd": 0.0197096,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "FROST-011",
+    "amount": 178000,
+    "counterparty_name": "",
+    "scenario": "NON-AR TRANSACTION — loan deposit — exclude from cash application matching",
+    "agent_result": {
+      "status": "unresolved",
+      "confidence": 0,
+      "reasoning": "Planning phase error: planner returned empty sub-agent list",
+      "investigation_summary": "OrchestratorV2 failed during planning phase."
+    },
+    "routing_decision": "manual_investigation",
+    "tool_call_count": 0,
+    "total_input_tokens": 1911,
+    "total_output_tokens": 641,
+    "total_cost_usd": 0.0040928,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "FROST-012",
+    "amount": 163251.75,
+    "counterparty_name": "",
+    "scenario": "single or multiple invoices — likely full payment — no remittance email — vague vendor name (Midstream Transp) with payment ID only — requires fuzzy name match",
+    "agent_result": {
+      "status": "unresolved",
+      "confidence": 0,
+      "reasoning": "Planning phase error: planner returned empty sub-agent list",
+      "investigation_summary": "OrchestratorV2 failed during planning phase."
+    },
+    "routing_decision": "manual_investigation",
+    "tool_call_count": 0,
+    "total_input_tokens": 1918,
+    "total_output_tokens": 661,
+    "total_cost_usd": 0.0041784000000000005,
+    "matches_expected": false
+  },
+  {
+    "txn_id": "FROST-013",
+    "amount": 76293.59,
+    "counterparty_name": "",
+    "scenario": "single or multiple invoices unknown — likely full payment — no remittance email — clear vendor name (CHAMPIONX LLC) — corporate payment with ID only, no invoice detail",
+    "agent_result": {
+      "status": "unresolved",
+      "confidence": 0,
+      "reasoning": "Planning phase error: planner returned empty sub-agent list",
+      "investigation_summary": "OrchestratorV2 failed during planning phase."
+    },
+    "routing_decision": "manual_investigation",
+    "tool_call_count": 0,
+    "total_input_tokens": 1922,
+    "total_output_tokens": 770,
+    "total_cost_usd": 0.0046175999999999995,
+    "matches_expected": false
+  },
+  {
+    "txn_id": "FROST-014",
+    "amount": 67946.93,
+    "counterparty_name": "",
+    "scenario": "single or multiple invoices — likely full payment — no remittance email — clear customer name (Tartan Oil LLC) — payment ID only, no invoice detail",
+    "agent_result": {
+      "status": "matched",
+      "customer_id": "CUST-TAR-010",
+      "customer_name": "Tartan Oil Corporation",
+      "confidence": 0.95,
+      "invoices": [
+        {
+          "id": "INV-TAR-001",
+          "original_amount": 33973.47,
+          "applied": 33973.47,
+          "deduction": 0,
+          "reason": "standard_payment"
+        },
+        {
+          "id": "INV-TAR-002",
+          "original_amount": 33973.46,
+          "applied": 33973.46,
+          "deduction": 0,
+          "reason": "standard_payment"
+        }
+      ],
+      "total_applied": 67946.93,
+      "reasoning": "All three analysts unanimously identified Tartan Oil Corporation as the customer. Verification confirmed CUST-TAR-010 has exactly two open invoices (INV-TAR-001: $33,973.47 and INV-TAR-002: $33,973.46) totaling $67,946.93, which matches the payment amount precisely. The counterparty text 'Tartan Oil LLC' aligns with the customer name 'Tartan Oil Corporation' (minor legal entity variation). Both invoices were due before the payment date (2024-02-12 and 2024-02-14), confirming timely payment. High confidence due to exact amount match, customer name alignment, and verified invoice totals.",
+      "investigation_summary": "Payment FROST-014 ($67,946.93) from 2024-02-20 matched to Tartan Oil Corporation (CUST-TAR-010). Three independent analysts converged on this customer with 0.95, 0.95, and 0.72 confidence levels. Verification confirmed the customer has exactly two open invoices totaling the payment amount. The remittance info 'Tartan Oil LLC' corresponds to the legal entity name variation of 'Tartan Oil Corporation'. Both invoices were overdue at time of payment, indicating this is a standard invoice payment application.",
+      "suggested_alias": "Tartan Oil LLC"
+    },
+    "guardrails": {
+      "passed": true,
+      "amounts_balance": true,
+      "ids_exist": true,
+      "invoices_belong_to_customer": true,
+      "deductions_within_policy": true
+    },
+    "routing_decision": "fast_track_review",
+    "tool_call_count": 0,
+    "total_input_tokens": 10540,
+    "total_output_tokens": 3245,
+    "total_cost_usd": 0.021412,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "FROST-015",
+    "amount": 62537.61,
+    "counterparty_name": "",
+    "scenario": "single or multiple invoices unknown — likely full payment — no remittance email — services vendor (Bachman Services) with payment ID — requires fuzzy name match",
+    "agent_result": {
+      "status": "matched",
+      "customer_id": "CUST-BCH-011",
+      "customer_name": "Bachman Service Group",
+      "confidence": 0.95,
+      "invoices": [
+        {
+          "id": "INV-BCH-001",
+          "original_amount": 31268.81,
+          "applied": 31268.81,
+          "deduction": 0,
+          "reason": "full_payment"
+        },
+        {
+          "id": "INV-BCH-002",
+          "original_amount": 31268.8,
+          "applied": 31268.8,
+          "deduction": 0,
+          "reason": "full_payment"
+        }
+      ],
+      "total_applied": 62537.61,
+      "reasoning": "All three analysts converged on Bachman Service Group with high confidence (0.92-0.95). Verification confirms: (1) Customer CUST-BCH-011 exists and is named Bachman Service Group; (2) Two open invoices (INV-BCH-001 $31,268.81 + INV-BCH-002 $31,268.80) total exactly $62,537.61, matching the transaction amount precisely; (3) Both invoices were due before payment date (2024-02-20); (4) Remittance text 'BACHMAN SERVICES' aligns with customer name; (5) Email corroboration from ap@bachmanservices.com confirms payment. No discounts or deductions apply—full payment applied to both invoices.\"",
+      "investigation_summary": "FROST-015 ($62,537.61 credit, 2024-02-20) matched to Bachman Service Group (CUST-BCH-011). Remittance 'BACHMAN SERVICESPAYMENTS 26022030-132' identified customer via name search and amount matching. All three analysts independently confirmed same customer. System verification shows two open invoices totaling exactly the payment amount. Email evidence from ap@bachmanservices.com (dated 2024-02-23) provides contemporaneous corroboration. Payment fully applied to INV-BCH-001 and INV-BCH-002 with no deductions.",
+      "suggested_alias": "BACHMAN SERVICES"
+    },
+    "guardrails": {
+      "passed": true,
+      "amounts_balance": true,
+      "ids_exist": true,
+      "invoices_belong_to_customer": true,
+      "deductions_within_policy": true
+    },
+    "routing_decision": "fast_track_review",
+    "tool_call_count": 0,
+    "total_input_tokens": 11124,
+    "total_output_tokens": 3296,
+    "total_cost_usd": 0.0220832,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "FROST-016",
+    "amount": 40721.98,
+    "counterparty_name": "",
+    "scenario": "single or multiple invoices — likely full payment — no remittance email — major supplier (HALLIBURTON) with account ref — excellent name match candidate",
+    "agent_result": {
+      "status": "unresolved",
+      "confidence": 0,
+      "reasoning": "Planning phase error: planner returned empty sub-agent list",
+      "investigation_summary": "OrchestratorV2 failed during planning phase."
+    },
+    "routing_decision": "manual_investigation",
+    "tool_call_count": 0,
+    "total_input_tokens": 1926,
+    "total_output_tokens": 1159,
+    "total_cost_usd": 0.0061768000000000005,
+    "matches_expected": false
+  },
+  {
+    "txn_id": "FROST-017",
+    "amount": 37707.23,
+    "counterparty_name": "",
+    "scenario": "single or multiple invoices — likely full payment — no remittance email — clear customer name (Mansfield Oil Co) — payment ID only",
+    "agent_result": {
+      "status": "unresolved",
+      "confidence": 0,
+      "reasoning": "Planning phase error: planner returned empty sub-agent list",
+      "investigation_summary": "OrchestratorV2 failed during planning phase."
+    },
+    "routing_decision": "manual_investigation",
+    "tool_call_count": 0,
+    "total_input_tokens": 1923,
+    "total_output_tokens": 1116,
+    "total_cost_usd": 0.0060024,
+    "matches_expected": false
+  },
+  {
+    "txn_id": "FROST-018",
+    "amount": 32854.12,
+    "counterparty_name": "",
+    "scenario": "invoices unknown (likely 1-2) — full payment — no remittance email — generic services vendor name (SA SERVICES LLC) — no invoice detail, name + amount match only",
+    "agent_result": {
+      "status": "matched",
+      "customer_id": "CUST-SAS-014",
+      "customer_name": "SA Services Corporation",
+      "confidence": 0.95,
+      "invoices": [
+        {
+          "id": "INV-SAS-001",
+          "original_amount": 32854.12,
+          "applied": 32854.12,
+          "deduction": 0,
+          "reason": "exact_match"
+        }
+      ],
+      "total_applied": 32854.12,
+      "reasoning": "All three analysts (NameAnalyst, AmountAnalyst, EmailAnalyst) unanimously identified SA Services Corporation (CUST-SAS-014) with converging evidence: (1) Exact amount match: $32,854.12 corresponds precisely to INV-SAS-001; (2) Remittance info explicitly states 'SENDER=SA SERVICES LLC' which aligns with customer name variant; (3) Verification confirmed customer exists with matching open invoice; (4) No early-pay discount required—single invoice exact match. High confidence due to unanimous analyst agreement and perfect amount correlation.\"",
+      "investigation_summary": "Transaction FROST-018 ($32,854.12 wire from SA SERVICES LLC to Tauber Petrochemical Co.) matched to SA Services Corporation (CUST-SAS-014). All three analysts converged on this customer with 0.85–0.95 confidence. Verification confirmed INV-SAS-001 for exactly $32,854.12 is open and due 2024-02-16. Payment received 2024-02-20 (4 days post-due). No deductions or discounts applied. Customer name variant (LLC vs Corporation) noted but does not affect match quality.\"",
+      "suggested_alias": "SA SERVICES LLC"
+    },
+    "guardrails": {
+      "passed": true,
+      "amounts_balance": true,
+      "ids_exist": true,
+      "invoices_belong_to_customer": true,
+      "deductions_within_policy": true
+    },
+    "routing_decision": "fast_track_review",
+    "tool_call_count": 0,
+    "total_input_tokens": 9988,
+    "total_output_tokens": 2895,
+    "total_cost_usd": 0.0195704,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "FROST-019",
+    "amount": 40133.3,
+    "counterparty_name": "",
+    "scenario": "single or multiple invoices — likely full payment — no remittance email — recognizable vendor (BARR BRANDS INT) — direct payment with ID only",
+    "agent_result": {
+      "status": "matched",
+      "customer_id": "CUST-BAR-015",
+      "customer_name": "Barr Brands International",
+      "confidence": 0.95,
+      "invoices": [
+        {
+          "id": "INV-BAR-001",
+          "original_amount": 20066.65,
+          "applied": 20066.65,
+          "deduction": 0,
+          "reason": "full_payment"
+        },
+        {
+          "id": "INV-BAR-002",
+          "original_amount": 20066.65,
+          "applied": 20066.65,
+          "deduction": 0,
+          "reason": "full_payment"
+        }
+      ],
+      "total_applied": 40133.3,
+      "reasoning": "All three analysts unanimously identified Barr Brands International (CUST-BAR-015) as the matching customer. Verification confirms: (1) exact amount match: INV-BAR-001 ($20,066.65) + INV-BAR-002 ($20,066.65) = $40,133.30 payment amount; (2) remittance text 'BARR BRANDS' directly matches customer name; (3) both invoices are open and due in early February 2024, consistent with payment date 2024-02-20. Payment was made after the 2% net 10 discount window, so no deductions apply. Two analysts (AmountAnalyst and NameAnalyst) achieved 0.85-0.95 confidence with strong corroborating evidence.\"",
+      "investigation_summary": "Payment FROST-019 ($40,133.30) from remittance 'BARR BRANDS INTEDIRECT-PAY260220' matched to Barr Brands International (CUST-BAR-015). Exact amount match with two open invoices (INV-BAR-001 and INV-BAR-002, each $20,066.65). Remittance text directly references customer name. Payment date 2024-02-20 is after discount window (net 10 from Feb 12-14 due dates). No deductions or discounts applied. Match is definitive.\""
+    },
+    "guardrails": {
+      "passed": true,
+      "amounts_balance": true,
+      "ids_exist": true,
+      "invoices_belong_to_customer": true,
+      "deductions_within_policy": true
+    },
+    "routing_decision": "fast_track_review",
+    "tool_call_count": 0,
+    "total_input_tokens": 9666,
+    "total_output_tokens": 2939,
+    "total_cost_usd": 0.0194888,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "FROST-020",
+    "amount": 24820.75,
+    "counterparty_name": "",
+    "scenario": "INTERNAL TAUBER SETTLEMENT — no remittance email — exclude from AR matching (corporate collection between tauber entities)",
+    "agent_result": {
+      "status": "unresolved",
+      "confidence": 0,
+      "reasoning": "Planning phase error: planner returned empty sub-agent list",
+      "investigation_summary": "OrchestratorV2 failed during planning phase."
+    },
+    "routing_decision": "manual_investigation",
+    "tool_call_count": 0,
+    "total_input_tokens": 1928,
+    "total_output_tokens": 912,
+    "total_cost_usd": 0.0051904,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "FROST-021",
+    "amount": 24108.28,
+    "counterparty_name": "",
+    "scenario": "single or multiple invoices — likely full payment — no remittance email — clear customer (FERRELL GAS) with account reference LP6689 — good match candidate",
+    "agent_result": {
+      "status": "matched",
+      "customer_id": "CUST-FER-016",
+      "customer_name": "Ferrell Gas Inc",
+      "confidence": 0.95,
+      "invoices": [
+        {
+          "id": "INV-FER-001",
+          "original_amount": 12054.14,
+          "applied": 12054.14,
+          "deduction": 0,
+          "reason": "full_payment"
+        },
+        {
+          "id": "INV-FER-002",
+          "original_amount": 12054.14,
+          "applied": 12054.14,
+          "deduction": 0,
+          "reason": "full_payment"
+        }
+      ],
+      "total_applied": 24108.28,
+      "reasoning": "Three independent analysts (NameAnalyst, AmountAnalyst, EmailAnalyst) converged on Ferrell Gas Inc with high confidence (0.72-0.95). Verification confirmed: (1) Customer CUST-FER-016 exists and is valid; (2) Two open invoices (INV-FER-001 and INV-FER-002) total exactly $24,108.28, matching the transaction amount with 0% variance; (3) Both invoices reference 'LP6689 batch' which aligns with 'LP6689' embedded in remittance text 'FERRELLGASLP6689PAYMENTS'; (4) Invoice due dates (2024-02-10 and 2024-02-12) precede payment date (2024-02-20), consistent with normal payment timing. The remittance text 'FERRELLGASLP' suggests LP entity structure, while customer record shows 'Inc', but this is a minor entity type variance common in business naming conventions.\"",
+      "investigation_summary": "Payment FROST-021 ($24,108.28 on 2024-02-20) matched to Ferrell Gas Inc (CUST-FER-016). Remittance info 'FERRELLGASLP6689PAYMENTS' identified the customer and LP6689 batch reference. All three analysts independently identified the same customer with converging evidence. System verification confirmed two open invoices totaling exactly the transaction amount. No discounts or deductions applied. Payment fully reconciles to customer account.",
+      "suggested_alias": "FERRELLGASLP (remittance text suggests LP entity structure)"
+    },
+    "guardrails": {
+      "passed": true,
+      "amounts_balance": true,
+      "ids_exist": true,
+      "invoices_belong_to_customer": true,
+      "deductions_within_policy": true
+    },
+    "routing_decision": "fast_track_review",
+    "tool_call_count": 0,
+    "total_input_tokens": 10094,
+    "total_output_tokens": 3257,
+    "total_cost_usd": 0.021103200000000003,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "FROST-022",
+    "amount": 18092.31,
+    "counterparty_name": "",
+    "scenario": "single or multiple invoices — likely full payment — no remittance email — compressed/abbreviated vendor name (CLEAN RECOMPRESS) — requires fuzzy matching",
+    "agent_result": {
+      "status": "unresolved",
+      "confidence": 0,
+      "reasoning": "Planning phase error: planner returned empty sub-agent list",
+      "investigation_summary": "OrchestratorV2 failed during planning phase."
+    },
+    "routing_decision": "manual_investigation",
+    "tool_call_count": 0,
+    "total_input_tokens": 1918,
+    "total_output_tokens": 692,
+    "total_cost_usd": 0.0043024,
+    "matches_expected": false
+  },
+  {
+    "txn_id": "FROST-023",
+    "amount": 17956.37,
+    "counterparty_name": "",
+    "scenario": "single invoice (ref: 2631641) — full payment — no remittance email — clear customer from wire (VALERO MKTG SUP) — reference in bank memo enables direct lookup",
+    "agent_result": {
+      "status": "unresolved",
+      "confidence": 0,
+      "reasoning": "Planning phase error: planner returned empty sub-agent list",
+      "investigation_summary": "OrchestratorV2 failed during planning phase."
+    },
+    "routing_decision": "manual_investigation",
+    "tool_call_count": 0,
+    "total_input_tokens": 1958,
+    "total_output_tokens": 1056,
+    "total_cost_usd": 0.0057904,
+    "matches_expected": false
+  },
+  {
+    "txn_id": "FROST-024",
+    "amount": 13167.61,
+    "counterparty_name": "",
+    "scenario": "INTERNAL TAUBER SETTLEMENT — no remittance email — exclude from AR matching (corporate collection between tauber entities)",
+    "agent_result": {
+      "status": "unresolved",
+      "confidence": 0,
+      "reasoning": "Planning phase error: planner returned empty sub-agent list",
+      "investigation_summary": "OrchestratorV2 failed during planning phase."
+    },
+    "routing_decision": "manual_investigation",
+    "tool_call_count": 0,
+    "total_input_tokens": 1928,
+    "total_output_tokens": 897,
+    "total_cost_usd": 0.0051304,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "FROST-025",
+    "amount": 12344.2,
+    "counterparty_name": "",
+    "scenario": "single or multiple invoices — likely full payment — no remittance email — abbreviated vendor name (BAM PROPANE) — requires fuzzy match, date reference only",
+    "agent_result": {
+      "status": "matched",
+      "customer_id": "CUST-BAM-020",
+      "customer_name": "BAM Propane Company",
+      "confidence": 0.95,
+      "invoices": [
+        {
+          "id": "INV-BAM-001",
+          "original_amount": 12344.2,
+          "applied": 12344.2,
+          "deduction": 0,
+          "reason": "full_payment"
+        }
+      ],
+      "total_applied": 12344.2,
+      "reasoning": "All three analysts unanimously identified BAM Propane Company (CUST-BAM-020) with high confidence (0.85–0.95). Verification confirmed: (1) Customer exists and is valid; (2) Invoice INV-BAM-001 for $12,344.20 matches payment amount exactly (0% variance); (3) Remittance info 'BAM PROPANE CON ACH' directly corresponds to customer name; (4) Payment received 2024-02-20, 7 days after invoice due date (2024-02-13), with no early-pay discount applicable. Full amount applies to single invoice with no deductions required.\"",
+      "investigation_summary": "Transaction FROST-025 ($12,344.20 credit, 2024-02-20) matched to BAM Propane Company (CUST-BAM-020). Remittance 'BAM PROPANE CON ACH' identified external customer. All three analysts (NameAnalyst, AmountAnalyst, EmailAnalyst) converged on same customer and invoice. Verification confirmed customer validity, invoice existence, and exact amount match. No discounts or deductions applicable. Payment fully applies to INV-BAM-001 (Propane supply and delivery)."
+    },
+    "guardrails": {
+      "passed": true,
+      "amounts_balance": true,
+      "ids_exist": true,
+      "invoices_belong_to_customer": true,
+      "deductions_within_policy": true
+    },
+    "routing_decision": "fast_track_review",
+    "tool_call_count": 0,
+    "total_input_tokens": 9940,
+    "total_output_tokens": 2851,
+    "total_cost_usd": 0.019355999999999998,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "FROST-026",
+    "amount": 10334.88,
+    "counterparty_name": "",
+    "scenario": "INTERNAL TAUBER SETTLEMENT — no remittance email — exclude from AR matching (tauber internal)",
+    "agent_result": {
+      "status": "internal_transfer",
+      "confidence": 1,
+      "unmatched_amount": 10334.88,
+      "reasoning": "All three analysts (NameAnalyst, AmountAnalyst, EmailAnalyst) returned no_match with consistent findings: (1) Reference 'TAUB260220' does not resolve to any external customer invoice; (2) Amount $10,334.88 has no matching customer invoices; (3) Remittance info 'TAUBER OIL COMPARHINE-TAUB260220-SETT-' contains internal Tauber nomenclature and settlement codes, not external customer identifiers; (4) Empty counterparty text indicates no external party. All search methods (name, amount, email, reference) returned no external customer matches. This is a confirmed internal Tauber Oil Company transfer or inter-company settlement.",
+      "investigation_summary": "FROST-026 ($10,334.88 credit, 2024-02-20) analyzed for external customer match. Remittance info 'TAUBER OIL COMPARHINE-TAUB260220-SETT-' and empty counterparty text indicate internal transfer. Comprehensive search by name, amount, email, and reference code found no external customer. All analysts confirmed no match. Classification: Internal Tauber Oil Company settlement or ZBA transfer with no external customer involvement.\""
+    },
+    "routing_decision": "manual_investigation",
+    "tool_call_count": 0,
+    "total_input_tokens": 5924,
+    "total_output_tokens": 2175,
+    "total_cost_usd": 0.013439199999999998,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "FROST-027",
+    "amount": 7023.38,
+    "counterparty_name": "",
+    "scenario": "single or multiple invoices — likely full payment — no remittance email — recognizable vendor (ALTIVIA SPECIALTY) with account reference — good name match candidate",
+    "agent_result": {
+      "status": "unresolved",
+      "confidence": 0,
+      "reasoning": "Planning phase error: planner returned empty sub-agent list",
+      "investigation_summary": "OrchestratorV2 failed during planning phase."
+    },
+    "routing_decision": "manual_investigation",
+    "tool_call_count": 0,
+    "total_input_tokens": 1921,
+    "total_output_tokens": 1071,
+    "total_cost_usd": 0.0058208,
+    "matches_expected": false
+  },
+  {
+    "txn_id": "FROST-028",
+    "amount": 5860.33,
+    "counterparty_name": "",
+    "scenario": "INTERNAL TAUBER SETTLEMENT — no remittance email — exclude from AR matching (tauber internal)",
+    "agent_result": {
+      "status": "unresolved",
+      "confidence": 0,
+      "reasoning": "Planning phase error: planner returned empty sub-agent list",
+      "investigation_summary": "OrchestratorV2 failed during planning phase."
+    },
+    "routing_decision": "manual_investigation",
+    "tool_call_count": 0,
+    "total_input_tokens": 1928,
+    "total_output_tokens": 910,
+    "total_cost_usd": 0.0051824,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "FROST-029",
+    "amount": 1769.04,
+    "counterparty_name": "",
+    "scenario": "single invoice (ROC 00069169 / ref 2633062) — full payment — no remittance email — international supplier (TRICON INTERNATIONAL LTD) — references in bank memo",
+    "agent_result": {
+      "status": "unresolved",
+      "confidence": 0,
+      "reasoning": "Planning phase error: planner returned empty sub-agent list",
+      "investigation_summary": "OrchestratorV2 failed during planning phase."
+    },
+    "routing_decision": "manual_investigation",
+    "tool_call_count": 0,
+    "total_input_tokens": 1964,
+    "total_output_tokens": 1110,
+    "total_cost_usd": 0.0060112,
+    "matches_expected": false
+  },
+  {
+    "txn_id": "FROST-030",
+    "amount": 2599775.88,
+    "counterparty_name": "",
+    "scenario": "INTERNAL TAUBER ZBA TRANSFER (large) — no remittance email — exclude from AR matching (working capital movement)",
+    "agent_result": {
+      "status": "internal_transfer",
+      "confidence": 1,
+      "reasoning": "Transaction FROST-030 exhibits all hallmarks of an internal Tauber Oil Company transfer: (1) empty counterparty text with no external company name, (2) explicit ZBA routing language in remittance ('TRANSFER FROM CHECKING ACCT 0502943352'), (3) account reference that does not match any invoice ID, and (4) unanimous analyst consensus that no external customer exists. All three analysts (AmountAnalyst, EmailAnalyst, NameAnalyst) independently confirmed zero external customer matches despite comprehensive searches by amount, email, and name. The remittance text is standard intra-company ZBA transfer syntax, not a customer payment.",
+      "investigation_summary": "FROST-030 is an internal transfer between Tauber Oil Company checking accounts. The $2,599,775.88 credit on 2024-02-20 originated from account 0502943352 and contains no external counterparty information. All analyst searches (amount-based, email-based, name-based) returned no external customer matches. The ZBA routing language in the remittance confirms this is an intra-company account transfer, not a customer payment application.\""
+    },
+    "routing_decision": "manual_investigation",
+    "tool_call_count": 0,
+    "total_input_tokens": 5911,
+    "total_output_tokens": 2108,
+    "total_cost_usd": 0.0131608,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "FROST-031",
+    "amount": 29742.13,
+    "counterparty_name": "",
+    "scenario": "INTERNAL TAUBER ZBA TRANSFER — no remittance email — exclude from AR matching (internal working capital)",
+    "agent_result": {
+      "status": "unresolved",
+      "confidence": 0,
+      "reasoning": "Planning phase error: planner returned empty sub-agent list",
+      "investigation_summary": "OrchestratorV2 failed during planning phase."
+    },
+    "routing_decision": "manual_investigation",
+    "tool_call_count": 0,
+    "total_input_tokens": 1919,
+    "total_output_tokens": 927,
+    "total_cost_usd": 0.0052432,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "FROST-032",
+    "amount": 17598.73,
+    "counterparty_name": "",
+    "scenario": "single or multiple invoices — likely full payment — no remittance email — recognizable vendor (Berryman Chemical) with account reference — good name match candidate",
+    "agent_result": {
+      "status": "unresolved",
+      "confidence": 0,
+      "reasoning": "Planning phase error: planner returned empty sub-agent list",
+      "investigation_summary": "OrchestratorV2 failed during planning phase."
+    },
+    "routing_decision": "manual_investigation",
+    "tool_call_count": 0,
+    "total_input_tokens": 1922,
+    "total_output_tokens": 780,
+    "total_cost_usd": 0.0046576,
+    "matches_expected": false
+  }
+]

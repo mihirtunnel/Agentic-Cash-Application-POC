@@ -1,0 +1,95 @@
+[
+  {
+    "txn_id": "FROST-031",
+    "amount": 29742.13,
+    "counterparty_name": "",
+    "scenario": "INTERNAL TAUBER ZBA TRANSFER — no remittance email — exclude from AR matching (internal working capital)",
+    "agent_result": {
+      "status": "internal_transfer",
+      "confidence": 1,
+      "reasoning": "This is an internal Tauber Oil entity transfer. The remittance info 'TRANSFER FROM CHECKING ACCT 0502699869' is a ZBA (Zero Balance Account) routing pattern indicating internal fund movement between Tauber subsidiaries. No external counterparty is identified, no customer invoices match the amount, and no remittance emails from customers were found. This is internal cash management, not a customer payment.\"",
+      "investigation_summary": "Transaction FROST-031 for $29,742.13 on 2024-02-20 identified as internal transfer based on: (1) ZBA account routing pattern in remittance info, (2) absence of external counterparty, (3) no matching customer invoices or remittance emails. This represents internal fund movement between Tauber Oil checking accounts.\""
+    },
+    "routing_decision": "manual_investigation",
+    "tool_call_count": 4,
+    "total_input_tokens": 8927,
+    "total_output_tokens": 949,
+    "total_cost_usd": 0.0109376,
+    "matches_expected": true
+  }
+]
+
+mihirchauhan@Apples-MacBook-Pro poc-agent % go run main.go -data ./frost-data -txn FROST-031 
+Loaded: 74 customers, 176 invoices, 33 emails, 32 transactions
+
+========================================
+ AGENTIC CASH APPLICATION POC
+ Mode: Single Agent
+========================================
+
+
+─── FROST-031: $29742.13 from "" ───
+  Scenario: INTERNAL TAUBER ZBA TRANSFER — no remittance email — exclude from AR matching (internal working capital)
+  ┌─ Round 1 ── tokens: 2657 in / 285 out
+  │ Agent: I'll investigate this payment systematically. Let me start by analyzing the transaction details.
+
+**INITIAL ANALYSIS:**
+- Transaction ID: FROST-031
+- Amount: $29,742.13
+- Remittance info: "TRANSFER FR...
+  │ [Tool 1] lookup_reference
+  │   Input:  {"reference":"0502699869"}
+  │   Result: No match found for "0502699869" in invoice IDs.
+  │ [Tool 2] search_customers_by_amount
+  │   Input:  {"amount":29742.13,"tolerance_percent":3}
+  │   Result: No customers found with invoice combinations matching $29742.13 (±3%).
+  └──────────────────────────────────────────────────
+  ┌─ Round 2 ── tokens: 3040 in / 171 out
+  │ Agent: The account number doesn't match an invoice ID, and no customer invoices sum to this amount. Let me search for remittance emails around this date and amount to see if there's any customer communicatio...
+  │ [Tool 3] search_remittance_emails
+  │   Input:  {"amount_min":29000,"amount_max":30500,"date_from":"2024-02-15","date_to":"2024-02-25"}
+  │   Result: No matching remittance emails found.
+  └──────────────────────────────────────────────────
+  ┌─ Round 3 ── tokens: 3230 in / 493 out
+  │ Agent: **ANALYSIS SUMMARY:**
+
+The payment exhibits strong indicators of an **INTERNAL TRANSFER**:
+
+1. **ZBA Pattern**: The remittance info "TRANSFER FROM CHECKING ACCT 0502699869" is a classic Zero Balance A...
+  │ [Tool 4] submit_match_result
+  └──────────────────────────────────────────────────
+  Result: internal_transfer
+  Confidence: 1.00
+  Tool calls: 4 | Tokens: 8927 in / 949 out | Cost: $0.0109
+  Routing: manual_investigation
+  Expected: (none) ✓
+
+
+========================================
+ PIPELINE RESULTS SUMMARY
+========================================
+
+Transactions processed:    1
+  Matched by agent:       0  (0%)
+  Internal transfers:     1  (100%)
+  Unresolved:             0  (0%)
+
+Routing decisions:
+  Internal transfer:      0  (0%)
+  Fast-track review:      0  (0%)
+  Human review:           0  (0%)
+  Manual investigation:   1  (100%)
+
+Accuracy (vs expected):
+  Correct customer ID:      0/1
+  Correct invoice match:    0/1
+  Correct internal transfer: 1/1
+
+AI costs:
+  Total Claude API cost:  $0.0109
+  Avg cost per txn:       $0.0109
+  Total tool calls:       4
+  Avg tool calls per txn: 4.0
+
+  Projected daily cost (500 txns): $5.47
+  Projected monthly cost:          $164.06

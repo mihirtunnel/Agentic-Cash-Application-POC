@@ -1,0 +1,39 @@
+[
+  {
+    "txn_id": "FROST-022",
+    "amount": 18092.31,
+    "counterparty_name": "",
+    "scenario": "single or multiple invoices — likely full payment — no remittance email — compressed/abbreviated vendor name (CLEAN RECOMPRESS) — requires fuzzy matching",
+    "agent_result": {
+      "status": "matched",
+      "customer_id": "CUST-CLN-017",
+      "customer_name": "Clean Recompression Corp",
+      "confidence": 0.98,
+      "invoices": [
+        {
+          "id": "INV-CLN-001",
+          "original_amount": 18092.31,
+          "applied": 18092.31,
+          "deduction": 0,
+          "reason": "exact_match"
+        }
+      ],
+      "total_applied": 18092.31,
+      "reasoning": "Two specialist agents (NameAgent and AmountAgent) independently identified Clean Recompression Corp with high confidence. The remittance text 'CLEAN RECOMPRESSCONS PAY' is a direct abbreviation match to the customer name. AmountAgent found an exact amount match on invoice INV-CLN-001 ($18,092.31). Verification confirmed the invoice exists with matching amount and due date (2024-02-14), with payment received 6 days later on 2024-02-20, consistent with normal payment timing. No discrepancies or deductions required.",
+      "investigation_summary": "Payment FROST-022 ($18,092.31) matched to Clean Recompression Corp (CUST-CLN-017) based on: (1) Direct textual match in remittance info to customer name, (2) Exact amount match on open invoice INV-CLN-001, (3) Consistent payment timing relative to invoice due date, (4) Agreement between NameAgent and AmountAgent on same customer."
+    },
+    "guardrails": {
+      "passed": true,
+      "amounts_balance": true,
+      "ids_exist": true,
+      "invoices_belong_to_customer": true,
+      "deductions_within_policy": true
+    },
+    "routing_decision": "fast_track_review",
+    "tool_call_count": 0,
+    "total_input_tokens": 17030,
+    "total_output_tokens": 3468,
+    "total_cost_usd": 0.027496,
+    "matches_expected": true
+  }
+]

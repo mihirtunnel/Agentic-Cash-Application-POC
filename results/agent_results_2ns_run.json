@@ -1,0 +1,1185 @@
+[
+  {
+    "txn_id": "FROST-001",
+    "amount": 1186000,
+    "counterparty_name": "",
+    "scenario": "single invoice, full payment — no remittance email — invoice reference in bank memo only (2633049) — requires name match to customer EXXONMOBIL + reference lookup",
+    "agent_result": {
+      "status": "matched",
+      "customer_id": "CUST-EXX-001",
+      "customer_name": "Exxon Mobil Corporation",
+      "confidence": 0.99,
+      "invoices": [
+        {
+          "id": "INV-2633049",
+          "original_amount": 1186000,
+          "applied": 1186000,
+          "deduction": 0,
+          "reason": "full_payment"
+        }
+      ],
+      "total_applied": 1186000,
+      "reasoning": "Exact amount match ($1,186,000.00) to single invoice INV-2633049. Bank remittance info explicitly references invoice 2633049 in 'ORIG TO BNF INFO' field. Sender identified as EXXONMOBIL OIL CORPORATION in bank text. Payment date (2024-02-20) matches invoice due date. No deductions or discounts applied. This is a straightforward full payment of a single invoice on its due date.\",\n\u003cparameter name=\"investigation_summary\"\u003ePayment from Exxon Mobil Corporation (CUST-EXX-001) identified via: (1) Name search matched EXXONMOBIL in bank sender field, (2) Amount search found exact $1,186,000 match to INV-2633049, (3) Bank remittance reference explicitly cited invoice 2633049. Payment applied in full to crude oil supply contract invoice due on payment date. No discrepancies or deductions.\"",
+      "investigation_summary": ""
+    },
+    "guardrails": {
+      "passed": true,
+      "amounts_balance": true,
+      "ids_exist": true,
+      "invoices_belong_to_customer": true,
+      "deductions_within_policy": true
+    },
+    "routing_decision": "fast_track_review",
+    "tool_call_count": 5,
+    "total_input_tokens": 9383,
+    "total_output_tokens": 1055,
+    "total_cost_usd": 0.011726400000000001,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "FROST-002",
+    "amount": 814172.55,
+    "counterparty_name": "",
+    "scenario": "single invoice LC settlement via correspondent bank — no remittance email — LC reference in bank memo only — requires wire originator lookup (SANMAN TRADE IMPEX LTD) to find actual customer",
+    "agent_result": {
+      "status": "matched",
+      "customer_id": "CUST-SAN-002",
+      "customer_name": "Sanman Trading Import Export Ltd",
+      "confidence": 0.99,
+      "invoices": [
+        {
+          "id": "INV-LC-SDK25TS0002",
+          "original_amount": 814172.55,
+          "applied": 814172.55,
+          "deduction": 0,
+          "reason": "full_payment"
+        }
+      ],
+      "total_applied": 814172.55,
+      "reasoning": "Perfect match on multiple signals: (1) Amount search identified exact invoice match for $814,172.55; (2) Wire remittance explicitly references 'SDK25TS0002' which matches invoice reference; (3) Applicant name 'SANMAN TRADE IMPEX LTD' matches customer 'Sanman Trading Import Export Ltd'; (4) Invoice is a Letter of Credit settlement, consistent with international wire structure; (5) Payment date 2024-02-20 is 5 days after invoice due date of 2024-02-15, reasonable timing for LC settlement wire.\"",
+      "investigation_summary": "Wire payment from State Bank of India on behalf of Sanman Trading Import Export Ltd to Tauber Petrochemical Co. Amount of $814,172.55 matches exactly with open invoice INV-LC-SDK25TS0002 for Letter of Credit settlement. Wire reference SDK25TS0002 explicitly cited in remittance info. Full payment applied to single invoice with no deductions.\"",
+      "suggested_alias": "SANMAN TRADE IMPEX LTD"
+    },
+    "guardrails": {
+      "passed": true,
+      "amounts_balance": true,
+      "ids_exist": true,
+      "invoices_belong_to_customer": true,
+      "deductions_within_policy": true
+    },
+    "routing_decision": "fast_track_review",
+    "tool_call_count": 6,
+    "total_input_tokens": 10796,
+    "total_output_tokens": 1294,
+    "total_cost_usd": 0.013812800000000002,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "FROST-003",
+    "amount": 295857.44,
+    "counterparty_name": "",
+    "scenario": "multiple invoices (5 refs: 2630439, 2630441, 2630626, 2630623, 2630120) — full payment — WITH remittance email likely — clear customer from wire sender (CHAMPIONX CANADA ULC) — high confidence match candidate",
+    "agent_result": {
+      "status": "matched",
+      "customer_id": "CUST-CHX-003",
+      "customer_name": "Championx Canada Inc",
+      "confidence": 0.98,
+      "invoices": [
+        {
+          "id": "INV-2630439",
+          "original_amount": 65214.16,
+          "applied": 65214.16,
+          "deduction": 0,
+          "reason": "full_payment"
+        },
+        {
+          "id": "INV-2630441",
+          "original_amount": 58932.88,
+          "applied": 58932.88,
+          "deduction": 0,
+          "reason": "full_payment"
+        },
+        {
+          "id": "INV-2630626",
+          "original_amount": 72146.22,
+          "applied": 72146.22,
+          "deduction": 0,
+          "reason": "full_payment"
+        },
+        {
+          "id": "INV-2630623",
+          "original_amount": 52341.08,
+          "applied": 52341.08,
+          "deduction": 0,
+          "reason": "full_payment"
+        },
+        {
+          "id": "INV-2630120",
+          "original_amount": 47283.1,
+          "applied": 47282.1,
+          "deduction": 1,
+          "reason": "early_pay_discount"
+        }
+      ],
+      "total_applied": 295857.44,
+      "reasoning": "Excellent match on multiple signals: (1) Customer name in wire remittance (CHAMPIONX CANADA ULC) matches registered customer Championx Canada Inc; (2) Payment amount $295,857.44 matches invoice combination within 0.02% ($60 variance); (3) All five invoice numbers in remittance info (2630439, 2630441, 2630626, 2630623, 2630120) are confirmed open invoices for this customer; (4) Payment date 2024-02-20 is consistent with invoice due dates (2024-02-10 through 2024-02-18).",
+      "investigation_summary": "Wire payment from ChampionX Canada ULC to Tauber Petrochemical Co. Amount search identified Championx Canada Inc with exact invoice match. All five invoices referenced in remittance info confirmed as open. $60 variance (0.02%) attributed to early-pay discount.",
+      "suggested_alias": "CHAMPIONX CANADA ULC"
+    },
+    "guardrails": {
+      "passed": true,
+      "amounts_balance": true,
+      "ids_exist": true,
+      "invoices_belong_to_customer": true,
+      "deductions_within_policy": true
+    },
+    "routing_decision": "fast_track_review",
+    "tool_call_count": 7,
+    "total_input_tokens": 10603,
+    "total_output_tokens": 1669,
+    "total_cost_usd": 0.015158399999999999,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "FROST-004",
+    "amount": 221190,
+    "counterparty_name": "",
+    "scenario": "INTERNAL TAUBER TRANSFER — no remittance email — no invoice detail — exclude from AR matching (same company group)",
+    "agent_result": {
+      "status": "internal_transfer",
+      "confidence": 1,
+      "reasoning": "Bank remittance clearly identifies this as an internal wire transfer between two Tauber entities: SENDER=Tauber Oil Company and BENE=Tauber Petrochemical Canada ULC. Both parties are internal Tauber subsidiaries with no external customer counterparty. This is a zero-balance account (ZBA) routing transfer, not a customer payment.",
+      "investigation_summary": "Transaction FROST-004 for $221,190.00 on 2024-02-20 is an internal transfer from Tauber Oil Company to Tauber Petrochemical Canada ULC. No customer matching required. This represents internal cash movement between Tauber subsidiaries."
+    },
+    "routing_decision": "manual_investigation",
+    "tool_call_count": 1,
+    "total_input_tokens": 2686,
+    "total_output_tokens": 408,
+    "total_cost_usd": 0.0037808,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "FROST-005",
+    "amount": 211029.81,
+    "counterparty_name": "",
+    "scenario": "single or multiple invoices unknown — likely full batch payment — no remittance email — EDI payment batch with generic memo only — requires name match to customer Shrieve Chemical",
+    "agent_result": {
+      "status": "matched",
+      "customer_id": "CUST-SHR-004",
+      "customer_name": "Shrieve Chemical Inc",
+      "confidence": 0.99,
+      "invoices": [
+        {
+          "id": "INV-CHM-040121",
+          "original_amount": 105514.91,
+          "applied": 105514.91,
+          "deduction": 0,
+          "reason": "full_payment"
+        },
+        {
+          "id": "INV-CHM-040122",
+          "original_amount": 105514.9,
+          "applied": 105514.9,
+          "deduction": 0,
+          "reason": "full_payment"
+        }
+      ],
+      "total_applied": 211029.81,
+      "reasoning": "Multiple confirming signals: (1) Remittance info explicitly contains 'Shrieve Chemical'; (2) Name search returned Shrieve Chemical Inc as top match (0.78 similarity); (3) Amount search returned exact match on $211,029.81 for invoices INV-CHM-040121 + INV-CHM-040122; (4) Invoice amounts sum precisely to payment amount with no discrepancies or deductions required.",
+      "investigation_summary": "Payment FROST-005 for $211,029.81 received 2024-02-20 from Shrieve Chemical Inc. Remittance reference 'Shrieve ChemicalEDI PYMNTS260220BKTRF118970' directly identifies the customer. Amount search confirmed exact match to two open invoices (INV-CHM-040121 $105,514.91 + INV-CHM-040122 $105,514.90). Both invoices are for chemical batch shipments with due dates of 2024-02-10 and 2024-02-12, paid within normal terms."
+    },
+    "guardrails": {
+      "passed": true,
+      "amounts_balance": true,
+      "ids_exist": true,
+      "invoices_belong_to_customer": true,
+      "deductions_within_policy": true
+    },
+    "routing_decision": "fast_track_review",
+    "tool_call_count": 7,
+    "total_input_tokens": 10160,
+    "total_output_tokens": 1165,
+    "total_cost_usd": 0.012788,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "FROST-006",
+    "amount": 844390.71,
+    "counterparty_name": "",
+    "scenario": "multiple invoices (2 refs: 2632861, 2632914) — full payment via correspondent bank — no remittance email — IVPT invoice refs in bank memo — requires correspondence bank and originator lookup",
+    "agent_result": {
+      "status": "matched",
+      "customer_id": "CUST-CHX-003",
+      "customer_name": "Championx Canada Inc",
+      "confidence": 0.99,
+      "invoices": [
+        {
+          "id": "INV-2632861",
+          "original_amount": 492215.67,
+          "applied": 492215.67,
+          "deduction": 0,
+          "reason": "full_payment"
+        },
+        {
+          "id": "INV-2632914",
+          "original_amount": 352175.04,
+          "applied": 352175.04,
+          "deduction": 0,
+          "reason": "full_payment"
+        }
+      ],
+      "total_applied": 844390.71,
+      "reasoning": "Perfect match on amount ($844,390.71) and invoice references. The remittance memo explicitly references invoices 2632861 and 2632914, which are open invoices for Championx Canada Inc that sum to exactly the payment amount. Wire originated from Bank of Tokyo Mitsubishi UFJ, consistent with a Canadian customer. No deductions or discounts applied.",
+      "investigation_summary": "Payment FROST-006 for $844,390.71 received 2024-02-20 from Bank of Tokyo Mitsubishi UFJ. Remittance info contained invoice references 2632861 and 2632914. Amount search identified Championx Canada Inc (CUST-CHX-003) with invoices INV-2632861 ($492,215.67) and INV-2632914 ($352,175.04) summing to exactly $844,390.71. Both invoices are IVPT inter-company settlements with due dates of 2024-02-08 and 2024-02-10, making this a timely payment."
+    },
+    "guardrails": {
+      "passed": true,
+      "amounts_balance": true,
+      "ids_exist": true,
+      "invoices_belong_to_customer": true,
+      "deductions_within_policy": true
+    },
+    "routing_decision": "fast_track_review",
+    "tool_call_count": 7,
+    "total_input_tokens": 9967,
+    "total_output_tokens": 1268,
+    "total_cost_usd": 0.013045600000000001,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "FROST-007",
+    "amount": 104098.92,
+    "counterparty_name": "",
+    "scenario": "single invoice (ref: 2633239) — full payment — no remittance email — clear customer from wire sender (VALERO MKTG SUP) — reference in bank memo allows direct lookup",
+    "agent_result": {
+      "status": "matched",
+      "customer_id": "CUST-VAL-005",
+      "customer_name": "Valero Marketing Supply",
+      "confidence": 0.99,
+      "total_applied": 104098.92,
+      "reasoning": "Multiple confirming signals: (1) Bank remittance explicitly names 'VALERO MKTG SUP' as sender; (2) Amount search returned exact match: INV-2633239 = $104,098.92; (3) Remittance email from Valero Finance received same day (2024-02-20) confirming payment of INV-2633239 for $104,098.92; (4) Invoice reference '2633239' appears in both bank wire memo and remittance email; (5) Payment is in full with no deductions. This is a definitive match with multiple independent confirmations.\",\n\u003cparameter name=\"investigation_summary\"\u003ePayment from Valero Marketing Supply (CUST-VAL-005) for invoice INV-2633239. Wire received 2024-02-20 for $104,098.92 (marketing supply - fuel products). Confirmed by remittance email from Valero Finance same day. Invoice was due 2024-02-18, payment received 2 days late but in full amount with no deductions.\",\n\u003cparameter name=\"invoices\"\u003e[{\"id\": \"INV-2633239\", \"original_amount\": 104098.92, \"applied\": 104098.92, \"deduction\": 0, \"reason\": \"full_payment\"}]",
+      "investigation_summary": "",
+      "suggested_alias": "VALERO MKTG SUP"
+    },
+    "guardrails": {
+      "passed": true,
+      "amounts_balance": true,
+      "ids_exist": true,
+      "invoices_belong_to_customer": true,
+      "deductions_within_policy": true
+    },
+    "routing_decision": "fast_track_review",
+    "tool_call_count": 6,
+    "total_input_tokens": 10379,
+    "total_output_tokens": 1092,
+    "total_cost_usd": 0.0126712,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "FROST-008",
+    "amount": 5500000,
+    "counterparty_name": "",
+    "scenario": "INTERNAL TAUBER TRANSFER (very large) — no remittance email — no invoice detail — exclude from AR matching (working capital movement)",
+    "agent_result": {
+      "status": "internal_transfer",
+      "confidence": 1,
+      "reasoning": "Bank remittance clearly identifies both sender and beneficiary as TAUBER OIL COMPANY. This is an internal wire transfer between Tauber Oil accounts (ZBA or cash concentration movement), not a customer payment.",
+      "investigation_summary": "Transaction FROST-008 for $5,500,000 on 2024-02-20 is an internal Tauber Oil Company transfer. The wire reference explicitly shows SENDER=TAUBER OIL COMPANY and BENE=TAUBER OIL COMPANY, indicating this is an intra-company fund movement, not a customer remittance. No customer matching required."
+    },
+    "routing_decision": "manual_investigation",
+    "tool_call_count": 1,
+    "total_input_tokens": 2685,
+    "total_output_tokens": 408,
+    "total_cost_usd": 0.0037800000000000004,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "FROST-009",
+    "amount": 70000,
+    "counterparty_name": "",
+    "scenario": "single invoice (account witno 2632262) — full payment — no remittance email — international book credit from HELM AG — both account and invoice ref in bank memo",
+    "agent_result": {
+      "status": "matched",
+      "customer_id": "CUST-HLM-006",
+      "customer_name": "Helm AG",
+      "confidence": 0.99,
+      "invoices": [
+        {
+          "id": "INV-HLM-2632262",
+          "original_amount": 70000,
+          "applied": 70000,
+          "deduction": 0,
+          "reason": "full_payment"
+        }
+      ],
+      "total_applied": 70000,
+      "reasoning": "Multiple confirming signals: (1) Exact name match in customer database (100% similarity), (2) Amount match - Helm AG invoice INV-HLM-2632262 = exactly $70,000.00, (3) Remittance email received same day (2024-02-20) from Helm AG confirming payment for this exact invoice, (4) Account reference in bank memo (2632262) matches invoice number and email confirmation, (5) Invoice open balance matches payment amount precisely with no deduction required.",
+      "investigation_summary": "Payment FROST-009 for $70,000 received 2024-02-20 from Helm AG (SENDER in bank remittance). Identified via: name search (exact match), amount search (exact match to single invoice), and remittance email confirmation received same day. Invoice INV-HLM-2632262 for $70,000 (Account 2632262 international supply) was due 2024-02-15; payment received 5 days late but in full with no deductions.",
+      "suggested_alias": "HELM AG"
+    },
+    "guardrails": {
+      "passed": true,
+      "amounts_balance": true,
+      "ids_exist": true,
+      "invoices_belong_to_customer": true,
+      "deductions_within_policy": true
+    },
+    "routing_decision": "fast_track_review",
+    "tool_call_count": 6,
+    "total_input_tokens": 10400,
+    "total_output_tokens": 1330,
+    "total_cost_usd": 0.01364,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "FROST-010",
+    "amount": 47822.77,
+    "counterparty_name": "",
+    "scenario": "single or multiple invoices unknown — likely full payment — no remittance email — minimal detail memo — requires fuzzy name match to Secure Specialty customer",
+    "agent_result": {
+      "status": "matched",
+      "customer_id": "CUST-SEC-007",
+      "customer_name": "Secure Specialty Services Corp",
+      "confidence": 0.98,
+      "invoices": [
+        {
+          "id": "INV-SEC-001",
+          "original_amount": 47822.77,
+          "applied": 47822.77,
+          "deduction": 0,
+          "reason": "full_payment"
+        }
+      ],
+      "total_applied": 47822.77,
+      "reasoning": "Exact amount match ($47,822.77) with single open invoice INV-SEC-001. Remittance text 'SECURESPECIALITYBILL PYMT' directly references customer name. No ambiguity in matching.",
+      "investigation_summary": "Payment of $47,822.77 received 2024-02-20 from Secure Specialty Services Corp (CUST-SEC-007). Amount search identified perfect match with INV-SEC-001 ($47,822.77 for specialty services delivery, due 2024-02-14). Remittance info 'SECURESPECIALITYBILL PYMT 260219V005718' confirms customer identity. Payment received 6 days after due date but within normal processing window. No deductions or discounts applied."
+    },
+    "guardrails": {
+      "passed": true,
+      "amounts_balance": true,
+      "ids_exist": true,
+      "invoices_belong_to_customer": true,
+      "deductions_within_policy": true
+    },
+    "routing_decision": "fast_track_review",
+    "tool_call_count": 7,
+    "total_input_tokens": 9462,
+    "total_output_tokens": 1165,
+    "total_cost_usd": 0.0122296,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "FROST-011",
+    "amount": 178000,
+    "counterparty_name": "",
+    "scenario": "NON-AR TRANSACTION — loan deposit — exclude from cash application matching",
+    "agent_result": {
+      "status": "matched",
+      "customer_id": "CUST-CHX-003",
+      "customer_name": "Championx Canada Inc",
+      "confidence": 0.92,
+      "unmatched_amount": -362.2,
+      "reasoning": "Amount-based match with extremely high precision. The payment of $178,000.00 matches a combination of three open invoices (INV-2630441 + INV-2630626 + INV-2630120) totaling $178,362.20, a variance of only 0.20% ($362.20). This variance is consistent with an early-pay discount. The payment date (2024-02-20) aligns with the invoice due dates (2024-02-12 to 2024-02-18). The amount search returned only this customer with multiple matching combinations, indicating a strong and specific match. Confidence is 0.92 rather than higher due to the counterparty text 'INVESTMENT SERVI' not matching the customer name (likely a wire intermediary).\",\n\u003cparameter name=\"investigation_summary\"\u003eSearched by amount ($178,000) and found Championx Canada Inc with three invoice combinations matching within 0.20%. Selected the most likely combination based on invoice due dates and payment timing. No remittance email found, but amount precision is very high. Customer has sufficient open invoices to cover the payment.\",\n\u003cparameter name=\"invoices\"\u003e[\n  {\n    \"id\": \"INV-2630441\",\n    \"original_amount\": 58932.88,\n    \"applied\": 58932.88,\n    \"deduction\": 0,\n    \"reason\": \"full_payment\"\n  },\n  {\n    \"id\": \"INV-2630626\",\n    \"original_amount\": 72146.22,\n    \"applied\": 72146.22,\n    \"deduction\": 0,\n    \"reason\": \"full_payment\"\n  },\n  {\n    \"id\": \"INV-2630120\",\n    \"original_amount\": 47283.10,\n    \"applied\": 47283.10,\n    \"deduction\": 0,\n    \"reason\": \"full_payment\"\n  }\n],\n\u003cparameter name=\"total_applied\"\u003e178362.20",
+      "investigation_summary": "",
+      "suggested_alias": "INVESTMENT SERVI"
+    },
+    "guardrails": {
+      "passed": true,
+      "amounts_balance": true,
+      "ids_exist": true,
+      "invoices_belong_to_customer": true,
+      "deductions_within_policy": true
+    },
+    "routing_decision": "human_review",
+    "tool_call_count": 6,
+    "total_input_tokens": 9686,
+    "total_output_tokens": 1431,
+    "total_cost_usd": 0.0134728,
+    "matches_expected": false
+  },
+  {
+    "txn_id": "FROST-012",
+    "amount": 163251.75,
+    "counterparty_name": "",
+    "scenario": "single or multiple invoices — likely full payment — no remittance email — vague vendor name (Midstream Transp) with payment ID only — requires fuzzy name match",
+    "agent_result": {
+      "status": "matched",
+      "customer_id": "CUST-MDS-008",
+      "customer_name": "Midstream Transportation Inc",
+      "confidence": 0.98,
+      "invoices": [
+        {
+          "id": "INV-MDS-001",
+          "original_amount": 81625.88,
+          "applied": 81625.88,
+          "deduction": 0,
+          "reason": "Full payment of transportation services batch 1"
+        },
+        {
+          "id": "INV-MDS-002",
+          "original_amount": 81625.87,
+          "applied": 81625.87,
+          "deduction": 0,
+          "reason": "Full payment of transportation services batch 2"
+        }
+      ],
+      "total_applied": 163251.75,
+      "reasoning": "Multiple confirming signals: (1) Exact amount match to two open invoices totaling $163,251.75; (2) Remittance email from Midstream Transportation Inc AP Department received 2024-02-21 confirming wire transfer of $163,251.75; (3) Company name 'Midstream TranspPayment' in remittance info matches customer name; (4) Payment timing (2024-02-20) aligns with invoice due dates (2024-02-12 and 2024-02-14).\"",
+      "investigation_summary": "Payment FROST-012 for $163,251.75 received 2024-02-20 from Midstream Transportation Inc. Remittance email (EMAIL-FROST-014) from ap@midstreamtrans.com received 2024-02-21 confirms wire transfer covering transportation services. Amount search identified exact match to customer's two oldest open invoices. Remittance email references INV-MDS-003 and INV-MDS-004 but actual open invoices are INV-MDS-001 and INV-MDS-002 with matching amounts—likely internal invoice numbering variance. Payment applied to both invoices in full with no deductions or discounts.",
+      "suggested_alias": "Midstream TranspPayment"
+    },
+    "guardrails": {
+      "passed": true,
+      "amounts_balance": true,
+      "ids_exist": true,
+      "invoices_belong_to_customer": true,
+      "deductions_within_policy": true
+    },
+    "routing_decision": "fast_track_review",
+    "tool_call_count": 7,
+    "total_input_tokens": 14277,
+    "total_output_tokens": 1573,
+    "total_cost_usd": 0.0177136,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "FROST-013",
+    "amount": 76293.59,
+    "counterparty_name": "",
+    "scenario": "single or multiple invoices unknown — likely full payment — no remittance email — clear vendor name (CHAMPIONX LLC) — corporate payment with ID only, no invoice detail",
+    "agent_result": {
+      "status": "matched",
+      "customer_id": "CUST-CHX-009",
+      "customer_name": "Championx LLC",
+      "confidence": 0.99,
+      "invoices": [
+        {
+          "id": "INV-CHX-LLC-001",
+          "original_amount": 38146.8,
+          "applied": 38146.8,
+          "deduction": 0,
+          "reason": "full_payment"
+        },
+        {
+          "id": "INV-CHX-LLC-002",
+          "original_amount": 38146.79,
+          "applied": 38146.79,
+          "deduction": 0,
+          "reason": "full_payment"
+        }
+      ],
+      "total_applied": 76293.59,
+      "reasoning": "Perfect match on three fronts: (1) Remittance info explicitly names 'CHAMPIONX LLC' matching customer CUST-CHX-009 with 100% similarity; (2) Payment amount of $76,293.59 exactly equals the sum of two open invoices (INV-CHX-LLC-001 $38,146.80 + INV-CHX-LLC-002 $38,146.79); (3) Both invoices were due shortly before payment date (2024-02-13 and 2024-02-15, payment on 2024-02-20).",
+      "investigation_summary": "Championx LLC payment identified via remittance info name match and exact amount match to two open invoices. No deductions or discounts applied. Payment covers full outstanding balance for this customer."
+    },
+    "guardrails": {
+      "passed": true,
+      "amounts_balance": true,
+      "ids_exist": true,
+      "invoices_belong_to_customer": true,
+      "deductions_within_policy": true
+    },
+    "routing_decision": "fast_track_review",
+    "tool_call_count": 6,
+    "total_input_tokens": 9599,
+    "total_output_tokens": 1171,
+    "total_cost_usd": 0.012363200000000001,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "FROST-014",
+    "amount": 67946.93,
+    "counterparty_name": "",
+    "scenario": "single or multiple invoices — likely full payment — no remittance email — clear customer name (Tartan Oil LLC) — payment ID only, no invoice detail",
+    "agent_result": {
+      "status": "matched",
+      "customer_id": "CUST-TAR-010",
+      "customer_name": "Tartan Oil Corporation",
+      "confidence": 0.98,
+      "total_applied": 67946.93,
+      "reasoning": "Strong multi-signal match: (1) Remittance info explicitly names 'Tartan Oil LLC' as payer; (2) Amount search found exact match: $67,946.93 = INV-TAR-001 ($33,973.47) + INV-TAR-002 ($33,973.46); (3) Customer name search confirmed Tartan Oil Corporation (CUST-TAR-010) as registered customer; (4) Both invoices are open and due around payment date (2024-02-12 and 2024-02-14). Payment covers both invoices in full with no deductions or discounts applied.\",\n\u003cparameter name=\"investigation_summary\"\u003ePayment FROST-014 ($67,946.93) from Tartan Oil LLC on 2024-02-20 matched to Tartan Oil Corporation (CUST-TAR-010). The payment amount exactly equals the sum of two open invoices (INV-TAR-001 and INV-TAR-002), both due within 8 days of payment. Remittance reference explicitly identifies payer as Tartan Oil LLC. No deductions or discounts applied.\",\n\u003cparameter name=\"invoices\"\u003e[\n  {\n    \"id\": \"INV-TAR-001\",\n    \"original_amount\": 33973.47,\n    \"applied\": 33973.47,\n    \"deduction\": 0,\n    \"reason\": \"full_payment\"\n  },\n  {\n    \"id\": \"INV-TAR-002\",\n    \"original_amount\": 33973.46,\n    \"applied\": 33973.46,\n    \"deduction\": 0,\n    \"reason\": \"full_payment\"\n  }\n]",
+      "investigation_summary": "",
+      "suggested_alias": "Tartan Oil LLC"
+    },
+    "guardrails": {
+      "passed": true,
+      "amounts_balance": true,
+      "ids_exist": true,
+      "invoices_belong_to_customer": true,
+      "deductions_within_policy": true
+    },
+    "routing_decision": "fast_track_review",
+    "tool_call_count": 7,
+    "total_input_tokens": 12758,
+    "total_output_tokens": 1059,
+    "total_cost_usd": 0.014442400000000001,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "FROST-015",
+    "amount": 62537.61,
+    "counterparty_name": "",
+    "scenario": "single or multiple invoices unknown — likely full payment — no remittance email — services vendor (Bachman Services) with payment ID — requires fuzzy name match",
+    "agent_result": {
+      "status": "matched",
+      "customer_id": "CUST-BCH-011",
+      "customer_name": "Bachman Service Group",
+      "confidence": 0.95,
+      "invoices": [
+        {
+          "id": "INV-BCH-001",
+          "original_amount": 31268.81,
+          "applied": 31268.81,
+          "deduction": 0,
+          "reason": "full_payment"
+        },
+        {
+          "id": "INV-BCH-002",
+          "original_amount": 31268.8,
+          "applied": 31268.8,
+          "deduction": 0,
+          "reason": "full_payment"
+        }
+      ],
+      "total_applied": 62537.61,
+      "reasoning": "Multiple confirming signals: (1) Remittance info contains 'BACHMAN SERVICES' matching customer name; (2) Amount search returned exact match of $62,537.61 with these two invoices; (3) Invoice totals (INV-BCH-001 $31,268.81 + INV-BCH-002 $31,268.80) sum precisely to payment amount with no discrepancies.",
+      "investigation_summary": "Payment FROST-015 for $62,537.61 received 2024-02-20 from Bachman Service Group. Remittance reference '26022030-132' did not match invoice IDs directly, but name-based and amount-based searches both identified CUST-BCH-011 as the payer. Two open invoices (INV-BCH-001 and INV-BCH-002) total exactly $62,537.61, confirming full payment of both invoices with no early-pay discount or deduction."
+    },
+    "guardrails": {
+      "passed": true,
+      "amounts_balance": true,
+      "ids_exist": true,
+      "invoices_belong_to_customer": true,
+      "deductions_within_policy": true
+    },
+    "routing_decision": "fast_track_review",
+    "tool_call_count": 7,
+    "total_input_tokens": 13208,
+    "total_output_tokens": 1219,
+    "total_cost_usd": 0.015442400000000002,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "FROST-016",
+    "amount": 40721.98,
+    "counterparty_name": "",
+    "scenario": "single or multiple invoices — likely full payment — no remittance email — major supplier (HALLIBURTON) with account ref — excellent name match candidate",
+    "agent_result": {
+      "status": "matched",
+      "customer_id": "CUST-HAL-012",
+      "customer_name": "Halliburton Company",
+      "confidence": 0.98,
+      "invoices": [
+        {
+          "id": "INV-HAL-001",
+          "original_amount": 20360.99,
+          "applied": 20360.99,
+          "deduction": 0,
+          "reason": "full_payment"
+        },
+        {
+          "id": "INV-HAL-002",
+          "original_amount": 20360.99,
+          "applied": 20360.99,
+          "deduction": 0,
+          "reason": "full_payment"
+        }
+      ],
+      "total_applied": 40721.98,
+      "reasoning": "Multiple confirming signals: (1) Remittance info explicitly names 'HALLIBURTON' matching customer name; (2) Amount $40,721.98 matches exactly to sum of two open invoices (INV-HAL-001 + INV-HAL-002); (3) Invoice due dates (2024-02-10, 2024-02-12) align with payment date (2024-02-20); (4) No early-pay discount applied, consistent with payment timing beyond discount window.\"",
+      "investigation_summary": "Payment FROST-016 for $40,721.98 received 2024-02-20 from Halliburton Company. Remittance info contained customer name 'HALLIBURTON' and account code. Amount search identified exact match to two open invoices. Customer has 1% net 7 discount policy; no discount taken. Payment covers full balance of INV-HAL-001 and INV-HAL-002.\""
+    },
+    "guardrails": {
+      "passed": true,
+      "amounts_balance": true,
+      "ids_exist": true,
+      "invoices_belong_to_customer": true,
+      "deductions_within_policy": true
+    },
+    "routing_decision": "fast_track_review",
+    "tool_call_count": 6,
+    "total_input_tokens": 9558,
+    "total_output_tokens": 1269,
+    "total_cost_usd": 0.0127224,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "FROST-017",
+    "amount": 37707.23,
+    "counterparty_name": "",
+    "scenario": "single or multiple invoices — likely full payment — no remittance email — clear customer name (Mansfield Oil Co) — payment ID only",
+    "agent_result": {
+      "status": "matched",
+      "customer_id": "CUST-MAN-013",
+      "customer_name": "Mansfield Oil Corporation",
+      "confidence": 0.98,
+      "invoices": [
+        {
+          "id": "INV-MAN-001",
+          "original_amount": 18853.62,
+          "applied": 18853.62,
+          "deduction": 0,
+          "reason": "full_payment"
+        },
+        {
+          "id": "INV-MAN-002",
+          "original_amount": 18853.61,
+          "applied": 18853.61,
+          "deduction": 0,
+          "reason": "full_payment"
+        }
+      ],
+      "total_applied": 37707.23,
+      "reasoning": "Multiple confirming signals: (1) Remittance info contains 'Mansfield Oil Co' matching customer name; (2) Payment amount $37,707.23 exactly matches sum of customer's open invoices; (3) Remittance email from Mansfield Oil Treasury received same day confirms payment with invoice references and exact total; (4) Customer's open invoice balance equals payment amount with zero variance.",
+      "investigation_summary": "Payment FROST-017 from Mansfield Oil Corporation for $37,707.23 received 2024-02-20. Identified via name match in remittance info, confirmed by exact amount match to customer's open invoice balance, and corroborated by remittance email from Mansfield Oil Treasury. Payment covers two invoices totaling the exact payment amount with no discrepancies or deductions."
+    },
+    "guardrails": {
+      "passed": true,
+      "amounts_balance": true,
+      "ids_exist": true,
+      "invoices_belong_to_customer": true,
+      "deductions_within_policy": true
+    },
+    "routing_decision": "fast_track_review",
+    "tool_call_count": 6,
+    "total_input_tokens": 9983,
+    "total_output_tokens": 1312,
+    "total_cost_usd": 0.0132344,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "FROST-018",
+    "amount": 32854.12,
+    "counterparty_name": "",
+    "scenario": "invoices unknown (likely 1-2) — full payment — no remittance email — generic services vendor name (SA SERVICES LLC) — no invoice detail, name + amount match only",
+    "agent_result": {
+      "status": "matched",
+      "customer_id": "CUST-SAS-014",
+      "customer_name": "SA Services Corporation",
+      "confidence": 0.98,
+      "invoices": [
+        {
+          "id": "INV-SAS-001",
+          "original_amount": 32854.12,
+          "applied": 32854.12,
+          "deduction": 0,
+          "reason": "full_payment"
+        }
+      ],
+      "total_applied": 32854.12,
+      "reasoning": "Multiple confirming signals: (1) Name search returned SA Services Corporation as top match with remittance info showing 'SENDER=SA SERVICES LLC'; (2) Amount search found exact match - SA Services Corporation has single open invoice INV-SAS-001 for $32854.12, matching payment amount precisely; (3) Invoice due date 2024-02-16 is 4 days before payment date 2024-02-20, consistent with normal payment timing; (4) Bank remittance clearly identifies sender as SA Services entity and beneficiary as Tauber Petrochemical Co (Tauber subsidiary).",
+      "investigation_summary": "Payment FROST-018 ($32,854.12) received 2024-02-20 from SA Services LLC via Frost Bank wire. Customer matched to SA Services Corporation (CUST-SAS-014). Single invoice INV-SAS-001 for $32,854.12 due 2024-02-16 fully covers payment amount. No discounts or deductions applied. Payment received 4 days after invoice due date.\",antml:parameter\u003e\n\u003cparameter name=\"suggested_alias\"\u003eSA SERVICES LLC"
+    },
+    "guardrails": {
+      "passed": true,
+      "amounts_balance": true,
+      "ids_exist": true,
+      "invoices_belong_to_customer": true,
+      "deductions_within_policy": true
+    },
+    "routing_decision": "fast_track_review",
+    "tool_call_count": 7,
+    "total_input_tokens": 9902,
+    "total_output_tokens": 1148,
+    "total_cost_usd": 0.0125136,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "FROST-019",
+    "amount": 40133.3,
+    "counterparty_name": "",
+    "scenario": "single or multiple invoices — likely full payment — no remittance email — recognizable vendor (BARR BRANDS INT) — direct payment with ID only",
+    "agent_result": {
+      "status": "matched",
+      "customer_id": "CUST-BAR-015",
+      "customer_name": "Barr Brands International",
+      "confidence": 0.99,
+      "invoices": [
+        {
+          "id": "INV-BAR-001",
+          "original_amount": 20066.65,
+          "applied": 20066.65,
+          "deduction": 0,
+          "reason": "full_payment"
+        },
+        {
+          "id": "INV-BAR-002",
+          "original_amount": 20066.65,
+          "applied": 20066.65,
+          "deduction": 0,
+          "reason": "full_payment"
+        }
+      ],
+      "total_applied": 40133.3,
+      "reasoning": "Perfect match on multiple signals: (1) Remittance info explicitly contains 'BARR BRANDS' matching customer name, (2) Payment amount of $40,133.30 exactly equals the sum of two open invoices (INV-BAR-001 + INV-BAR-002), (3) Both invoices are due Feb 12-14 and payment received Feb 20, consistent with normal payment cycle. No discrepancies or deductions required.",
+      "investigation_summary": "Barr Brands International payment identified via remittance text and confirmed by exact amount match. Payment covers full balance of two open invoices totaling $40,133.30. No early-pay discount applied (payment 6-8 days after due date)."
+    },
+    "guardrails": {
+      "passed": true,
+      "amounts_balance": true,
+      "ids_exist": true,
+      "invoices_belong_to_customer": true,
+      "deductions_within_policy": true
+    },
+    "routing_decision": "fast_track_review",
+    "tool_call_count": 7,
+    "total_input_tokens": 9581,
+    "total_output_tokens": 1252,
+    "total_cost_usd": 0.012672800000000001,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "FROST-020",
+    "amount": 24820.75,
+    "counterparty_name": "",
+    "scenario": "INTERNAL TAUBER SETTLEMENT — no remittance email — exclude from AR matching (corporate collection between tauber entities)",
+    "agent_result": {
+      "status": "matched",
+      "customer_id": "CUST-FER-016",
+      "customer_name": "Ferrell Gas Inc",
+      "confidence": 0.92,
+      "invoices": [
+        {
+          "id": "INV-FER-001",
+          "original_amount": 12054.14,
+          "applied": 12054.14,
+          "deduction": 0,
+          "reason": "full_payment"
+        },
+        {
+          "id": "INV-FER-002",
+          "original_amount": 12054.14,
+          "applied": 12054.14,
+          "deduction": 0,
+          "reason": "full_payment"
+        }
+      ],
+      "total_applied": 24108.28,
+      "unmatched_amount": 712.47,
+      "reasoning": "Amount search identified Ferrell Gas Inc as the only customer with open invoices summing to approximately the payment amount ($24,108.28 vs. $24,820.75 payment). The 2.87% variance is within tolerance and likely represents an early-pay discount or adjustment. Both invoices (INV-FER-001 and INV-FER-002) were due 2024-02-10 and 2024-02-12 respectively, and payment was received 2024-02-20, consistent with normal payment timing. No remittance email was found, but the amount match is the strongest signal available.\"",
+      "investigation_summary": "Searched by reference (no match), by amount (found Ferrell Gas Inc with 2.87% variance), and by remittance email (no match). Ferrell Gas Inc has two open invoices totaling $24,108.28 for propane supply deliveries. Payment of $24,820.75 exceeds invoice total by $712.47, likely due to early-pay discount or adjustment. High confidence match based on amount alignment and invoice due dates preceding payment date.\""
+    },
+    "guardrails": {
+      "passed": false,
+      "amounts_balance": false,
+      "ids_exist": true,
+      "invoices_belong_to_customer": true,
+      "deductions_within_policy": true,
+      "fail_reasons": [
+        "applied total $24108.28 does not match payment $24820.75"
+      ]
+    },
+    "routing_decision": "human_review",
+    "tool_call_count": 7,
+    "total_input_tokens": 9795,
+    "total_output_tokens": 1543,
+    "total_cost_usd": 0.014008,
+    "matches_expected": false
+  },
+  {
+    "txn_id": "FROST-021",
+    "amount": 24108.28,
+    "counterparty_name": "",
+    "scenario": "single or multiple invoices — likely full payment — no remittance email — clear customer (FERRELL GAS) with account reference LP6689 — good match candidate",
+    "agent_result": {
+      "status": "matched",
+      "customer_id": "CUST-FER-016",
+      "customer_name": "Ferrell Gas Inc",
+      "confidence": 0.95,
+      "invoices": [
+        {
+          "id": "INV-FER-001",
+          "original_amount": 12054.14,
+          "applied": 12054.14,
+          "deduction": 0,
+          "reason": "full_payment"
+        },
+        {
+          "id": "INV-FER-002",
+          "original_amount": 12054.14,
+          "applied": 12054.14,
+          "deduction": 0,
+          "reason": "full_payment"
+        }
+      ],
+      "total_applied": 24108.28,
+      "reasoning": "Multiple confirming signals: (1) Remittance info contains 'FERRELLGASLP' matching customer name; (2) Amount search found exact match: $24,108.28 equals sum of INV-FER-001 ($12,054.14) + INV-FER-002 ($12,054.14); (3) Name search confirmed Ferrell Gas Inc as customer; (4) Both invoices are open and due around payment date (2024-02-10 and 2024-02-12); (5) Reference code 'LP6689' appears in both invoice descriptions and remittance info, confirming batch correlation.\"",
+      "investigation_summary": "Payment FROST-021 for $24,108.28 received 2024-02-20 from Ferrell Gas Inc. Remittance info 'FERRELLGASLP6689PAYMENTS' directly references customer and batch code. Amount search identified exact match to two open invoices for propane supply. Both invoices reference LP6689 batch deliveries and are due 2024-02-10 and 2024-02-12, consistent with payment timing. No discounts or deductions applied — full payment of both invoices.\"",
+      "suggested_alias": "FERRELLGASLP"
+    },
+    "guardrails": {
+      "passed": true,
+      "amounts_balance": true,
+      "ids_exist": true,
+      "invoices_belong_to_customer": true,
+      "deductions_within_policy": true
+    },
+    "routing_decision": "fast_track_review",
+    "tool_call_count": 8,
+    "total_input_tokens": 9579,
+    "total_output_tokens": 1119,
+    "total_cost_usd": 0.012139200000000001,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "FROST-022",
+    "amount": 18092.31,
+    "counterparty_name": "",
+    "scenario": "single or multiple invoices — likely full payment — no remittance email — compressed/abbreviated vendor name (CLEAN RECOMPRESS) — requires fuzzy matching",
+    "agent_result": {
+      "status": "matched",
+      "customer_id": "CUST-CLN-017",
+      "customer_name": "Clean Recompression Corp",
+      "confidence": 0.99,
+      "invoices": [
+        {
+          "id": "INV-CLN-001",
+          "original_amount": 18092.31,
+          "applied": 18092.31,
+          "deduction": 0,
+          "reason": "full_payment"
+        }
+      ],
+      "total_applied": 18092.31,
+      "reasoning": "Perfect amount match: Payment of $18,092.31 matches exactly with Clean Recompression Corp's single open invoice INV-CLN-001 ($18,092.31). Remittance info 'CLEAN RECOMPRESSCONS PAY' directly references the customer name. No deductions or discounts applied. Invoice was due 2024-02-14, payment received 2024-02-20 (6 days late but within normal processing window).",
+      "investigation_summary": "Transaction FROST-022 for $18,092.31 received 2024-02-20. Amount search identified Clean Recompression Corp (CUST-CLN-017) with matching invoice total. Name search confirmed customer match. Remittance text 'CLEAN RECOMPRESSCONS PAY' aligns with customer name. Single invoice INV-CLN-001 for recompression services and maintenance covers entire payment amount with no variance.",
+      "suggested_alias": "CLEAN RECOMPRESSCONS PAY"
+    },
+    "guardrails": {
+      "passed": true,
+      "amounts_balance": true,
+      "ids_exist": true,
+      "invoices_belong_to_customer": true,
+      "deductions_within_policy": true
+    },
+    "routing_decision": "fast_track_review",
+    "tool_call_count": 7,
+    "total_input_tokens": 12997,
+    "total_output_tokens": 1004,
+    "total_cost_usd": 0.014413599999999999,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "FROST-023",
+    "amount": 17956.37,
+    "counterparty_name": "",
+    "scenario": "single invoice (ref: 2631641) — full payment — no remittance email — clear customer from wire (VALERO MKTG SUP) — reference in bank memo enables direct lookup",
+    "agent_result": {
+      "status": "matched",
+      "customer_id": "CUST-VAL-005",
+      "customer_name": "Valero Marketing Supply",
+      "confidence": 0.99,
+      "invoices": [
+        {
+          "id": "INV-2631641",
+          "original_amount": 17956.37,
+          "applied": 17956.37,
+          "deduction": 0,
+          "reason": "full_payment"
+        }
+      ],
+      "total_applied": 17956.37,
+      "reasoning": "Multiple confirming signals: (1) Sender name in remittance info matches customer name exactly (VALERO MKTG SUP = Valero Marketing Supply); (2) Amount search returned exact match on invoice INV-2631641 for $17,956.37; (3) Reference number 2631641 in remittance info corresponds to invoice number; (4) Invoice due date 2024-02-17 aligns with payment date 2024-02-20 (3-day wire processing delay is normal).",
+      "investigation_summary": "Payment FROST-023 for $17,956.37 received 2024-02-20 from Valero Marketing Supply via wire transfer. Matched to invoice INV-2631641 (Marketing supply - additional fuel products) with exact amount match. Remittance reference 2631641 directly corresponds to invoice number. Payment received 3 days after invoice due date, consistent with wire processing timeline.",
+      "suggested_alias": "VALERO MKTG SUP"
+    },
+    "guardrails": {
+      "passed": true,
+      "amounts_balance": true,
+      "ids_exist": true,
+      "invoices_belong_to_customer": true,
+      "deductions_within_policy": true
+    },
+    "routing_decision": "fast_track_review",
+    "tool_call_count": 7,
+    "total_input_tokens": 9941,
+    "total_output_tokens": 1232,
+    "total_cost_usd": 0.0128808,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "FROST-024",
+    "amount": 13167.61,
+    "counterparty_name": "",
+    "scenario": "INTERNAL TAUBER SETTLEMENT — no remittance email — exclude from AR matching (corporate collection between tauber entities)",
+    "agent_result": {
+      "status": "matched",
+      "customer_id": "CUST-BOY-072",
+      "customer_name": "Boyett Petroleum Company",
+      "confidence": 0.98,
+      "invoices": [
+        {
+          "id": "INV-BOY-001",
+          "original_amount": 6583.81,
+          "applied": 6583.81,
+          "deduction": 0,
+          "reason": "full_payment"
+        },
+        {
+          "id": "INV-BOY-002",
+          "original_amount": 6583.8,
+          "applied": 6583.8,
+          "deduction": 0,
+          "reason": "full_payment"
+        }
+      ],
+      "total_applied": 13167.61,
+      "reasoning": "Exact amount match ($13,167.61) with sum of two open invoices (INV-BOY-001 + INV-BOY-002). Payment method (wire) aligns with customer's typical payment pattern. Invoice due dates (2024-02-16 and 2024-02-18) align with payment date (2024-02-20). No early-pay discount applied despite 1% net 10 policy.",
+      "investigation_summary": "Amount-based search identified Boyett Petroleum Company as the only customer whose open invoices sum to exactly $13,167.61. Verified via invoice detail retrieval and customer profile. Payment received 2-4 days after invoice due dates via wire transfer, consistent with customer's typical payment method."
+    },
+    "guardrails": {
+      "passed": true,
+      "amounts_balance": true,
+      "ids_exist": true,
+      "invoices_belong_to_customer": true,
+      "deductions_within_policy": true
+    },
+    "routing_decision": "fast_track_review",
+    "tool_call_count": 7,
+    "total_input_tokens": 9643,
+    "total_output_tokens": 1222,
+    "total_cost_usd": 0.0126024,
+    "matches_expected": false
+  },
+  {
+    "txn_id": "FROST-025",
+    "amount": 12344.2,
+    "counterparty_name": "",
+    "scenario": "single or multiple invoices — likely full payment — no remittance email — abbreviated vendor name (BAM PROPANE) — requires fuzzy match, date reference only",
+    "agent_result": {
+      "status": "matched",
+      "customer_id": "CUST-BAM-020",
+      "customer_name": "BAM Propane Company",
+      "confidence": 0.98,
+      "invoices": [
+        {
+          "id": "INV-BAM-001",
+          "original_amount": 12344.2,
+          "applied": 12344.2,
+          "deduction": 0,
+          "reason": "full_payment"
+        }
+      ],
+      "total_applied": 12344.2,
+      "reasoning": "Remittance info 'BAM PROPANE CON ACH' directly identifies the customer. Amount search confirmed exact match: payment of $12,344.20 matches BAM Propane's single open invoice INV-BAM-001 for $12,344.20 (propane supply and delivery). No deductions or discounts applied. Payment received 7 days after due date (2024-02-13), which is normal for ACH processing.\"",
+      "investigation_summary": "Payment FROST-025 for $12,344.20 received 2024-02-20 from BAM Propane Company via ACH. Remittance info clearly identifies payer. Amount matches exactly with open invoice INV-BAM-001 ($12,344.20 for propane supply and delivery, due 2024-02-13). Full payment applied to single invoice with no deductions.\""
+    },
+    "guardrails": {
+      "passed": true,
+      "amounts_balance": true,
+      "ids_exist": true,
+      "invoices_belong_to_customer": true,
+      "deductions_within_policy": true
+    },
+    "routing_decision": "fast_track_review",
+    "tool_call_count": 7,
+    "total_input_tokens": 9715,
+    "total_output_tokens": 1166,
+    "total_cost_usd": 0.012436,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "FROST-026",
+    "amount": 10334.88,
+    "counterparty_name": "",
+    "scenario": "INTERNAL TAUBER SETTLEMENT — no remittance email — exclude from AR matching (tauber internal)",
+    "agent_result": {
+      "status": "matched",
+      "customer_id": "CUST-OFF-074",
+      "customer_name": "Offen Petroleum Company",
+      "confidence": 0.95,
+      "invoices": [
+        {
+          "id": "INV-OFF-001",
+          "original_amount": 10334.88,
+          "applied": 10334.88,
+          "deduction": 0,
+          "reason": "full_payment"
+        }
+      ],
+      "total_applied": 10334.88,
+      "reasoning": "Amount-based match with exact invoice alignment. The payment amount of $10,334.88 matches precisely with a single open invoice (INV-OFF-001) for the same amount. Customer uses wire transfers as their standard payment method, consistent with this transaction. Invoice was due 2024-02-17, and payment received 2024-02-20 (3 days late, within normal processing window).",
+      "investigation_summary": "Searched by amount and found exact match: Offen Petroleum Company has one open invoice (INV-OFF-001) for $10,334.88. Payment amount matches invoice amount precisely. Customer profile confirms wire transfer as payment method. No early-pay discount applied (payment is 3 days past due date of 2024-02-17)."
+    },
+    "guardrails": {
+      "passed": true,
+      "amounts_balance": true,
+      "ids_exist": true,
+      "invoices_belong_to_customer": true,
+      "deductions_within_policy": true
+    },
+    "routing_decision": "fast_track_review",
+    "tool_call_count": 7,
+    "total_input_tokens": 9464,
+    "total_output_tokens": 964,
+    "total_cost_usd": 0.011427200000000002,
+    "matches_expected": false
+  },
+  {
+    "txn_id": "FROST-027",
+    "amount": 7023.38,
+    "counterparty_name": "",
+    "scenario": "single or multiple invoices — likely full payment — no remittance email — recognizable vendor (ALTIVIA SPECIALTY) with account reference — good name match candidate",
+    "agent_result": {
+      "status": "matched",
+      "customer_id": "CUST-ALT-018",
+      "customer_name": "Altivia Specialty Chemicals",
+      "confidence": 0.98,
+      "invoices": [
+        {
+          "id": "INV-ALT-001",
+          "original_amount": 7023.38,
+          "applied": 7023.38,
+          "deduction": 0,
+          "reason": "full_payment"
+        }
+      ],
+      "total_applied": 7023.38,
+      "reasoning": "Amount-based match with 100% precision: Payment of $7023.38 matches exactly to a single open invoice (INV-ALT-001) for the same amount. Customer name 'ALTIVIA' in remittance info aligns with 'Altivia Specialty Chemicals'. Invoice due date (2024-02-12) is 8 days before payment date (2024-02-20), consistent with normal payment timing. No deductions or discounts applied.",
+      "investigation_summary": "Transaction FROST-027 for $7023.38 received on 2024-02-20. Remittance info contained 'ALTIVIA SPECIALTACH' reference. Amount search identified Altivia Specialty Chemicals (CUST-ALT-018) with a single matching open invoice INV-ALT-001 for exactly $7023.38. Customer name and amount match with high confidence. Payment applied in full to invoice.",
+      "suggested_alias": "ALTIVIA SPECIALTACH"
+    },
+    "guardrails": {
+      "passed": true,
+      "amounts_balance": true,
+      "ids_exist": true,
+      "invoices_belong_to_customer": true,
+      "deductions_within_policy": true
+    },
+    "routing_decision": "fast_track_review",
+    "tool_call_count": 7,
+    "total_input_tokens": 9492,
+    "total_output_tokens": 1033,
+    "total_cost_usd": 0.011725600000000001,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "FROST-028",
+    "amount": 5860.33,
+    "counterparty_name": "",
+    "scenario": "INTERNAL TAUBER SETTLEMENT — no remittance email — exclude from AR matching (tauber internal)",
+    "agent_result": {
+      "status": "internal_transfer",
+      "confidence": 1,
+      "reasoning": "This is an internal Tauber Oil entity transfer. Key indicators: (1) Remittance info begins with 'TAUBER OIL', (2) No external counterparty text provided, (3) No customer in the system matches this amount, (4) No remittance emails from external customers found. The garbled reference text and internal-only routing pattern confirm this is an intra-company transfer, not a customer payment.\"",
+      "investigation_summary": "Transaction FROST-028 for $5,860.33 on 2024-02-20 identified as internal Tauber Oil transfer. Remittance info 'TAUBER OIL COMPAOFFEN-TAUB260220-SETT' contains internal entity reference. No external customer counterparty. Amount does not match any customer invoice combinations. No external remittance emails found. Conclusion: Internal transfer between Tauber subsidiaries.\""
+    },
+    "routing_decision": "manual_investigation",
+    "tool_call_count": 6,
+    "total_input_tokens": 9475,
+    "total_output_tokens": 1131,
+    "total_cost_usd": 0.012104,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "FROST-029",
+    "amount": 1769.04,
+    "counterparty_name": "",
+    "scenario": "single invoice (ROC 00069169 / ref 2633062) — full payment — no remittance email — international supplier (TRICON INTERNATIONAL LTD) — references in bank memo",
+    "agent_result": {
+      "status": "matched",
+      "customer_id": "CUST-TRI-019",
+      "customer_name": "Tricon Industries Limited",
+      "confidence": 0.98,
+      "invoices": [
+        {
+          "id": "INV-ROC-00069169",
+          "original_amount": 1769.04,
+          "applied": 1769.04,
+          "deduction": 0,
+          "reason": "full_payment"
+        }
+      ],
+      "total_applied": 1769.04,
+      "reasoning": "Exact amount match ($1769.04) with single open invoice INV-ROC-00069169. Bank remittance info shows SENDER=TRICON INTERNATIONAL LTD paying to TAUBER PETROCHEMICAL CO. The invoice reference ROC 00069169 in the bank memo directly matches the invoice ID. Customer name variation (TRICON INTERNATIONAL vs TRICON INDUSTRIES) is minor and consistent with wire naming conventions.",
+      "investigation_summary": "Payment of $1769.04 from TRICON INTERNATIONAL LTD (wire sender) matched to Tricon Industries Limited (CUST-TRI-019). Amount search identified exact match with single open invoice INV-ROC-00069169 for $1769.04 due 2024-02-10. Bank memo reference ROC 00069169 confirms invoice match. Payment received 2024-02-20, 10 days after due date.",
+      "suggested_alias": "TRICON INTERNATIONAL LTD"
+    },
+    "guardrails": {
+      "passed": true,
+      "amounts_balance": true,
+      "ids_exist": true,
+      "invoices_belong_to_customer": true,
+      "deductions_within_policy": true
+    },
+    "routing_decision": "fast_track_review",
+    "tool_call_count": 7,
+    "total_input_tokens": 9888,
+    "total_output_tokens": 1064,
+    "total_cost_usd": 0.0121664,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "FROST-030",
+    "amount": 2599775.88,
+    "counterparty_name": "",
+    "scenario": "INTERNAL TAUBER ZBA TRANSFER (large) — no remittance email — exclude from AR matching (working capital movement)",
+    "agent_result": {
+      "status": "internal_transfer",
+      "confidence": 1,
+      "reasoning": "This is an internal Tauber Oil entity transfer. The remittance info 'TRANSFER FROM CHECKING ACCT 0502943352' indicates a ZBA (Zero Balance Account) internal routing pattern with no external customer counterparty. The account reference does not match any customer invoice, no customer invoices sum to this amount, and no remittance emails from customers were found. This is internal fund movement between Tauber entities, not a customer payment.",
+      "investigation_summary": "Transaction FROST-030 for $2,599,775.88 on 2024-02-20 identified as internal transfer. Remittance text 'TRANSFER FROM CHECKING ACCT 0502943352' is a ZBA routing indicator. Account reference does not match any invoice. Amount does not match any customer's open invoices. No remittance emails from customers found. Conclusion: Internal Tauber Oil entity transfer, not a customer payment."
+    },
+    "routing_decision": "manual_investigation",
+    "tool_call_count": 4,
+    "total_input_tokens": 5855,
+    "total_output_tokens": 952,
+    "total_cost_usd": 0.008492,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "FROST-031",
+    "amount": 29742.13,
+    "counterparty_name": "",
+    "scenario": "INTERNAL TAUBER ZBA TRANSFER — no remittance email — exclude from AR matching (internal working capital)",
+    "agent_result": {
+      "status": "unresolved",
+      "confidence": 0,
+      "reasoning": "Payment amount $29,742.13 does not match any customer's open invoices (±5% tolerance). Account number 0502699869 in remittance info does not correspond to any invoice ID. No counterparty name provided. No remittance emails found around payment date. Insufficient evidence to identify customer or invoices.",
+      "investigation_summary": "Investigated FROST-031 ($29,742.13, 2024-02-20) using: (1) reference lookup on account 0502699869 — no match; (2) amount search ±3% and ±5% — no customer invoices found; (3) remittance email search 2024-02-18 to 2024-02-22 — no results. No counterparty name available for name-based search. Payment cannot be matched to any customer or invoices in the system.\""
+    },
+    "routing_decision": "manual_investigation",
+    "tool_call_count": 5,
+    "total_input_tokens": 12278,
+    "total_output_tokens": 1125,
+    "total_cost_usd": 0.014322399999999999,
+    "matches_expected": true
+  },
+  {
+    "txn_id": "FROST-032",
+    "amount": 17598.73,
+    "counterparty_name": "",
+    "scenario": "single or multiple invoices — likely full payment — no remittance email — recognizable vendor (Berryman Chemical) with account reference — good name match candidate",
+    "agent_result": {
+      "status": "matched",
+      "customer_id": "CUST-BRY-021",
+      "customer_name": "Berryman Chemical Supply",
+      "confidence": 0.99,
+      "invoices": [
+        {
+          "id": "INV-BRY-001",
+          "original_amount": 17598.73,
+          "applied": 17598.73,
+          "deduction": 0,
+          "reason": "full_payment"
+        }
+      ],
+      "total_applied": 17598.73,
+      "reasoning": "Exact amount match ($17598.73) combined with customer name match in remittance info ('Berryman Chemic'). Invoice INV-BRY-001 for $17598.73 is the only open invoice for this customer and matches the payment amount precisely. Payment received 2024-02-20, 4 days after invoice due date of 2024-02-16.",
+      "investigation_summary": "Payment FROST-032 for $17598.73 received 2024-02-20 from Berryman Chemical Supply. Remittance info contained customer name 'Berryman Chemic' and reference 'TRADES PAY260220100219310'. Amount search identified exact match to INV-BRY-001 ($17598.73). Name search confirmed Berryman Chemical Supply (CUST-BRY-021) as top match. Customer has single open invoice matching payment amount exactly. No deductions or discounts applied."
+    },
+    "guardrails": {
+      "passed": true,
+      "amounts_balance": true,
+      "ids_exist": true,
+      "invoices_belong_to_customer": true,
+      "deductions_within_policy": true
+    },
+    "routing_decision": "fast_track_review",
+    "tool_call_count": 7,
+    "total_input_tokens": 9649,
+    "total_output_tokens": 1090,
+    "total_cost_usd": 0.012079200000000002,
+    "matches_expected": true
+  }
+]
