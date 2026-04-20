@@ -1,0 +1,262 @@
+{
+  "Data": {
+    "payer": "Logitech",
+    "payment_date": "2025-04-10",
+    "total_amount": 385000,
+    "currency": "USD",
+    "bank_reference_number": "2307 11",
+    "invoices": [
+      {
+        "invoice_number": "NECO-2024-001",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-001",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-001",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-001",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-001",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-001",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-001",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-001",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-001",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-001",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-001",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-001",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-001",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-001",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-001",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-001",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-001",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-001",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-001",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-001",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-001",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-001",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-001",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-001",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-002",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-002",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-002",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-002",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-002",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-002",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-002",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-002",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-002",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-002",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-002",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-002",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-002",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-002",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-002",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-002",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-002",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-002",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-002",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-002",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-002",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-002",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-002",
+        "amount": 5000,
+        "description": "PO-1000"
+      },
+      {
+        "invoice_number": "NECO-2024-002",
+        "amount": 5000,
+        "description": "PO-1000"
+      }
+    ],
+    "invoice_count": 48,
+    "notes": "Payment Method: ACH. Trx No: 000049107. Vendor No: VEN564. Total from PDF: $385,000.00. Email indicates payment initiated and remittance advice attached. Receipt of this remittance advice is not confirmation of success or failure of the electronic funds attempt."
+  },
+  "TokenUsage": {
+    "InputTokens": 4289,
+    "OutputTokens": 1964
+  },
+  "CostUSD": 0.0033128000000000003,
+  "Provider": "openai",
+  "ModelUsed": "gpt-5.4-nano",
+  "EmailFile": "./data/Payment Initiated 71 invoices.eml",
+  "ProcessedAt": "2026-04-20T06:47:54.657711Z"
+}

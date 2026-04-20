@@ -1,0 +1,8 @@
+# Local secrets — never commit
+.env
+gmail_credentials.json
+gmail_token.json
+
+# Build output
+/remittance-poc
+/gmail-sync

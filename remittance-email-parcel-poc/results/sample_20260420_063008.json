@@ -1,0 +1,37 @@
+{
+  "Data": {
+    "payer": "Global Supplies Inc.",
+    "payment_date": "2026-04-15",
+    "total_amount": 15000,
+    "currency": "USD",
+    "bank_reference_number": "WIRE-20260415-8842",
+    "invoices": [
+      {
+        "invoice_number": "INV-2026-001",
+        "amount": 5250,
+        "description": "Office Supplies Q1 2026"
+      },
+      {
+        "invoice_number": "INV-2026-002",
+        "amount": 3750,
+        "description": "Warehouse Safety Equipment"
+      },
+      {
+        "invoice_number": "INV-2026-003",
+        "amount": 6000,
+        "description": "IT Infrastructure Renewal"
+      }
+    ],
+    "invoice_count": 3,
+    "notes": "Payment method: Domestic Wire Transfer. Please apply payment to the above invoices. Contact ap@globalsupplies.com for any discrepancies."
+  },
+  "TokenUsage": {
+    "InputTokens": 780,
+    "OutputTokens": 223
+  },
+  "CostUSD": 0.00043475,
+  "Provider": "openai",
+  "ModelUsed": "gpt-5.4-nano",
+  "EmailFile": "data/sample.eml",
+  "ProcessedAt": "2026-04-20T06:30:08.695711Z"
+}
