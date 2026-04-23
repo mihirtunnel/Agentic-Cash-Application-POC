@@ -1,0 +1,147 @@
+{
+  "Data": {
+    "payer": "Housing Gear Co",
+    "payment_date": "2026-03-27",
+    "total_amount": 71869,
+    "currency": "USD",
+    "bank_reference_number": "ACH9988776655",
+    "invoices": [
+      {
+        "invoice_number": "INV-4001",
+        "amount": 2446,
+        "description": "Equipment / Services"
+      },
+      {
+        "invoice_number": "INV-4002",
+        "amount": 4820,
+        "description": "Equipment / Services"
+      },
+      {
+        "invoice_number": "INV-4003",
+        "amount": 952,
+        "description": "Equipment / Services"
+      },
+      {
+        "invoice_number": "INV-4004",
+        "amount": 813,
+        "description": "Equipment / Services"
+      },
+      {
+        "invoice_number": "INV-4005",
+        "amount": 1415,
+        "description": "Equipment / Services"
+      },
+      {
+        "invoice_number": "INV-4006",
+        "amount": 3492,
+        "description": "Equipment / Services"
+      },
+      {
+        "invoice_number": "INV-4007",
+        "amount": 1183,
+        "description": "Equipment / Services"
+      },
+      {
+        "invoice_number": "INV-4008",
+        "amount": 3232,
+        "description": "Equipment / Services"
+      },
+      {
+        "invoice_number": "INV-4009",
+        "amount": 4081,
+        "description": "Equipment / Services"
+      },
+      {
+        "invoice_number": "INV-4010",
+        "amount": 2604,
+        "description": "Equipment / Services"
+      },
+      {
+        "invoice_number": "INV-4011",
+        "amount": 1029,
+        "description": "Equipment / Services"
+      },
+      {
+        "invoice_number": "INV-4012",
+        "amount": 5034,
+        "description": "Equipment / Services"
+      },
+      {
+        "invoice_number": "INV-4013",
+        "amount": 1305,
+        "description": "Equipment / Services"
+      },
+      {
+        "invoice_number": "INV-4014",
+        "amount": 1895,
+        "description": "Equipment / Services"
+      },
+      {
+        "invoice_number": "INV-4015",
+        "amount": 653,
+        "description": "Equipment / Services"
+      },
+      {
+        "invoice_number": "INV-4016",
+        "amount": 2999,
+        "description": "Equipment / Services"
+      },
+      {
+        "invoice_number": "INV-4017",
+        "amount": 1793,
+        "description": "Equipment / Services"
+      },
+      {
+        "invoice_number": "INV-4018",
+        "amount": 4118,
+        "description": "Equipment / Services"
+      },
+      {
+        "invoice_number": "INV-4019",
+        "amount": 3055,
+        "description": "Equipment / Services"
+      },
+      {
+        "invoice_number": "INV-4020",
+        "amount": 4896,
+        "description": "Equipment / Services"
+      },
+      {
+        "invoice_number": "INV-4021",
+        "amount": 2455,
+        "description": "Equipment / Services"
+      },
+      {
+        "invoice_number": "INV-4022",
+        "amount": 5063,
+        "description": "Equipment / Services"
+      },
+      {
+        "invoice_number": "INV-4023",
+        "amount": 3623,
+        "description": "Equipment / Services"
+      },
+      {
+        "invoice_number": "INV-4024",
+        "amount": 4739,
+        "description": "Equipment / Services"
+      },
+      {
+        "invoice_number": "INV-4025",
+        "amount": 4174,
+        "description": "Equipment / Services"
+      }
+    ],
+    "invoice_count": 25,
+    "notes": "Reference No: RA-55678; Batch ID: BATCH-99821; Transaction No: TXN-991245; Payment Method: ACH; Settlement Date: 2026-03-28; FX Rate: 1.00; Bank Details: Chase Bank (Routing No: 021000021, SWIFT: CHASUS33, Account No: ****5678). Adjustments \u0026 Credits: Credit Note CN-10021 (-500) and Early Payment Discount EPD-7782 (-320)."
+  },
+  "TokenUsage": {
+    "InputTokens": 1951,
+    "OutputTokens": 983
+  },
+  "CostUSD": 0.0016189499999999999,
+  "Provider": "openai",
+  "ModelUsed": "gpt-5.4-nano",
+  "EmailFile": "gmail:19daf6687f737a38",
+  "ProcessedAt": "2026-04-21T09:38:24.628674Z"
+}

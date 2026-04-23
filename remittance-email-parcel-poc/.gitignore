@@ -2,6 +2,9 @@
 .env
 gmail_credentials.json
 gmail_token.json
+# Long-named credentials file Google downloads
+gmial-client_secret_*.json
+client_secret_*.json
 
 # Build output
 /remittance-poc

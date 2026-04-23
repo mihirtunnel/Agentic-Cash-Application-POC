@@ -1,0 +1,102 @@
+{
+  "Data": {
+    "payer": "ABC Technologies Pvt. Ltd.",
+    "payment_date": "2026-04-21",
+    "total_amount": 29650,
+    "currency": "USD",
+    "bank_reference_number": "",
+    "invoices": [
+      {
+        "invoice_number": "INV-1001",
+        "amount": 1200
+      },
+      {
+        "invoice_number": "INV-1002",
+        "amount": 980
+      },
+      {
+        "invoice_number": "INV-1003",
+        "amount": 1450
+      },
+      {
+        "invoice_number": "INV-1004",
+        "amount": 2100
+      },
+      {
+        "invoice_number": "INV-1005",
+        "amount": 750
+      },
+      {
+        "invoice_number": "INV-1006",
+        "amount": 1320
+      },
+      {
+        "invoice_number": "INV-1007",
+        "amount": 860
+      },
+      {
+        "invoice_number": "INV-1008",
+        "amount": 1970
+      },
+      {
+        "invoice_number": "INV-1009",
+        "amount": 1110
+      },
+      {
+        "invoice_number": "INV-1010",
+        "amount": 2400
+      },
+      {
+        "invoice_number": "INV-1011",
+        "amount": 1050
+      },
+      {
+        "invoice_number": "INV-1012",
+        "amount": 890
+      },
+      {
+        "invoice_number": "INV-1013",
+        "amount": 1670
+      },
+      {
+        "invoice_number": "INV-1014",
+        "amount": 1200
+      },
+      {
+        "invoice_number": "INV-1015",
+        "amount": 940
+      },
+      {
+        "invoice_number": "INV-1016",
+        "amount": 2050
+      },
+      {
+        "invoice_number": "INV-1017",
+        "amount": 780
+      },
+      {
+        "invoice_number": "INV-1018",
+        "amount": 1330
+      },
+      {
+        "invoice_number": "INV-1019",
+        "amount": 1600
+      },
+      {
+        "invoice_number": "INV-1020",
+        "amount": 2200
+      }
+    ],
+    "invoice_count": 20,
+    "notes": "Payment processed via Bank Transfer. Payment Date: 21-Apr-2026. Total Amount Paid: $29,650."
+  },
+  "TokenUsage": {
+    "InputTokens": 758,
+    "OutputTokens": 655
+  },
+  "CostUSD": 0.00097035,
+  "Provider": "openai",
+  "ModelUsed": "gpt-5.4-nano",
+  "EmailFile": "gmail:19daf4f0f2fc6dad",
+  "ProcessedAt": "2026-04-21T09:28:40.182449Z"
+}

@@ -1,0 +1,32 @@
+{
+  "Data": {
+    "payer": "Housing Gear Co",
+    "payment_date": "2026-03-27",
+    "total_amount": 1500,
+    "currency": "USD",
+    "bank_reference_number": "G04447",
+    "invoices": [
+      {
+        "invoice_number": "INV-B0B08C",
+        "amount": 700,
+        "description": "Invoice 108013"
+      },
+      {
+        "invoice_number": "INV-08CC6C",
+        "amount": 800,
+        "description": "Invoice 108014"
+      }
+    ],
+    "invoice_count": 2,
+    "notes": "Ref No: 3829; Payment Method: ACH; Total: $1,500.00. PDF states electronic funds attempt may not indicate success."
+  },
+  "TokenUsage": {
+    "InputTokens": 1001,
+    "OutputTokens": 177
+  },
+  "CostUSD": 0.00042144999999999997,
+  "Provider": "openai",
+  "ModelUsed": "gpt-5.4-nano",
+  "EmailFile": "gmail:19daf3dc82e127b1",
+  "ProcessedAt": "2026-04-21T09:06:23.097398Z"
+}

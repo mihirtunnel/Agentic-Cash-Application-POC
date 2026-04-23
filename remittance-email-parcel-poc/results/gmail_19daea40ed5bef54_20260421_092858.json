@@ -1,0 +1,27 @@
+{
+  "Data": {
+    "payer": "Housing Gear Co",
+    "payment_date": "2026-04-09",
+    "total_amount": 200,
+    "currency": "USD",
+    "bank_reference_number": "3851",
+    "invoices": [
+      {
+        "invoice_number": "INV-AF236C",
+        "amount": 200,
+        "description": "Invoice 108046"
+      }
+    ],
+    "invoice_count": 1,
+    "notes": "Email indicates payment initiated for Bluestone Equipment in the amount of $200.00. PDF shows Trx No: G04448, Payment Method: ACH, Vendor No: V00040. Total Net: $200.00."
+  },
+  "TokenUsage": {
+    "InputTokens": 962,
+    "OutputTokens": 160
+  },
+  "CostUSD": 0.0003924,
+  "Provider": "openai",
+  "ModelUsed": "gpt-5.4-nano",
+  "EmailFile": "gmail:19daea40ed5bef54",
+  "ProcessedAt": "2026-04-21T09:28:58.900841Z"
+}

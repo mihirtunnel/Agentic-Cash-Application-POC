@@ -1,0 +1,292 @@
+{
+  "Data": {
+    "payer": "Housing Gear Co",
+    "payment_date": "2026-04-21",
+    "total_amount": 26800,
+    "currency": "USD",
+    "bank_reference_number": "3852 / G04449",
+    "invoices": [
+      {
+        "invoice_number": "INV-B1D491",
+        "amount": 500,
+        "description": "Invoice 108021"
+      },
+      {
+        "invoice_number": "INV-FA3026",
+        "amount": 600,
+        "description": "Invoice 108022"
+      },
+      {
+        "invoice_number": "INV-DF7A0A",
+        "amount": 700,
+        "description": "Invoice 108023"
+      },
+      {
+        "invoice_number": "INV-AFE08D",
+        "amount": 800,
+        "description": "Invoice 108024"
+      },
+      {
+        "invoice_number": "INV-3A688D",
+        "amount": 900,
+        "description": "Invoice 108025"
+      },
+      {
+        "invoice_number": "INV-FAC816",
+        "amount": 200,
+        "description": "Invoice 108026"
+      },
+      {
+        "invoice_number": "INV-3DF56E",
+        "amount": 100,
+        "description": "Invoice 108027"
+      },
+      {
+        "invoice_number": "INV-5B7B76",
+        "amount": 200,
+        "description": "Invoice 108028"
+      },
+      {
+        "invoice_number": "INV-BD1DDA",
+        "amount": 300,
+        "description": "Invoice 108029"
+      },
+      {
+        "invoice_number": "INV-2C91FD",
+        "amount": 400,
+        "description": "Invoice 108030"
+      },
+      {
+        "invoice_number": "INV-32DF96",
+        "amount": 500,
+        "description": "Invoice 108031"
+      },
+      {
+        "invoice_number": "INV-0BDC94",
+        "amount": 600,
+        "description": "Invoice 108032"
+      },
+      {
+        "invoice_number": "INV-97190C",
+        "amount": 700,
+        "description": "Invoice 108033"
+      },
+      {
+        "invoice_number": "INV-3026BF",
+        "amount": 800,
+        "description": "Invoice 108034"
+      },
+      {
+        "invoice_number": "INV-D6B577",
+        "amount": 900,
+        "description": "Invoice 108035"
+      },
+      {
+        "invoice_number": "INV-EB71DF",
+        "amount": 200,
+        "description": "Invoice 108036"
+      },
+      {
+        "invoice_number": "INV-F53850",
+        "amount": 100,
+        "description": "Invoice 108037"
+      },
+      {
+        "invoice_number": "INV-D5BDFF",
+        "amount": 200,
+        "description": "Invoice 108056"
+      },
+      {
+        "invoice_number": "INV-95252B",
+        "amount": 100,
+        "description": "Invoice 108057"
+      },
+      {
+        "invoice_number": "INV-83E542",
+        "amount": 200,
+        "description": "Invoice 108058"
+      },
+      {
+        "invoice_number": "INV-8BEF13",
+        "amount": 200,
+        "description": "Invoice 108038"
+      },
+      {
+        "invoice_number": "INV-C92080",
+        "amount": 300,
+        "description": "Invoice 108039"
+      },
+      {
+        "invoice_number": "INV-D0B1F3",
+        "amount": 400,
+        "description": "Invoice 108040"
+      },
+      {
+        "invoice_number": "INV-DD9F50",
+        "amount": 500,
+        "description": "Invoice 108041"
+      },
+      {
+        "invoice_number": "INV-776F24",
+        "amount": 600,
+        "description": "Invoice 108042"
+      },
+      {
+        "invoice_number": "INV-5CEE0A",
+        "amount": 700,
+        "description": "Invoice 108043"
+      },
+      {
+        "invoice_number": "INV-E641FD",
+        "amount": 300,
+        "description": "Invoice 108059"
+      },
+      {
+        "invoice_number": "INV-AB70D3",
+        "amount": 400,
+        "description": "Invoice 108060"
+      },
+      {
+        "invoice_number": "INV-562C64",
+        "amount": 500,
+        "description": "Invoice 108061"
+      },
+      {
+        "invoice_number": "INV-91B09C",
+        "amount": 600,
+        "description": "Invoice 108062"
+      },
+      {
+        "invoice_number": "INV-A480DF",
+        "amount": 800,
+        "description": "Invoice 108044"
+      },
+      {
+        "invoice_number": "INV-C6120E",
+        "amount": 900,
+        "description": "Invoice 108045"
+      },
+      {
+        "invoice_number": "INV-CD5752",
+        "amount": 100,
+        "description": "Invoice 108047"
+      },
+      {
+        "invoice_number": "INV-5E6521",
+        "amount": 200,
+        "description": "Invoice 108048"
+      },
+      {
+        "invoice_number": "INV-E84A87",
+        "amount": 300,
+        "description": "Invoice 108049"
+      },
+      {
+        "invoice_number": "INV-4A0943",
+        "amount": 400,
+        "description": "Invoice 108050"
+      },
+      {
+        "invoice_number": "INV-71721A",
+        "amount": 500,
+        "description": "Invoice 108051"
+      },
+      {
+        "invoice_number": "INV-A768EA",
+        "amount": 600,
+        "description": "Invoice 108052"
+      },
+      {
+        "invoice_number": "INV-F093A0",
+        "amount": 700,
+        "description": "Invoice 108053"
+      },
+      {
+        "invoice_number": "INV-5ADD5D",
+        "amount": 800,
+        "description": "Invoice 108054"
+      },
+      {
+        "invoice_number": "INV-131CB9",
+        "amount": 900,
+        "description": "Invoice 108055"
+      },
+      {
+        "invoice_number": "INV-7C5BDB",
+        "amount": 700,
+        "description": "Invoice 108063"
+      },
+      {
+        "invoice_number": "INV-7BBC7D",
+        "amount": 800,
+        "description": "Invoice 108064"
+      },
+      {
+        "invoice_number": "INV-91B2AC",
+        "amount": 900,
+        "description": "Invoice 108065"
+      },
+      {
+        "invoice_number": "INV-06B7FF",
+        "amount": 200,
+        "description": "Invoice 108066"
+      },
+      {
+        "invoice_number": "INV-AAA0AD",
+        "amount": 100,
+        "description": "Invoice 108067"
+      },
+      {
+        "invoice_number": "INV-658A6D",
+        "amount": 200,
+        "description": "Invoice 108068"
+      },
+      {
+        "invoice_number": "INV-23FE8F",
+        "amount": 300,
+        "description": "Invoice 108069"
+      },
+      {
+        "invoice_number": "INV-CE0B09",
+        "amount": 400,
+        "description": "Invoice 108070"
+      },
+      {
+        "invoice_number": "INV-36B1FD",
+        "amount": 500,
+        "description": "Invoice 108071"
+      },
+      {
+        "invoice_number": "INV-A6ABCB",
+        "amount": 600,
+        "description": "Invoice 108072"
+      },
+      {
+        "invoice_number": "INV-3E6537",
+        "amount": 700,
+        "description": "Invoice 108073"
+      },
+      {
+        "invoice_number": "INV-E4A6AC",
+        "amount": 800,
+        "description": "Invoice 108074"
+      },
+      {
+        "invoice_number": "INV-51B16C",
+        "amount": 900,
+        "description": "Invoice 108075"
+      }
+    ],
+    "invoice_count": 54,
+    "notes": "Payment Method: ACH. Ref No: 3852. Trx No: G04449. Beneficiary: Bluestone Equipment. Total from email/PDF: 26,800.00."
+  },
+  "TokenUsage": {
+    "InputTokens": 2755,
+    "OutputTokens": 2035
+  },
+  "CostUSD": 0.0030947500000000003,
+  "Provider": "openai",
+  "ModelUsed": "gpt-5.4-nano",
+  "EmailFile": "gmail:19daf470c1bd78de",
+  "ProcessedAt": "2026-04-21T09:05:15.449075Z"
+}

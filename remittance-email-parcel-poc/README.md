@@ -77,6 +77,49 @@ Raw PDF binary is **never sent** to the LLM. Instead:
 └── results/         # JSON output files (created at runtime)
 ```
 
+## Gmail integration
+
+Instead of reading `.eml` files from disk you can pull emails directly from your Gmail inbox.
+
+```bash
+# First run — opens a browser URL for one-time OAuth2 consent.
+# The token is saved to gmail_token.json automatically for all future runs.
+go run ./cmd/gmail_sync \
+  -credentials "./gmial-client_secret_550546757593-tev1n78op47laivqj4rvciqaepakgt8e.apps.googleusercontent.com.json"
+
+# Or set the path in .env so you don't need to pass the flag every time:
+#   GMAIL_CREDENTIALS_FILE=gmial-client_secret_...json
+
+# Custom query (Gmail search syntax)
+go run ./cmd/gmail_sync -query "subject:remittance has:attachment filename:pdf" -max 20
+
+# Dry-run — auth + fetch + parse but skip the AI call
+go run ./cmd/gmail_sync -dry-run
+
+# OpenAI instead of Claude
+go run ./cmd/gmail_sync -provider openai
+```
+
+### Gmail flags
+
+| Flag | Default | Description |
+|---|---|---|
+| `-credentials` | `$GMAIL_CREDENTIALS_FILE` or `gmail_credentials.json` | Path to the OAuth2 JSON from Google Cloud Console |
+| `-token` | `$GMAIL_TOKEN_FILE` or `gmail_token.json` | Where to store/reload the saved token |
+| `-query` | `has:attachment filename:pdf` | Gmail search query |
+| `-max` | `10` | Max emails to fetch per run |
+| `-provider` | `claude` | `claude` or `openai` |
+| `-dry-run` | false | Skip AI call |
+
+### One-time Google Cloud setup (already done if you have the credentials file)
+
+1. [Google Cloud Console](https://console.cloud.google.com/) → select your project
+2. **APIs & Services → Enable APIs** → enable **Gmail API**
+3. **APIs & Services → Credentials → Create OAuth 2.0 Client ID** (type: Desktop app)
+4. Download the JSON — that is the credentials file
+
+---
+
 ## Limitations (POC scope)
 
 - **Scanned PDFs** — image-only pages produce no text. OCR is out of scope.

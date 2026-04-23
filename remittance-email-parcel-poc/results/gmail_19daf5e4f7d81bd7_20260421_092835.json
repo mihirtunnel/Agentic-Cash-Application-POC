@@ -1,0 +1,122 @@
+{
+  "Data": {
+    "payer": "Housing Gear Co",
+    "payment_date": "2026-03-27",
+    "total_amount": 33889,
+    "currency": "USD",
+    "bank_reference_number": "RA-93821",
+    "invoices": [
+      {
+        "invoice_number": "INV-3001",
+        "amount": 2045,
+        "description": "Equipment / Services"
+      },
+      {
+        "invoice_number": "INV-3002",
+        "amount": 812,
+        "description": "Equipment / Services"
+      },
+      {
+        "invoice_number": "INV-3003",
+        "amount": 2304,
+        "description": "Equipment / Services"
+      },
+      {
+        "invoice_number": "INV-3004",
+        "amount": 976,
+        "description": "Equipment / Services"
+      },
+      {
+        "invoice_number": "INV-3005",
+        "amount": 2692,
+        "description": "Equipment / Services"
+      },
+      {
+        "invoice_number": "INV-3006",
+        "amount": 1670,
+        "description": "Equipment / Services"
+      },
+      {
+        "invoice_number": "INV-3007",
+        "amount": 1591,
+        "description": "Equipment / Services"
+      },
+      {
+        "invoice_number": "INV-3008",
+        "amount": 836,
+        "description": "Equipment / Services"
+      },
+      {
+        "invoice_number": "INV-3009",
+        "amount": 2626,
+        "description": "Equipment / Services"
+      },
+      {
+        "invoice_number": "INV-3010",
+        "amount": 1941,
+        "description": "Equipment / Services"
+      },
+      {
+        "invoice_number": "INV-3011",
+        "amount": 1281,
+        "description": "Equipment / Services"
+      },
+      {
+        "invoice_number": "INV-3012",
+        "amount": 1388,
+        "description": "Equipment / Services"
+      },
+      {
+        "invoice_number": "INV-3013",
+        "amount": 1749,
+        "description": "Equipment / Services"
+      },
+      {
+        "invoice_number": "INV-3014",
+        "amount": 1092,
+        "description": "Equipment / Services"
+      },
+      {
+        "invoice_number": "INV-3015",
+        "amount": 607,
+        "description": "Equipment / Services"
+      },
+      {
+        "invoice_number": "INV-3016",
+        "amount": 2228,
+        "description": "Equipment / Services"
+      },
+      {
+        "invoice_number": "INV-3017",
+        "amount": 2763,
+        "description": "Equipment / Services"
+      },
+      {
+        "invoice_number": "INV-3018",
+        "amount": 2978,
+        "description": "Equipment / Services"
+      },
+      {
+        "invoice_number": "INV-3019",
+        "amount": 1380,
+        "description": "Equipment / Services"
+      },
+      {
+        "invoice_number": "INV-3020",
+        "amount": 930,
+        "description": "Equipment / Services"
+      }
+    ],
+    "invoice_count": 20,
+    "notes": "Reference No: RA-93821; Transaction No: TXN-882144; Payment Method: ACH. This remittance advice confirms payment initiation; funds settlement depends on banking clearance."
+  },
+  "TokenUsage": {
+    "InputTokens": 1253,
+    "OutputTokens": 751
+  },
+  "CostUSD": 0.00118935,
+  "Provider": "openai",
+  "ModelUsed": "gpt-5.4-nano",
+  "EmailFile": "gmail:19daf5e4f7d81bd7",
+  "ProcessedAt": "2026-04-21T09:28:35.215306Z"
+}

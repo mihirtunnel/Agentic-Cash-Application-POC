@@ -1,6 +1,12 @@
-// gmail_sync fetches emails from the last N hours via the Gmail API,
-// classifies each one as remittance or not, and runs the AI extraction
-// pipeline on any remittance email — saving results to results/.
+// gmail_sync fetches remittance emails directly from Gmail and runs them
+// through the AI extraction pipeline.
+//
+// Usage:
+//
+//	go run ./cmd/gmail_sync
+//	go run ./cmd/gmail_sync -credentials ./gmial-client_secret_...json
+//	go run ./cmd/gmail_sync -query "subject:remittance" -max 20
+//	go run ./cmd/gmail_sync -provider openai -dry-run
 package main
 
 import (
@@ -13,262 +19,201 @@ import (
 	"time"
 
 	"remittance-poc/internal/aiclient"
+	"remittance-poc/internal/emailparser"
 	"remittance-poc/internal/gmailclient"
 	"remittance-poc/internal/models"
 	"remittance-poc/internal/pdfextractor"
 	"remittance-poc/internal/textbuilder"
 )
 
-// EmailSummary captures the outcome for a single fetched email.
-type EmailSummary struct {
-	MessageID    string    `json:"message_id"`
-	From         string    `json:"from"`
-	Subject      string    `json:"subject"`
-	Date         time.Time `json:"date"`
-	IsRemittance bool      `json:"is_remittance"`
-	ProcessedAt  time.Time `json:"processed_at"`
-	ResultFile   string    `json:"result_file,omitempty"`
-	Error        string    `json:"error,omitempty"`
-}
-
-// SyncSummary is written at the end of each run.
-type SyncSummary struct {
-	FetchedAt       time.Time      `json:"fetched_at"`
-	EmailsSince     time.Time      `json:"emails_since"`
-	TotalEmails     int            `json:"total_emails"`
-	RemittanceCount int            `json:"remittance_count"`
-	Provider        string         `json:"provider"`
-	ModelUsed       string         `json:"model_used"`
-	Emails          []EmailSummary `json:"emails"`
-}
-
 func main() {
-	credFile := flag.String("credentials", "gmail_credentials.json",
-		"Path to Google OAuth2 client credentials JSON (from Cloud Console)")
-	tokenFile := flag.String("token", "gmail_token.json",
-		"Path to saved OAuth2 user token (created on first run)")
-	hours := flag.Int("hours", 2,
-		"How many hours back to look for emails")
+	credFile := flag.String("credentials",
+		envOrDefault("GMAIL_CREDENTIALS_FILE", "gmail_credentials.json"),
+		"Path to Gmail OAuth2 credentials JSON (downloaded from Google Cloud Console)")
+	tokenFile := flag.String("token",
+		envOrDefault("GMAIL_TOKEN_FILE", "gmail_token.json"),
+		"Path to store/load the OAuth2 token (created automatically on first run)")
+	query := flag.String("query",
+		"has:attachment filename:pdf",
+		"Gmail search query — same syntax as the Gmail search box")
+	maxResults := flag.Int64("max", 10,
+		"Maximum number of emails to fetch and process")
+	dryRun := flag.Bool("dry-run", false,
+		"Parse emails and build AI context but skip the actual API call")
 	provider := flag.String("provider", "claude",
 		"AI provider: 'claude' or 'openai'")
-	dryRun := flag.Bool("dry-run", false,
-		"Classify emails but skip AI extraction calls")
 	flag.Parse()
 
 	loadEnvFile(".env")
 
-	fmt.Println("╔══════════════════════════════════════════════════╗")
-	fmt.Println("║   Gmail Remittance Sync — POC                    ║")
-	fmt.Println("╚══════════════════════════════════════════════════╝")
+	fmt.Println("╔══════════════════════════════════════════════╗")
+	fmt.Println("║  Remittance Gmail Sync — AI Extraction POC  ║")
+	fmt.Println("╚══════════════════════════════════════════════╝")
 	fmt.Println()
 
-	// ── Connect to Gmail ──────────────────────────────────────────────────
-	fmt.Printf("Connecting to Gmail (credentials: %s) …\n", *credFile)
-	gc, err := gmailclient.New(*credFile, *tokenFile)
+	// ── Gmail authentication ──────────────────────────────────────────────────
+	fmt.Printf("Credentials file: %s\n", *credFile)
+	fmt.Printf("Token file:       %s\n\n", *tokenFile)
+
+	svc, err := gmailclient.GetService(*credFile, *tokenFile)
 	if err != nil {
-		fatalf("Gmail setup failed: %v\n\nMake sure you have:\n"+
-			"  1. Created OAuth2 credentials in Google Cloud Console\n"+
-			"  2. Downloaded them as JSON to %q\n"+
-			"  3. Enabled the Gmail API for your project\n", err, *credFile)
+		fatalf("Gmail auth failed: %v", err)
 	}
-	fmt.Println("Gmail connected.")
+	fmt.Println("Gmail authenticated successfully.")
 	fmt.Println()
 
-	// ── Fetch emails ──────────────────────────────────────────────────────
-	since := time.Now().UTC().Add(-time.Duration(*hours) * time.Hour)
-	fmt.Printf("Fetching emails since: %s  (last %d hour(s))\n\n",
-		since.Format("2006-01-02 15:04:05 UTC"), *hours)
+	// ── Fetch emails ──────────────────────────────────────────────────────────
+	fmt.Printf("Query:  %s\n", *query)
+	fmt.Printf("Limit:  %d email(s)\n\n", *maxResults)
 
-	emails, messageIDs, err := gc.FetchEmailsSince(since)
+	messages, err := gmailclient.FetchRawMessages(svc, *query, *maxResults)
 	if err != nil {
-		fatalf("Failed to fetch emails: %v", err)
+		fatalf("Fetching Gmail messages: %v", err)
 	}
-	fmt.Printf("Found %d email(s)\n\n", len(emails))
-
-	if len(emails) == 0 {
-		fmt.Println("No emails in the specified window. Done.")
+	if len(messages) == 0 {
+		fmt.Println("No emails matched the query.")
 		return
 	}
+	fmt.Printf("Found %d email(s) to process.\n\n", len(messages))
 
-	// ── Set up AI client ──────────────────────────────────────────────────
+	// ── AI client ─────────────────────────────────────────────────────────────
 	prov := aiclient.Provider(*provider)
-	var ai *aiclient.Client
+	var client *aiclient.Client
 	if *dryRun {
 		fmt.Printf("Mode: DRY-RUN (no %s API calls)\n\n", prov)
-		ai = aiclient.NewDryRun(prov)
+		client = aiclient.NewDryRun(prov)
 	} else {
-		ai, err = aiclient.New(prov)
+		client, err = aiclient.New(prov)
 		if err != nil {
-			fatalf("AI client setup failed: %v", err)
+			fatalf("AI client setup: %v", err)
 		}
-		fmt.Printf("Mode: LIVE  provider=%s  model=%s\n\n", prov, ai.ModelName())
+		fmt.Printf("Mode: LIVE  provider=%s  model=%s\n\n", prov, client.ModelName())
 	}
 
-	// ── Process each email ────────────────────────────────────────────────
-	summary := SyncSummary{
-		FetchedAt:   time.Now().UTC(),
-		EmailsSince: since,
-		TotalEmails: len(emails),
+	// ── Process ───────────────────────────────────────────────────────────────
+	os.MkdirAll("results", 0755)
+
+	var totalCost float64
+	processed := 0
+
+	for i, msg := range messages {
+		fmt.Printf("━━━ [%d/%d] %s ━━━\n", i+1, len(messages), msg.ID)
+		if msg.Subject != "" {
+			fmt.Printf("Subject: %s\n", msg.Subject)
+		}
+
+		result := processMessage(msg, client, prov)
+		if result != nil {
+			totalCost += result.CostUSD
+			saveResult(*result)
+			processed++
+		}
+		fmt.Println()
+	}
+
+	// ── Summary ───────────────────────────────────────────────────────────────
+	fmt.Println("╔══════════════════════════════════════════════╗")
+	fmt.Println("║                   Summary                    ║")
+	fmt.Println("╚══════════════════════════════════════════════╝")
+	fmt.Printf("Emails fetched:    %d\n", len(messages))
+	fmt.Printf("Successfully proc: %d\n", processed)
+	fmt.Printf("Total AI cost:     $%.5f\n", totalCost)
+}
+
+func processMessage(msg gmailclient.RawMessage, client *aiclient.Client, prov aiclient.Provider) *models.ExtractionResult {
+	// Parse raw RFC 2822 email.
+	parsed, err := emailparser.ParseEML(msg.Raw)
+	if err != nil {
+		fmt.Printf("  [ERROR] Email parsing: %v\n", err)
+		return nil
+	}
+	fmt.Printf("From:            %s\n", parsed.Metadata.From)
+	fmt.Printf("Date:            %s\n", parsed.Metadata.Date.Format("2006-01-02 15:04 MST"))
+	fmt.Printf("PDF attachments: %d\n", len(parsed.Attachments))
+
+	// Extract text from each PDF attachment.
+	pdfTexts := make(map[string]string)
+	for _, att := range parsed.Attachments {
+		fmt.Printf("  Extracting: %s (%d bytes)\n", att.Filename, len(att.Data))
+		text, err := pdfextractor.ExtractText(att.Data)
+		if err != nil {
+			fmt.Printf("    [WARN] PDF extraction error: %v\n", err)
+		}
+		if text == "" {
+			fmt.Println("    [WARN] No extractable text — possibly a scanned/image-only PDF")
+		} else {
+			fmt.Printf("    Extracted %d characters\n", len(text))
+		}
+		pdfTexts[att.Filename] = text
+	}
+
+	// Assemble context string.
+	context := textbuilder.Build(parsed, pdfTexts)
+	fmt.Printf("Context:         %d characters\n", len(context))
+
+	// Call AI.
+	fmt.Println("Calling AI…")
+	start := time.Now()
+	data, usage, err := client.Extract(context)
+	elapsed := time.Since(start)
+	if err != nil {
+		fmt.Printf("  [ERROR] AI extraction: %v\n", err)
+		return nil
+	}
+	if data == nil {
+		fmt.Println("  [DRY-RUN] No data returned.")
+		return nil
+	}
+
+	cost := client.CalculateCost(usage)
+	fmt.Printf("Done in %s  |  %d in / %d out tokens  |  $%.5f\n",
+		elapsed.Round(time.Millisecond), usage.InputTokens, usage.OutputTokens, cost)
+
+	// Print key fields.
+	fmt.Printf("  Payer:      %s\n", data.Payer)
+	fmt.Printf("  Date:       %s\n", data.PaymentDate)
+	fmt.Printf("  Total:      %.2f %s\n", data.TotalAmount, data.Currency)
+	fmt.Printf("  Bank Ref:   %s\n", data.BankReferenceNumber)
+	fmt.Printf("  Invoices:   %d\n", data.InvoiceCount)
+
+	return &models.ExtractionResult{
+		Data:        data,
+		TokenUsage:  usage,
+		CostUSD:     cost,
 		Provider:    string(prov),
-		ModelUsed:   ai.ModelName(),
+		ModelUsed:   client.ModelName(),
+		EmailFile:   fmt.Sprintf("gmail:%s", msg.ID),
+		ProcessedAt: time.Now().UTC(),
 	}
-
-	for i, parsed := range emails {
-		msgID := messageIDs[i]
-
-		fmt.Printf("─── [%d/%d] ──────────────────────────────────────────\n",
-			i+1, len(emails))
-		fmt.Printf("From:    %s\n", parsed.Metadata.From)
-		fmt.Printf("Subject: %s\n", parsed.Metadata.Subject)
-		fmt.Printf("Date:    %s\n", parsed.Metadata.Date.Format("2006-01-02 15:04:05 UTC"))
-		fmt.Printf("PDFs:    %d attachment(s)\n", len(parsed.Attachments))
-
-		es := EmailSummary{
-			MessageID:   msgID,
-			From:        parsed.Metadata.From,
-			Subject:     parsed.Metadata.Subject,
-			Date:        parsed.Metadata.Date,
-			ProcessedAt: time.Now().UTC(),
-		}
-
-		// ── Classify ──────────────────────────────────────────────────────
-		isRemittance := gmailclient.IsRemittanceEmail(parsed)
-		es.IsRemittance = isRemittance
-
-		if !isRemittance {
-			fmt.Println("Classification: NOT a remittance email — skipped")
-			fmt.Println()
-			summary.Emails = append(summary.Emails, es)
-			continue
-		}
-
-		fmt.Println("Classification: REMITTANCE email — extracting…")
-		summary.RemittanceCount++
-
-		// ── Extract PDF text ──────────────────────────────────────────────
-		pdfTexts := make(map[string]string)
-		for _, att := range parsed.Attachments {
-			fmt.Printf("  Extracting PDF: %s (%d bytes)\n", att.Filename, len(att.Data))
-			text, err := pdfextractor.ExtractText(att.Data)
-			if err != nil {
-				fmt.Printf("  [WARN] PDF extraction error: %v\n", err)
-			}
-			if text == "" {
-				fmt.Println("  [WARN] No extractable text (possibly a scanned PDF)")
-			} else {
-				fmt.Printf("  Extracted %d chars from %s\n", len(text), att.Filename)
-			}
-			pdfTexts[att.Filename] = text
-		}
-
-		// ── Build LLM context ─────────────────────────────────────────────
-		context := textbuilder.Build(parsed, pdfTexts)
-		fmt.Printf("  Context: %d chars (cap: %d)\n", len(context), textbuilder.MaxContextChars)
-
-		// ── Call AI ───────────────────────────────────────────────────────
-		fmt.Println("  Calling AI for structured extraction…")
-		start := time.Now()
-		data, usage, err := ai.Extract(context)
-		elapsed := time.Since(start)
-
-		if err != nil {
-			fmt.Printf("  [ERROR] AI extraction failed: %v\n\n", err)
-			es.Error = err.Error()
-			summary.Emails = append(summary.Emails, es)
-			continue
-		}
-
-		if data == nil {
-			fmt.Println("  No data (dry-run).")
-			fmt.Println()
-			summary.Emails = append(summary.Emails, es)
-			continue
-		}
-
-		cost := ai.CalculateCost(usage)
-		fmt.Printf("  Done in %s | tokens: %d in / %d out | cost: $%.5f\n",
-			elapsed.Round(time.Millisecond), usage.InputTokens, usage.OutputTokens, cost)
-		fmt.Printf("  Payer: %q  |  Amount: %.2f %s  |  Invoices: %d\n",
-			data.Payer, data.TotalAmount, data.Currency, data.InvoiceCount)
-
-		// ── Save extraction result ─────────────────────────────────────────
-		result := models.ExtractionResult{
-			Data:        data,
-			TokenUsage:  usage,
-			CostUSD:     cost,
-			Provider:    string(prov),
-			ModelUsed:   ai.ModelName(),
-			EmailFile:   fmt.Sprintf("gmail-message-id:%s", msgID),
-			ProcessedAt: time.Now().UTC(),
-		}
-		resultPath := saveExtractionResult(result, parsed.Metadata.Subject, msgID)
-		es.ResultFile = resultPath
-		fmt.Printf("  Saved: %s\n\n", resultPath)
-
-		summary.Emails = append(summary.Emails, es)
-	}
-
-	// ── Save run summary ──────────────────────────────────────────────────
-	summaryPath := saveSyncSummary(summary)
-
-	fmt.Println("════════════════════════════════════════════════════")
-	fmt.Printf("Processed %d email(s) — %d remittance(s) extracted.\n",
-		summary.TotalEmails, summary.RemittanceCount)
-	fmt.Printf("Summary: %s\n", summaryPath)
 }
 
-// saveExtractionResult writes a single email's extraction result to results/.
-func saveExtractionResult(result models.ExtractionResult, subject, msgID string) string {
-	os.MkdirAll("results", 0755) //nolint:errcheck
-	safe := sanitizeFilename(subject)
-	if safe == "" {
-		safe = "msg_" + msgID[:8]
-	}
-	filename := fmt.Sprintf("gmail_%s_%s.json",
-		safe, result.ProcessedAt.UTC().Format("20060102_150405"))
+func saveResult(result models.ExtractionResult) {
+	id := strings.TrimPrefix(result.EmailFile, "gmail:")
+	filename := fmt.Sprintf("gmail_%s_%s.json", id, result.ProcessedAt.Format("20060102_150405"))
 	path := filepath.Join("results", filename)
 
-	out, _ := json.MarshalIndent(result, "", "  ")
-	if err := os.WriteFile(path, out, 0644); err != nil {
-		fmt.Fprintf(os.Stderr, "[WARN] Failed to save result: %v\n", err)
+	data, err := json.MarshalIndent(result, "", "  ")
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "  [WARN] marshal result: %v\n", err)
+		return
 	}
-	return path
-}
-
-// saveSyncSummary writes the overall run summary to results/.
-func saveSyncSummary(s SyncSummary) string {
-	os.MkdirAll("results", 0755) //nolint:errcheck
-	filename := fmt.Sprintf("gmail_sync_summary_%s.json",
-		s.FetchedAt.UTC().Format("20060102_150405"))
-	path := filepath.Join("results", filename)
-
-	out, _ := json.MarshalIndent(s, "", "  ")
-	if err := os.WriteFile(path, out, 0644); err != nil {
-		fmt.Fprintf(os.Stderr, "[WARN] Failed to save summary: %v\n", err)
+	if err := os.WriteFile(path, data, 0644); err != nil {
+		fmt.Fprintf(os.Stderr, "  [WARN] save result: %v\n", err)
+		return
 	}
-	return path
-}
-
-// sanitizeFilename converts a string into a safe filename segment (≤ 40 chars).
-func sanitizeFilename(s string) string {
-	var sb strings.Builder
-	for _, r := range s {
-		switch {
-		case r >= 'a' && r <= 'z', r >= 'A' && r <= 'Z', r >= '0' && r <= '9':
-			sb.WriteRune(r)
-		default:
-			sb.WriteRune('_')
-		}
-		if sb.Len() >= 40 {
-			break
-		}
-	}
-	return strings.Trim(sb.String(), "_")
+	fmt.Printf("  Result saved: %s\n", path)
 }
 
 func fatalf(format string, args ...any) {
-	fmt.Fprintf(os.Stderr, "\nERROR: "+format+"\n", args...)
+	fmt.Fprintf(os.Stderr, "ERROR: "+format+"\n", args...)
 	os.Exit(1)
+}
+
+func envOrDefault(key, def string) string {
+	if v := os.Getenv(key); v != "" {
+		return v
+	}
+	return def
 }
 
 func loadEnvFile(path string) {

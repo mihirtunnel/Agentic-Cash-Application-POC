@@ -1,0 +1,27 @@
+{
+  "Data": {
+    "payer": "Housing Gear Co",
+    "payment_date": "2026-04-09",
+    "total_amount": 200,
+    "currency": "USD",
+    "bank_reference_number": "G04448",
+    "invoices": [
+      {
+        "invoice_number": "INV-AF236C",
+        "amount": 200,
+        "description": "Invoice 108046"
+      }
+    ],
+    "invoice_count": 1,
+    "notes": "Email indicates payment initiated; PDF shows Ref No: 3851, Trx No: G04448, Payment Method: ACH, Vendor No: V00040. Invoice date: 2026-02-13."
+  },
+  "TokenUsage": {
+    "InputTokens": 962,
+    "OutputTokens": 155
+  },
+  "CostUSD": 0.00038615000000000003,
+  "Provider": "openai",
+  "ModelUsed": "gpt-5.4-nano",
+  "EmailFile": "gmail:19daea40ed5bef54",
+  "ProcessedAt": "2026-04-21T06:42:04.329635Z"
+}
