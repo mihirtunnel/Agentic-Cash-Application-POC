@@ -1,0 +1,27 @@
+{
+  "Data": {
+    "payer": "Housing Gear Co",
+    "payment_date": "2026-04-09",
+    "total_amount": 200,
+    "currency": "USD",
+    "bank_reference_number": "G04448",
+    "invoices": [
+      {
+        "invoice_number": "INV-AF236C",
+        "amount": 200,
+        "description": "Invoice 108046"
+      }
+    ],
+    "invoice_count": 1,
+    "notes": "Ref No: 3851, Vendor No: V00040, Payment Method: ACH, PO Number not specified"
+  },
+  "TokenUsage": {
+    "InputTokens": 786,
+    "OutputTokens": 112
+  },
+  "CostUSD": 0.004038,
+  "Provider": "claude",
+  "ModelUsed": "claude-opus-4-5",
+  "EmailFile": "outlook:AQMkADAwATMwMAExLWFjYmEtNWMwOS0wMAItMDAKAEYAAAMwvVHl4Jd5T5Qv7IaE5AdQBwDguF8YBNcwRrYtUYonnvrtAAACAQwAAADguF8YBNcwRrYtUYonnvrtAAACBV4AAAA=",
+  "ProcessedAt": "2026-05-01T06:51:55.751855Z"
+}
